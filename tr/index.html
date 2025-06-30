@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEEXX</title>
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <!-- Css -->
+  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/index.css">
+  <link rel="stylesheet" href="./assets/pop-up.css">
+  <link rel="stylesheet" href="./assets/kvkk.css">
+
+  <!-- Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> <link rel="icon" type="favicon" href="images/meex-favicon.png">
+
+  <link rel="icon" type="favicon" href="images/meex-favicon.png">
+  <style>
+    input[type="radio"] {
+      display: none;
+    }
+
+    body {
+      background-color: #000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Start -->
+  <header class="main-header">
+    <div class="container-navbar">
+      <a href="index.html" class="logo mt-5">
+        <!-- Gerçek logo dosyanızın yolunu buraya ekleyin -->
+        <img src="./images/meexx logo.png" class="" alt="">
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">MEEXX <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="hakkimizda.html">Hakkında</a></li>
+              <li><a href="fuar-kunyesi.html">Fuar Künyesi</a></li>
+              <li><a href="fuar-alani.html">Fuar Alanı</a></li>
+              <li><a href="ulasim.html">Nasıl Ulaşırım ?</a></li>
+              <li><a href="#">Fuar Sonuç Raporu</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Katılımcı <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="katilimci-profili.html">Katılımcı Profili</a></li>
+              <li><a href="on-kayit-formu.html">Ön Kayıt Formu</a></li>
+              <li><a href="neden-katilmalisiniz.html">Neden Katılmalısınız ?</a></li>
+              <li><a href="#">Katılımcı Listesi 2026</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Ziyaretçi <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="ziyaretci-profili.html">Ziyaretçi Profili</a></li>
+              <li><a href="neden-ziyaret-etmelisiniz.html">Neden Ziyaret Etmelisiniz ?</a></li>
+              <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Etkinlikler <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="b2b-toplantıları.html">B2B Toplantıları</a></li>
+              <li><a href="#">MEEXX Insights</a></li>
+              <li><a href="#">MEEXX Experience</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Medya <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="medya-logo.html">Logo</a></li>
+              <li><a href="#">Haberler</a></li>
+              <li><a href="#">Galeri</a></li>
+              <li><a href="#">Kurumsal Kimlik</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="iletisim.html" class="nav-link">Bize Ulaşın</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch mt-4">
+          <div class="header-search">
+            <input type="text" class="header-search-input" placeholder="Ara...">
+            <button class="header-search-button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <a href="online-bilet.html" class="trigger-button">ONLINE BİLET</a>
+          <!-- Dil Dropdown Başlangıç -->
+          <div class="lang-dropdown">
+            <button class="lang-dropdown-toggle" id="langDropdownBtn">
+              <span id="selectedLang">TR</span> <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="lang-dropdown-menu" id="langDropdownMenu">
+              <a href="index.html" class="lang-option" data-lang="tr">TR</a>
+              <a href="" class="lang-option" data-lang="en">EN</a>
+            </div>
+          </div>
+          <!-- Dil Dropdown Bitiş -->
+        </div>
+        <div class="mobile-actions">
+          <button class="search-toggle-button" aria-label="Arama">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="mobile-menu-toggle nav-toggle-button" data-translate-aria-label="menu.toggleAriaLabel"
+            aria-label="Menüyü Aç/Kapat">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <!-- Header End -->
+  <!-- Mobil Arama Çubuğu -->
+  <div class="search-overlay">
+    <div class="search-container">
+      <div class="search-content">
+        <input type="text" class="search-input" placeholder="Aramak istediğiniz kelimeyi yazınız...">
+        <button class="search-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Tam Ekran Overlay Menü -->
+  <div class="fullscreen-menu">
+    <div class="menu-header">
+      <a href="index.html" class="logo-menu">
+        <!-- Menüdeki logo -->
+        <img src="./images/meexx logo.png" alt="" class="fs-2">
+      </a>
+
+      <div class="menu-header-actions-fs">
+        <div class="lang-switch">
+          <a href="online-bilet.html" class="trigger-button">ONLINE BILET</a>
+          <a href="#" class="active" data-lang="tr" data-translate="lang.tr">TR</a> | <a href="" class="" data-lang="en"
+            data-translate="lang.en">EN</a>
+        </div>
+        <button class="close-menu-btn" aria-label="Menüyü Kapat">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="menu-content">
+      <div class="menu-column">
+        <!-- Başlığa tıklanınca menüyü kapatmak için nav-toggle-button ekledik -->
+        <h3 class="nav-toggle-button">MEEXX</h3>
+        <ul>
+          <li><a href="hakkimizda.html">Hakkında</a></li>
+          <li><a href="fuar-kunyesi.html">Fuar Künyesi</a></li>
+          <li><a href="fuar-alani.html">Fuar Alanı</a></li>
+          <li><a href="ulasim.html">Nasıl Ulaşırım ?</a></li>
+          <li><a href="#">Fuar Sonuç Raporu</a></li>
+        </ul>
+      </div>
+      <div class="menu-column">
+        <h3 class="nav-toggle-button">Katılımcı</h3>
+        <ul>
+          <li><a href="katilimci-profili.html">Katılımcı Profili</a></li>
+          <li><a href="on-kayit-formu.html">Ön Kayıt Formu</a></li>
+          <li><a href="neden-katilmalisiniz.html">Neden Katılmalısınız ?</a></li>
+          <li><a href="katilimci-listesi.html">Katılımcı Listesi 2025</a></li>
+        </ul>
+      </div>
+      <div class="menu-column">
+        <h3 class="nav-toggle-button" data-translate="menu.visitBFM">Ziyaretçi</h3>
+        <ul>
+          <li><a href="ziyaretci-profili.html">Ziyaretçi Profili</a></li>
+          <li><a href="neden-ziyaret-etmelisiniz.html">Neden Ziyaret Etmelisiniz ?</a></li>
+          <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+        </ul>
+      </div>
+      <div class="menu-column">
+        <h3 class="nav-toggle-button">ETKİNLİKLER</h3>
+        <ul>
+          <li><a href="b2b-toplantilari.html">B2B Toplantıları</a></li>
+          <li><a href="#">MEEXX Insights</a></li>
+          <li><a href="#">MEEXX Experience</a></li>
+        </ul>
+      </div>
+      <div class="menu-column">
+        <h3 class="nav-toggle-button">Medya</h3>
+        <ul>
+          <li><a href="medya-logo.html">Logo</a></li>
+          <li><a href="#">Haberler</a></li>
+          <li><a href="#">Galeri</a></li>
+          <li><a href="#">Kurumsal Kimlik</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-column">
+        <h3 class="nav-toggle-button">Bize Ulaşın</h3>
+        <ul>
+          <li><a href="iletisim.html">İletişim Bilgileri</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="menu-footer">
+      <!-- <span class="up-menu-f2f"> Powered By F2F Bilişim Reklam ve Danışmanlık Hizmetleri</span> -->
+      <span data-translate="menu.followUs">Bizi Takip Edin</span>
+      <div class="social-icons-menu">
+        <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slider Start -->
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+    </div> -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="video-container"></div>
+        <!-- <video class="desktop-video" autoplay loop muted playsinline>
+          <source src="./videos/lesexpo-video-masaustu.mp4" type="video/mp4">
+        </video>
+        <video class="mobile-video" autoplay loop muted playsinline>
+          <source src="./videos/lesexpo-turkce-mobil.mp4" type="video/mp4">
+        </video> -->
+        <img src="./images/meexx foto 7.jpg" class="d-block w-100 img-1 video-slide" alt="...">
+      </div>
+
+      <div class="hero-content">
+
+      </div>
+    </div>
+    <!-- <div class="carousel-item">
+      <img src="./images/meexx-foto-2.jpg" class="d-block w-100 img-1 video-slide" alt="...">
+    </div> -->
+  </div>
+  <!-- Fixed Stats Section -->
+  <div class="stats">
+    <h4>RAKAMLAR İLE MEEXX 2025</h4>
+    <div class="stat-item">
+      <h2>28.000</h2>
+      <span>m² alan</span>
+    </div>
+    <div class="stat-item">
+      <h2>3 Kıtadan</h2>
+      <span>ziyaretçi</span>
+    </div>
+  </div>
+  <!-- <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button> -->
+  </div>
+  <!-- Slider End -->
+
+  <!-- Section-1 Start -->
+  <div class="container-os">
+    <div class="main-content-os">
+      <div class="image-section-os">
+        <div class="image-container-os">
+          <img src="./images/meexx foto 4.jpg" alt="Endüstriyel robot ve otomasyon sistemleri">
+        </div>
+        <div class="image-container-os">
+          <img src="./images/meexx foto 5.jpg" alt="Modern fabrika üretim hattı">
+        </div>
+      </div>
+
+      <div class="content-section-os">
+        <div class="brand-tag-os">MEEXX</div>
+
+        <h1 class="main-title-os">Makinenin Kalbi Bu Fuarda Atıyor: MEEXX 2025!</h1>
+
+        <p class="description-os">
+          Yenilikçi teknolojilerin, endüstriyel devrimlerin ve ileri mühendisliğin buluşma noktası olan MEEXX Makine
+          Fuarı, sektöre yön veren firmaları ve profesyonelleri bir araya getirerek geleceğin üretim vizyonunu bugünden
+          inşa ediyor.
+        </p>
+
+        <a href="hakkimizda.html" class="cta-button-os">Daha Fazla Detay</a>
+      </div>
+    </div>
+  </div>
+  <!-- Section-2 -->
+  <div class="container-3">
+    <div class="content-wrapper-3">
+      <div class="text-content-3">
+        <h3 class="title-3">MEEXX 2025</h3>
+        <h1 class="heading-3">İmalat Endüstrisinin
+          Nabzı MEEXX'de
+          Atacak!</h1>
+        <p class="description-3"> Türkiye'nin üretim gücünün merkezlerinden Bursa, 2025
+          yılında bir kez daha yerli ve yabancı sanayicilerin buluşma
+          noktası oluyor. Makine teknolojileri sektöründe faaliyet
+          gösteren firmalar için eşsiz bir buluşma noktası olan
+          BURSA MEEXX 2025,<a href="hakkimizda.html" class="text-danger">Devamını oku...</a></p>
+        <a href="on-kayit-formu.html" class="button" target="_blank">
+          Yerinizi Ayırtın
+        </a>
+      </div>
+      <div class="image-content-3">
+        <img src="./images/foto mex 6.png" alt="LES-EXPO 2026">
+      </div>
+    </div>
+  </div>
+
+  <!-- Section-3 -->
+  <div class="container-cs">
+    <div class="header-cs">
+      <h1>Hızlı Erişim</h1>
+      <p>İhtiyacınız Olan Bilgilere Kolayca Ulaşın</p>
+    </div>
+
+    <div class="tabs-cs">
+      <div class="tab-cs active-cs" data-tab="fuar-katalogu">Fuar Kataloğu</div>
+      <div class="tab-cs" data-tab="ulasim-bilgileri">Ulaşım Bilgileri</div>
+      <div class="tab-cs" data-tab="ziyaretci-kaydi">Ziyaretçi Kaydı</div>
+    </div>
+
+    <!-- Fuar Kataloğu Content -->
+    <div class="content-section-cs active-cs" id="fuar-katalogu">
+      <div class="content-cs">
+        <div class="image-container-cs">
+          <img src="./images/katalog-tr.png" alt="AYMOD Fuar Kataloğu" class="content-image-cs">
+        </div>
+        <div class="info-panel-cs">
+          <h2>Fuar Kataloğu</h2>
+          <p>3 - 6 Aralık 2025 MEEXX MAKİNA FUARI Katılımcı Kataloğu. Bu katalogda, fuara katılan tüm firmaların
+            listesini, stand bilgilerini, ürünleri gruplarını, iletişim (e-posta ve telefon) bilgilerini bulabilirsiniz.
+          </p>
+
+          <div class="info-cards-cs">
+            <div class="info-card-cs">
+              <div class="icon-cs">🏢</div>
+              <h3>Firma Bilgileri</h3>
+              <p>Firmanın ürününü görüntüleyin</p>
+            </div>
+            <div class="info-card-cs">
+              <div class="icon-cs">📍</div>
+              <h3>Stand Bilgileri</h3>
+              <p>Hall ve stand numarasını öğrenin</p>
+            </div>
+            <div class="info-card-cs">
+              <div class="icon-cs">📞</div>
+              <h3>İletişim Bilgileri</h3>
+              <p>Telefon, e-posta ve web adresine ulaşın</p>
+            </div>
+            <div class="info-card-cs">
+              <div class="icon-cs">🛍️</div>
+              <h3>Ürün Grubu Bilgisi</h3>
+              <p>Sergilenecek ürünler hakkında bilgi edinin</p>
+            </div>
+          </div>
+
+          <a href="./images/katalog-tr.png" download class="detail-button-cs">Kataloğu İndir</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ulaşım Bilgileri Content -->
+    <div class="content-section-cs" id="ulasim-bilgileri">
+      <div class="content-cs">
+        <div class="image-container-cs">
+          <img src="./images/bfm-usgorsel.jpg" alt="Fuar Alanı Ulaşım" class="content-image-cs">
+        </div>
+        <div class="info-panel-cs">
+          <h2>Ulaşım Bilgileri</h2>
+          <p>Ziyaretçi sayfasında detaylı olarak fuar alanına gidiş için yol tarifleri, havalimanına olan uzaklıkları,
+            toplu taşıma ile ulaşım ayrıntıları, otopark bilgisi yer almaktadır.</p>
+
+          <div class="info-cards-cs">
+            <div class="info-card-cs">
+              <div class="icon-cs">🚗</div>
+              <h3>Yol Tarifleri</h3>
+              <p>Hangi güzergahlar kullanılabilir?</p>
+            </div>
+            <div class="info-card-cs">
+              <div class="icon-cs">✈️</div>
+              <h3>Hangi güzergahlar kullanılabilir?</h3>
+              <p>Havalimanlarına kaç km, kaç dakika...</p>
+            </div>
+            <div class="info-card-cs">
+              <div class="icon-cs">🚌</div>
+              <h3>Toplu Taşıma Bilgisi</h3>
+              <p>Toplu taşıma ile nasıl gelinir?</p>
+            </div>
+            <div class="info-card-cs">
+              <div class="icon-cs">🅿️</div>
+              <h3>Otopark Bilgisi</h3>
+              <p>Otopark alanları ve ödeme noktaları...</p>
+            </div>
+          </div>
+
+          <a href="ulasim.html" class="detail-button-cs">Detaylı Bilgi</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ziyaretçi Kaydı Content -->
+    <div class="content-section-cs" id="ziyaretci-kaydi">
+      <div class="content-cs">
+        <div class="image-container-cs">
+          <img src="./images/mock.jpg" alt="Ziyaretçi Kaydı" class="content-image-cs">
+        </div>
+        <div class="info-panel-cs">
+          <h2>Ziyaretçi Kaydı</h2>
+          <p>Fuara katılım için online ziyaretçi kaydı yapabilir, giriş biletinizi önceden alabilir ve fuar günlerinde
+            hızlı giriş imkanından yararlanabilirsiniz.</p>
+
+          <div class="info-cards-cs">
+            <div class="info-card-cs">
+              <div class="icon-cs">📝</div>
+              <h3>Online Kayıt</h3>
+              <p>Hızlı ve kolay kayıt işlemi</p>
+            </div>
+            <div class="info-card-cs">
+              <div class="icon-cs">🎫</div>
+              <h3>Dijital Bilet</h3>
+              <p>QR kodlu dijital biletinizi alın</p>
+            </div>
+            <div class="info-card-cs">
+              <div class="icon-cs">⚡</div>
+              <h3>Hızlı Giriş</h3>
+              <p>Kayıtlı ziyaretçiler için hızlı giriş</p>
+            </div>
+            <div class="info-card-cs">
+              <div class="icon-cs">📧</div>
+              <h3>Bilgilendirme</h3>
+              <p>Fuar güncellemeleri e-posta ile</p>
+            </div>
+          </div>
+
+          <a href="online-bilet.html" class="detail-button-cs">Kayıt Ol</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logo Slider -->
+  <div class="container-fluid logo-slider">
+    <div class="logo-slider-container">
+      <!-- First Slide -->
+      <div class="logo-slide">
+        <a href="https://www.btso.org.tr" class="logo-link" target="_blank">
+          <div class="logo-img-container">
+            <img src="./images/btso-logo.png" alt="YMB" class="logo-img-slider">
+          </div>
+          <div class="logo-text"></div>
+        </a>
+        <a href="https://www.mib.org.tr" class="logo-link" target="_blank">
+          <div class="logo-img-container">
+            <img src="./images/mib-logo.png" alt="KFA" class="logo-img-slider">
+          </div>
+          <div class="logo-text"></div>
+        </a>
+        <a href="https://bfm.webonalti.net" class="logo-link" target="_blank">
+          <div class="logo-img-container">
+            <img src="./images/logo-beyaz.png" alt="TETSİAD" class="logo-img-slider">
+          </div>
+          <div class="logo-text"></div>
+        </a>
+      </div>
+
+      <!-- Second Slide (duplicate for seamless looping) -->
+      <div class="logo-slide">
+        <a href="https://www.btso.org.tr" class="logo-link" target="_blank">
+          <div class="logo-img-container">
+            <img src="./images/btso-logo.png" alt="YMB" class="logo-img-slider">
+          </div>
+          <div class="logo-text"></div>
+        </a>
+        <a href="https://www.mib.org.tr" class="logo-link" target="_blank">
+          <div class="logo-img-container">
+            <img src="./images/mib-logo.png" alt="KFA" class="logo-img-slider">
+          </div>
+          <div class="logo-text"></div>
+        </a>
+        <a href="https://bfm.webonalti.net" class="logo-link" target="_blank">
+          <div class="logo-img-container">
+            <img src="./images/logo-beyaz.png" alt="TETSİAD" class="logo-img-slider">
+          </div>
+          <div class="logo-text"></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- countdown -->
+  <div class="countdown-container">
+    <div class="countdown-timer" id="countdownTimer">
+      <div class="countdown-header">
+        <div class="countdown-title">
+          <span class="gear-icon">⚙️</span>
+          MEEXX 2025
+        </div>
+        <div class="countdown-call-to-action">Yerinizi Ayırtın!</div>
+      </div>
+
+      <div class="fair-info">
+        <div class="fair-info-text">
+          📅 3-6 Aralık 2025<br>
+          📍 Bursa Fuar Merkezi<br>
+          🕘 09:00 - 18:00
+        </div>
+      </div>
+
+      <div class="countdown-display">
+        <div class="time-unit">
+          <span class="time-number" id="days">00</span>
+          <span class="time-label">Gün</span>
+        </div>
+        <div class="time-unit">
+          <span class="time-number" id="hours">00</span>
+          <span class="time-label">Saat</span>
+        </div>
+        <div class="time-unit">
+          <span class="time-number" id="minutes">00</span>
+          <span class="time-label">Dakika</span>
+        </div>
+        <div class="time-unit">
+          <span class="time-number" id="seconds">00</span>
+          <span class="time-label">Saniye</span>
+        </div>
+      </div>
+
+      <div class="countdown-buttons">
+        <a href="on-kayit-formu.html" class="countdown-btn btn-stant" id="stantBtn">
+          🏢 Stant Talebi
+        </a>
+        <a href="online-bilet.html" class="countdown-btn btn-bilet" id="biletBtn">
+          🎫 Online Bilet
+        </a>
+      </div>
+
+      <div class="countdown-footer">
+        <div class="event-description">Türkiye'nin En Kapsamlı Makine Fuarı</div>
+      </div>
+      <!-- Sağ üst köşeye sade gizle butonu -->
+      <button class="countdown-hide-btn" id="countdownHideBtn" title="Gizle">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polyline points="10,7 17,14 10,21" fill="none" stroke="#e53e3e" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <!-- Countdown gizliyken sağ ortada sade geri getir butonu -->
+  <button class="countdown-restore-fab" id="countdownRestoreFab" title="Geri Getir">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="23,10 13,18 23,26" fill="none" stroke="#e53e3e" stroke-width="3" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  <!-- Footer Start -->
+  <footer class="footer">
+    <div class="footer-content mt-3">
+      <div class="footer-left">
+        <div class="logo-footer">
+          <img src="./images/meexx logo beyaz.png" alt="">
+        </div>
+        <p class="address">İLETİŞİM BİLGİLERİ</p>
+        <div class="contact-info" style="font-size: 14px;">
+            <i class="fas fa-phone"></i> <span>0546 458 70 16</span>
+          </p>
+            <i class="fas fa-phone"></i> <span>0546 458 01 53</span>
+          </p>
+            <i class="fas fa-phone"></i> <span>0549 458 01 09</span>
+          </p>
+            <i class="fas fa-phone"></i> <span>0546 458 01 77</span>
+          </p>
+          <p><i class="fas fa-envelope"></i><span>info@meeexx.com.tr
+            </span></p>
+          <p><i class="fas fa-envelope"></i><span>meexx@kfa.com.tr </span></p>
+        </div>
+        <h4 class="follow-us">Bizi Takip Edin</h4>
+        <div class="social-icons-footer">
+          <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>MEEXX</h3>
+            <ul>
+              <li><a href="hakkimizda.html">Hakkında</a></li>
+              <li><a href="fuar-kunyesi.html">Fuar Künyesi</a></li>
+              <li><a href="fuar-alani.html">Fuar Alanı</a></li>
+              <li><a href="ulasim.html">Nasıl Ulaşırım ?</a></li>
+              <li><a href="fuar-sonuc-raporu.html">Fuar Sonuç Raporu</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>KATILIMCI</h3>
+            <ul>
+              <li><a href="katilimci-profili.html">Katılımcı Profili</a></li>
+              <li><a href="on-kayit-formu.html">Ön Kayıt Formu</a></li>
+              <li><a href="katilimci-profili.html">Neden Katılmalısınız ?</a></li>
+              <li><a href="#">Katılımcı Listesi 2026</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>ZİYARETÇİ</h3>
+            <ul>
+              <li><a href="ziyaretci-profili.html">Ziyaretçi Profili</a></li>
+              <li><a href="neden-ziyaret-etmelisiniz.html">Neden Ziyaret Etmelisiniz?</a></li>
+              <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>ETKİNLİKLER</h3>
+            <ul>
+              <li><a href="b2b-toplantıları.html">B2B Toplantıları</a></li>
+              <li><a href="#">Haberler</a></li>
+              <li><a href="#">MEEXX Insights</a></li>
+              <li><a href="#">MEEXX Experiences</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+
+  </script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+    integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"
+    integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  <script src="popup.js"></script>
+  <script src="stant-talebi.js"></script>
+  <script src="main.js"></script>
+  <script src="index.js"></script>
+  <script src="kvkk.js"></script>
+</body>
+
+</html>
