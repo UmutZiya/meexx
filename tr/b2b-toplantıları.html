@@ -9,6 +9,7 @@
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <!-- Css -->
   <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/kvkk.css">
   <link rel="stylesheet" href="./assets/b2b-toplantilari.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -485,6 +486,29 @@
       </div>
     </footer>
 
+    <!-- Footer Alt Satır ve Modal Başlangıç -->
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-content">
+        <div class="footer-bottom-left">
+          <span>Copyright © 2025 MEEXX Her Hakkı Saklıdır</span>
+        </div>
+        <div class="footer-bottom-right">
+          <a href="#" class="footer-link" data-modal="kvkk">KVKK</a> •
+          <a href="#" class="footer-link" data-modal="gizlilik">GİZLİLİK SÖZLEŞMESİ</a> •
+          <a href="#" class="footer-link" data-modal="kullanici">KULLANICI SÖZLEŞMESİ</a>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Yapısı -->
+    <div id="footerModal" class="footer-modal">
+      <div class="footer-modal-content">
+        <span class="footer-modal-close">&times;</span>
+        <div id="footer-modal-title" class="footer-modal-title"></div>
+        <div id="footer-modal-body" class="footer-modal-body"></div>
+      </div>
+    </div>
+    <!-- Footer Alt Satır ve Modal Bitiş -->
+
     <script>
 
 
@@ -501,6 +525,7 @@
     <!-- Custom Scripts -->
     <script src="hakkimizda.js"></script>
     <script src="main.js"></script>
+    <script src="kvkk.js"></script>
 
 </body>
 

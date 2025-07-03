@@ -12,10 +12,9 @@
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <!-- Css -->
   <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/kvkk.css">
   <link rel="stylesheet" href="./assets/index.css">
   <link rel="stylesheet" href="./assets/pop-up.css">
-  <link rel="stylesheet" href="./assets/kvkk.css">
-
   <!-- Font Awesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +24,8 @@
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> <link rel="icon" type="favicon" href="images/meex-favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="icon" type="favicon" href="images/meex-favicon.png">
 
   <link rel="icon" type="favicon" href="images/meex-favicon.png">
   <style>
@@ -67,7 +67,7 @@
               <li><a href="katilimci-profili.html">Katılımcı Profili</a></li>
               <li><a href="on-kayit-formu.html">Ön Kayıt Formu</a></li>
               <li><a href="neden-katilmalisiniz.html">Neden Katılmalısınız ?</a></li>
-              <li><a href="#">Katılımcı Listesi 2026</a></li>
+              <li><a href="#">Katılımcı Listesi 2025</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -117,7 +117,7 @@
             </button>
             <div class="lang-dropdown-menu" id="langDropdownMenu">
               <a href="index.html" class="lang-option" data-lang="tr">TR</a>
-              <a href="" class="lang-option" data-lang="en">EN</a>
+              <a href="../en/home.html" class="lang-option" data-lang="en">EN</a>
             </div>
           </div>
           <!-- Dil Dropdown Bitiş -->
@@ -591,13 +591,13 @@
         </div>
         <p class="address">İLETİŞİM BİLGİLERİ</p>
         <div class="contact-info" style="font-size: 14px;">
-            <i class="fas fa-phone"></i> <span>0546 458 70 16</span>
+          <i class="fas fa-phone"></i> <span>0546 458 70 16</span>
           </p>
-            <i class="fas fa-phone"></i> <span>0546 458 01 53</span>
+          <i class="fas fa-phone"></i> <span>0546 458 01 53</span>
           </p>
-            <i class="fas fa-phone"></i> <span>0549 458 01 09</span>
+          <i class="fas fa-phone"></i> <span>0549 458 01 09</span>
           </p>
-            <i class="fas fa-phone"></i> <span>0546 458 01 77</span>
+          <i class="fas fa-phone"></i> <span>0546 458 01 77</span>
           </p>
           <p><i class="fas fa-envelope"></i><span>info@meeexx.com.tr
             </span></p>
@@ -658,6 +658,29 @@
       </div>
     </div>
   </footer>
+  <!-- Footer Alt Satır ve Modal Başlangıç -->
+  <div class="footer-bottom-bar">
+    <div class="footer-bottom-content">
+      <div class="footer-bottom-left">
+        <span>Copyright © 2025 MEEXX Her Hakkı Saklıdır</span>
+      </div>
+      <div class="footer-bottom-right">
+        <a href="#" class="footer-link" data-modal="kvkk">KVKK</a> •
+        <a href="#" class="footer-link" data-modal="gizlilik">GİZLİLİK SÖZLEŞMESİ</a> •
+        <a href="#" class="footer-link" data-modal="kullanici">KULLANICI SÖZLEŞMESİ</a>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Yapısı -->
+  <div id="footerModal" class="footer-modal">
+    <div class="footer-modal-content">
+      <span class="footer-modal-close">&times;</span>
+      <div id="footer-modal-title" class="footer-modal-title"></div>
+      <div id="footer-modal-body" class="footer-modal-body"></div>
+    </div>
+  </div>
+  <!-- Footer Alt Satır ve Modal Bitiş -->
+
   <script>
 
   </script>
@@ -677,10 +700,10 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
+  <script src="index.js"></script>
+  <script src="main.js"></script>
   <script src="popup.js"></script>
   <script src="stant-talebi.js"></script>
-  <script src="main.js"></script>
-  <script src="index.js"></script>
   <script src="kvkk.js"></script>
 </body>
 

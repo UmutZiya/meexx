@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <!-- Css -->
-    <link rel="stylesheet" href="../tr/assets/style.css">
+    <link rel="stylesheet" href="../tr/assets/style.css">  <link rel="stylesheet" href="../tr/assets/kvkk.css">
     <link rel="stylesheet" href="../tr/assets/on-kayit-formu.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> <link rel="icon" type="favicon" href="images/meex-favicon.png">
 
     <link rel="icon" type="image" href="./images/lesexpo-favicon.png">
+    <!-- Pikaday CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
     <style>
         .banner {
             position: relative;
@@ -45,143 +47,198 @@
 
 <body>
     <!-- Header Start -->
-    <header class="main-header">
-        <div class="container-navbar">
-            <a href="home.html" class="logo mt-5">
-                <!-- Gerçek logo dosyanızın yolunu buraya ekleyin -->
-                <img src="./images/meexx logo.png" class="" alt="">
-            </a>
+  <header class="main-header">
+    <div class="container-navbar">
+      <a href="home.html" class="logo mt-5">
+        <!-- Gerçek logo dosyanızın yolunu buraya ekleyin -->
+        <img src="./images/meexx logo.png" class="" alt="">
+      </a>
 
-            <nav class="main-nav">
-                <ul class="">
-                    <!-- nav-toggle-button class'ı menüyü açar -->
-                    <li><a href="#" class="nav-toggle-button" data-translate="nav.discoverBFM">LES-EXPO<i
-                                class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="#" class="nav-toggle-button" data-translate="nav.organizeFair">Exhibitor<i
-                                class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="#" class="nav-toggle-button" data-translate="nav.visitBFM">Visitor<i
-                                class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="#" class="nav-toggle-button" data-translate="nav.events">Events<i
-                                class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="#" class="nav-toggle-button" data-translate="nav.events">Media<i
-                                class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="contact.html" data-translate="nav.contactUs">Contact</a></li>
-                </ul>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">MEEXX <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="exhibiton-identification.html">Exhibition Identification</a></li>
+              <li><a href="exhibition-area.html">Exhibition Area</a></li>
+              <li><a href="how-to-reach.html">How To Reach</a></li>
+              <li><a href="#">Exhibition Post Report</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Exhibitor <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="exhibitor-profile.html">Exhibitor Profile</a></li>
+              <li><a href="pre-registration-form.html">Pre-Registration Form</a></li>
+              <li><a href="why-exhibit.html">Why Exhibit ?</a></li>
+              <li><a href="#">Exhibitor List 2025</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Visitor<i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="visitor-profile.html">Visitor Profile</a></li>
+              <li><a href="why-visit.html">Why Should You Visit ?</a></li>
+              <li><a href="faq.html">Frequently Asked Questions</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Events<i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="b2b-meeting.html">B2B Meetings</a></li>
+              <li><a href="#">MEEXX Insights</a></li>
+              <li><a href="#">MEEXX Experience</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Media<i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="media-logo.html">Logo</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Corporate Identity</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
 
-            </nav>
-
-            <div class="header-actions">
-                <div class="lang-switch mt-4 ms-4">
-                    <div class="header-search">
-                        <input type="text" class="header-search-input" placeholder="Ara...">
-                        <button class="header-search-button">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                    <a href="online-ticket.html" class="trigger-button">Onlıne Tıcket</a>
-                    <a href="../tr/on-kayit-formu.html" class="" data-lang="tr" data-translate="lang.tr">TR</a> | <a
-                        href="#" class="active" data-lang="en" data-translate="lang.en">EN</a>
-                </div>
-                <!-- nav-toggle-button class'ı menüyü açar -->
-
-            </div>
-
-            <!-- Mobil için Hamburger İkonu (nav-toggle-button class'ı menüyü açar/kapatır) -->
-            <button class="mobile-menu-toggle nav-toggle-button" data-translate-aria-label="menu.toggleAriaLabel"
-                aria-label="Menüyü Aç/Kapat">
-                <i class="fas fa-bars"></i>
+      <div class="header-actions">
+        <div class="lang-switch mt-4">
+          <div class="header-search">
+            <input type="text" class="header-search-input" placeholder="Search...">
+            <button class="header-search-button">
+              <i class="fas fa-search"></i>
             </button>
+          </div>
+          <a href="online-ticket.html" class="trigger-button">ONLINE TICKET</a>
+          <!-- Dil Dropdown Başlangıç -->
+          <div class="lang-dropdown">
+            <button class="lang-dropdown-toggle" id="langDropdownBtn">
+              <span id="selectedLang">TR</span> <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="lang-dropdown-menu" id="langDropdownMenu">
+              <a href="../tr/on-kayit-formu.html" class="lang-option" data-lang="tr">TR</a>
+              <a href="#" class="lang-option" data-lang="en">EN</a>
+            </div>
+          </div>
+          <!-- Dil Dropdown Bitiş -->
         </div>
-    </header>
-    <!-- Header End -->
-    <!-- Tam Ekran Overlay Menü -->
-    <div class="fullscreen-menu">
-        <div class="menu-header">
-            <a href="home.html" class="logo-menu">
-                <!-- Menüdeki logo -->
-                <img src="./images/lesexpologo-inter.png" alt="Rising City & Yapı ve Yaşam Fuarı Logo" class="fs-2">
-            </a>
-
-            <div class="menu-header-actions-fs">
-                <div class="lang-switch">
-                    <a href="online-ticket.html" class="trigger-button">Onlıne Tıcket</a>
-                    <a href="../tr/on-kayit-formu.html" class="" data-lang="tr" data-translate="lang.tr">TR</a> | <a
-                        href="#" class="active" data-lang="en" data-translate="lang.en">EN</a>
-                </div>
-                <button class="close-menu-btn" aria-label="Menüyü Kapat">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
+        <div class="mobile-actions">
+          <button class="search-toggle-button" aria-label="Arama">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="mobile-menu-toggle nav-toggle-button" data-translate-aria-label="menu.toggleAriaLabel"
+            aria-label="Menüyü Aç/Kapat">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
+      </div>
 
-        <div class="menu-content">
-            <div class="menu-column">
-                <!-- Başlığa tıklanınca menüyü kapatmak için nav-toggle-button ekledik -->
-                <h3 class="nav-toggle-button">MEEXX</h3>
-                <ul>
-                    <li><a href="about-us.html">About</a></li>
-                    <li><a href="exhibiton-identification.html">Exhibition Identification</a></li>
-                    <li><a href="exhibition-area.html">Exhibition Area</a></li>
-                    <li><a href="how-to-reach.html">How To Reach?</a></li>
-                    <li><a href="show-report.html">Post Show Report</a></li>
-                </ul>
-            </div>
-            <div class="menu-column">
-                <h3 class="nav-toggle-button">Exhibitor</h3>
-                <ul>
-                    <li><a href="exhibitor-profile.html">Exhibitor Profile</a></li>
-                    <li><a href="pre-registration-form.html">Pre-Registration Form</a></li>
-                    <li><a href="why-exhibit.html">Why Should You Exhibit?</a></li>
-                    <li><a href="exhibitor-list.html">2026 Exhibitor List</a></li>
-                </ul>
-            </div>
-            <div class="menu-column">
-                <h3 class="nav-toggle-button" data-translate="menu.visitBFM">Visitor</h3>
-                <ul>
-                    <li><a href="visitor-profile.html">Visitor Profile</a></li>
-                    <li><a href="why-visit.html">Why Should You Visit?</a></li>
-                    <li><a href="faq.html">Frequently Asked Questions</a></li>
-                </ul>
-            </div>
-            <div class="menu-column">
-                <h3 class="nav-toggle-button">Events</h3>
-                <ul>
-                    <li><a href="b2b-meeting.html">B2B Meetings</a></li>
-                    <li><a href="les-insights.html">LES Insights</a></li>
-                    <li><a href="les-experiences.html">LES experiences</a></li>
-                </ul>
-            </div>
-            <div class="menu-column">
-                <h3 class="nav-toggle-button">Media</h3>
-                <ul>
-                    <li><a href="media-logo.html">Logo</a></li>
-                    <li><a href="all-news.html">News</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Corporate Identity</a></li>
-                </ul>
-            </div>
-
-            <div class="menu-column">
-                <h3 class="nav-toggle-button">Contact Us</h3>
-                <ul>
-                    <li><a href="contact.html">Contact Information</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="menu-footer">
-            <!-- <span class="up-menu-f2f"> Powered By F2F Bilişim Reklam ve Danışmanlık Hizmetleri</span> -->
-            <span data-translate="menu.followUs">Follow us</span>
-            <div class="social-icons-menu">
-                <a href="https://www.facebook.com/lesexpofair" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://x.com/lesexpofair" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.instagram.com/lesexpofair/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/@lesexpofair" target="_blank"><i class="fab fa-youtube"></i></a>
-               <a href="https://www.linkedin.com/company/les-expo-yük-mühendisliği-hizmetleri-fuarı/" target="_blank"><i
-                                class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
     </div>
+  </header>
+  <!-- Header End -->
+  <!-- Mobil Arama Çubuğu -->
+  <div class="search-overlay">
+    <div class="search-container">
+      <div class="search-content">
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Tam Ekran Overlay Menü -->
+  <div class="fullscreen-menu">
+    <div class="menu-header">
+      <a href="home.html" class="logo-menu">
+        <!-- Menüdeki logo -->
+        <img src="./images/meexx logo.png" alt="" class="fs-2">
+      </a>
+
+      <div class="menu-header-actions-fs">
+        <div class="lang-switch">
+          <a href="online-ticket.html" class="trigger-button">ONLINE TICKET</a>
+          <a href="../tr/on-kayit-formu.html" class="active" data-lang="tr" data-translate="lang.tr">TR</a> | <a href="#"
+            class="" data-lang="en" data-translate="lang.en">EN</a>
+        </div>
+        <button class="close-menu-btn" aria-label="Menüyü Kapat">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="menu-content">
+      <div class="menu-column">
+        <!-- Başlığa tıklanınca menüyü kapatmak için nav-toggle-button ekledik -->
+        <h3 class="nav-toggle-button">MEEXX</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="exhibiton-identification.html">Exhibition Identification</a></li>
+          <li><a href="exhibition-area.html">Exhibition Area</a></li>
+          <li><a href="how-to-reach.html">How To Reach</a></li>
+          <li><a href="#">Exhibition Post Report</a></li>
+        </ul>
+      </div>
+      <div class="menu-column">
+        <h3 class="nav-toggle-button">Exhibitor</h3>
+        <ul>
+          <li><a href="exhibitor-profile.html">Exhibitor Profile</a></li>
+          <li><a href="pre-registration-form.html">Pre-Registration Form</a></li>
+          <li><a href="why-exhibit.html">Why Exhibit ?</a></li>
+          <li><a href="#">Exhibitor List 2025</a></li>
+        </ul>
+      </div>
+      <div class="menu-column">
+        <h3 class="nav-toggle-button" data-translate="menu.visitBFM">Visitor</h3>
+        <ul>
+          <li><a href="visitor-profile.html">Visitor Profile</a></li>
+          <li><a href="why-visit.html">Why Should You Visit ?</a></li>
+          <li><a href="faq.html">Frequently Asked Questions</a></li>
+        </ul>
+      </div>
+      <div class="menu-column">
+        <h3 class="nav-toggle-button">Events</h3>
+        <ul>
+          <li><a href="b2b-meeting.html">B2B Meetings</a></li>
+          <li><a href="#">MEEXX Insights</a></li>
+          <li><a href="#">MEEXX Experience</a></li>
+        </ul>
+      </div>
+      <div class="menu-column">
+        <h3 class="nav-toggle-button">Media</h3>
+        <ul>
+          <li><a href="media-logo.html">Logo</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Corporate Identity</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-column">
+        <h3 class="nav-toggle-button">Contact Us</h3>
+        <ul>
+          <li><a href="contact.html">Contact Information</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="menu-footer">
+      <!-- <span class="up-menu-f2f"> Powered By F2F Bilişim Reklam ve Danışmanlık Hizmetleri</span> -->
+      <span data-translate="menu.followUs">Follow Us</span>
+      <div class="social-icons-menu">
+        <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
 
     <div class="banner">
         <div class="banner-yazi">MEEXX</div>
@@ -310,14 +367,48 @@
 
                     <!-- Sixth Row -->
                     <div class="row mb-4">
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="kurulusTarihi">Establishment date of your company *</label>
-                                <input type="date" class="form-control" id="kurulusTarihi" placeholder="GG-AA-YYYY"
-                                    required>
-                            </div>
-                        </div>
-                    </div>
+                      <div class="col-md-4">
+                          <div class="form-group">
+                              <label>Would you like us to visit your company? *</label>
+                              <div class="radio-group">
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="ziyaret" id="ziyaretEvet"
+                                          value="evet" required>
+                                      <label class="form-check-label" for="ziyaretEvet">Evet</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="ziyaret" id="ziyaretHayir"
+                                          value="hayir">
+                                      <label class="form-check-label" for="ziyaretHayir">Hayır</label>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="form-group">
+                              <label>Detailed Information About Fair Participation *</label>
+                              <div class="radio-group-form">
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="katilim"
+                                          id="katilimIstiyorum" value="istiyorum" required>
+                                      <label class="form-check-label" for="katilimIstiyorum">I want</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="katilim"
+                                          id="katilimIstemiyorum" value="istemiyorum">
+                                      <label class="form-check-label" for="katilimIstemiyorum">I don't want</label>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="form-group">
+                              <label for="kurulusTarihi">Establishment Date of Your Company *</label>
+                              <input type="text" class="form-control" id="kurulusTarihi" placeholder="GG-AA-YYYY"
+                                  required autocomplete="off">
+                          </div>
+                      </div>
+                  </div>
 
                     <!-- Seventh Row -->
                     <div class="row mb-4">
@@ -439,25 +530,101 @@
                         </div>
                     </div> -->
 
-                    <!-- Terms and Captcha -->
-                    <div class="form-section-ob">
-                        <div class="form-group-ob checkbox-group-ob">
-                            <input type="checkbox" id="terms" name="terms" required>
-                            <label for="terms">I have read and accept the information text regarding the Information
-                                Text and the Use and Protection of Personal Data. <span
-                                    class="required-ob">*</span></label>
-                        </div>
-                    </div>
-
+                    <!-- Terms and Modal Section -->
                     <div class="row mb-4">
-
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="KODU GİRİNİZ" required>
-                                <button class="btn btn-primary" type="submit">Book Your Place Now</button>
-                            </div>
+                      <div class="col-12">
+                        <div class="onay-kutusu-okf-1">
+                          <label for="acceptPDPL" id="pdplLabel" style="cursor:pointer;">
+                            <input type="checkbox" id="acceptPDPL" style="pointer-events:none;">
+                            I have read and accept the Information Text regarding the Use and Protection of Personal Data.
+                          </label>
+                          <button class="btn-okf-1" id="formSubmitBtn" type="submit" disabled>Book Your Place Now</button>
                         </div>
+                      </div>
                     </div>
+
+                    <!-- PDPL Modal -->
+                    <div id="pdplModal" class="footer-modal" style="display:none;">
+                      <div class="footer-modal-content">
+                        <span class="footer-modal-close" id="pdplModalClose">&times;</span>
+                        <div id="pdpl-modal-title" class="footer-modal-title">Information Text (PDPL)</div>
+                        <div id="pdpl-modal-body" class="footer-modal-body"></div>
+                        <div style="margin-top:20px; text-align:right;">
+                          <button id="pdplModalCloseBtn" class="btn btn-secondary" type="button">Close</button>
+                          <button id="pdplModalAcceptBtn" class="btn btn-primary" type="button">I Accept</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                      var pdplModalBody = document.getElementById('pdpl-modal-body');
+                      var pdplCheckbox = document.getElementById('acceptPDPL');
+                      var pdplLabel = document.getElementById('pdplLabel');
+                      var formSubmitBtn = document.getElementById('formSubmitBtn');
+                      var pdplModal = document.getElementById('pdplModal');
+                      var pdplModalClose = document.getElementById('pdplModalClose');
+                      var pdplModalCloseBtn = document.getElementById('pdplModalCloseBtn');
+                      var pdplModalAcceptBtn = document.getElementById('pdplModalAcceptBtn');
+
+                      // PDPL text (fill with your actual text)
+                      pdplModalBody.innerHTML = `
+                        <p>This is where the Information Text regarding the Use and Protection of Personal Data (PDPL) will appear. Please provide the actual text here.</p>
+                      `;
+
+                      // Button disabled by default
+                      formSubmitBtn.disabled = true;
+
+                      // Prevent direct checkbox click
+                      pdplCheckbox.addEventListener('click', function(e) {
+                        e.preventDefault();
+                      });
+
+                      // Label click opens modal if not checked, unchecks if already checked
+                      pdplLabel.addEventListener('click', function(e) {
+                        if (!pdplCheckbox.checked) {
+                          pdplModal.style.display = 'block';
+                        } else {
+                          pdplCheckbox.checked = false;
+                          formSubmitBtn.disabled = true;
+                        }
+                      });
+
+                      // Modal close (X or Close)
+                      pdplModalClose.addEventListener('click', function() {
+                        pdplModal.style.display = 'none';
+                      });
+                      pdplModalCloseBtn.addEventListener('click', function() {
+                        pdplModal.style.display = 'none';
+                      });
+
+                      // Accept in modal
+                      pdplModalAcceptBtn.addEventListener('click', function() {
+                        pdplCheckbox.checked = true;
+                        formSubmitBtn.disabled = false;
+                        pdplModal.style.display = 'none';
+                      });
+
+                      // If checkbox is unchecked, disable button
+                      pdplCheckbox.addEventListener('change', function() {
+                        if (!pdplCheckbox.checked) {
+                          formSubmitBtn.disabled = true;
+                        }
+                      });
+
+                      // Prevent submit if not accepted
+                      var form = document.querySelector('form');
+                      if(form) {
+                        form.addEventListener('submit', function(e) {
+                          if (!pdplCheckbox.checked) {
+                            e.preventDefault();
+                            alert('You must accept the Information Text regarding the Use and Protection of Personal Data to submit the form.');
+                          }
+                        });
+                      }
+                    });
+                    </script>
+
                 </form>
             </div>
         </div>
@@ -512,79 +679,103 @@
         </div>
 
         <!-- Footer Start -->
-        <footer class="footer">
-            <div class="footer-content mt-3">
-                <div class="footer-left">
-                    <div class="logo-footer">
-                        <img src="./images/lesexpologo-footer.png" alt="">
-                    </div>
-                    <p class="address">CONTACT INFORMATION</p>
-                    <div class="contact-info">
-                        <p><i class="fas fa-phone"></i><span>+90 549 458 56 10</span></p>
-                        <p><i class="fas fa-phone"></i><span>+90 546 458 77 16</span></p>
-                        <p><i class="fas fa-phone"></i><span>+90 549 458 01 34</span></p>
-                        <p><i class="fas fa-envelope"></i><span>info@les-expo.com</span></p>
-                        <p><i class="fas fa-envelope"></i><span>lesexpo@kfa.com.tr</span></p>
-                    </div>
-                    <h4 class="follow-us">Follow us</h4>
-                    <div class="social-icons-footer">
-                        <a href="https://www.facebook.com/lesexpofair" target="_blank"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="https://x.com/lesexpofair" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="https://www.instagram.com/lesexpofair/" target="_blank"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@lesexpofair" target="_blank"><i
-                                class="fab fa-youtube"></i></a>
-                        <a href="https://www.linkedin.com/company/les-expo-yük-mühendisliği-hizmetleri-fuarı/" target="_blank"><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
+        <!-- Footer Start -->
+  <footer class="footer">
+    <div class="footer-content mt-3">
+      <div class="footer-left">
+        <div class="logo-footer">
+          <img src="./images/meexx logo beyaz.png" alt="">
+        </div>
+        <p class="address">CONTACT INFORMATION</p>
+        <div class="contact-info" style="font-size: 14px;">
+          <i class="fas fa-phone"></i> <span>0546 458 70 16</span>
+          </p>
+          <i class="fas fa-phone"></i> <span>0546 458 01 53</span>
+          </p>
+          <i class="fas fa-phone"></i> <span>0549 458 01 09</span>
+          </p>
+          <i class="fas fa-phone"></i> <span>0546 458 01 77</span>
+          </p>
+          <p><i class="fas fa-envelope"></i><span>info@meeexx.com.tr
+            </span></p>
+          <p><i class="fas fa-envelope"></i><span>meexx@kfa.com.tr </span></p>
+        </div>
+        <h4 class="follow-us">Follow us</h4>
+        <div class="social-icons-footer">
+          <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
 
-                <div class="footer-right">
-                    <div class="footer-links">
-                        <div class="footer-column">
-                            <h3>LES-EXPO</h3>
-                            <ul>
-                                <li><a href="about-us.html">About</a></li>
-                                <li><a href="exhibiton-identification.html">Exhibiton Identification</a></li>
-                                <li><a href="exhibition-area.html">Exhibiton Area</a></li>
-                                <li><a href="how-to-reach.html">How To Reach?</a></li>
-                                <li><a href="show-report.html">Post Show Report</a></li>
-                            </ul>
-                        </div>
+      <div class="footer-right">
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>MEEXX</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="exhibiton-identification.html">Exhibition Identification</a></li>
+              <li><a href="exhibition-area.html">Exhibition Area</a></li>
+              <li><a href="how-to-reach.html">How To Reach</a></li>
+              <li><a href="#">Exhibition Post Report</a></li>
+            </ul>
+          </div>
 
-                        <div class="footer-column">
-                            <h3>Exhibitor</h3>
-                            <ul>
-                                <li><a href="exhibitor-profile.html">Exhibitor Profile</a></li>
-                                <li><a href="pre-registration-form.html">Pre-Registration Form</a></li>
-                                <li><a href="why-exhibit.html">Why Should You Exhibit</a></li>
-                                <li><a href="exhibitor-list.html">2026 Exhibitor List</a></li>
-                            </ul>
-                        </div>
+          <div class="footer-column">
+            <h3>EXHIBITORS</h3>
+            <ul>
+              <li><a href="exhibitor-profile.html">Exhibitor Profile</a></li>
+              <li><a href="pre-registration-form.html">Pre-Registration Form</a></li>
+              <li><a href="why-exhibit.html">Why Exhibit ?</a></li>
+              <li><a href="#">Exhibitor List 2025</a></li>
+            </ul>
+          </div>
 
-                        <div class="footer-column">
-                            <h3>Visitor</h3>
-                            <ul>
-                                <li><a href="visitor-profile.html">Visitor Profile</a></li>
-                                <li><a href="why-visit.html">Why Should You Visit?</a></li>
-                                <li><a href="faq.html">Frequently Asked Questions</a></li>
-                            </ul>
-                        </div>
+          <div class="footer-column">
+            <h3>VISITORS</h3>
+            <ul>
+              <li><a href="visitor-profile.html">Visitor Profile</a></li>
+              <li><a href="why-visit.html">Why Should You Visit ?</a></li>
+              <li><a href="faq.html">Frequently Asked Questions</a></li>
+            </ul>
+          </div>
 
-                        <div class="footer-column">
-                            <h3>Events</h3>
-                            <ul>
-                                <li><a href="b2b-meeting.html">B2B Toplantıları</a></li>
-                                <li><a href="all-news.html">Haberler</a></li>
-                                <li><a href="les-insights.html">LES Insights</a></li>
-                                <li><a href="les-experiences.html">LES Experiences</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+          <div class="footer-column">
+            <h3>EVENTS</h3>
+            <ul>
+              <li><a href="b2b-meeting.html">B2B Meetings</a></li>
+              <li><a href="#">MEEXX Insights</a></li>
+              <li><a href="#">MEEXX Experience</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer Alt Satır ve Modal Başlangıç -->
+  <div class="footer-bottom-bar">
+    <div class="footer-bottom-content">
+      <div class="footer-bottom-left">
+        <span>Copyright © 2025 MEEXX All Rights Reserved</span>
+      </div>
+      <div class="footer-bottom-right">
+        <a href="#" class="footer-link" data-modal="kvkk">PDPL</a> •
+        <a href="#" class="footer-link" data-modal="gizlilik">PRIVACY AGREEMENT</a> •
+        <a href="#" class="footer-link" data-modal="kullanici">USER AGREEMENT</a>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Yapısı -->
+  <div id="footerModal" class="footer-modal">
+    <div class="footer-modal-content">
+      <span class="footer-modal-close">&times;</span>
+      <div id="footer-modal-title" class="footer-modal-title"></div>
+      <div id="footer-modal-body" class="footer-modal-body"></div>
+    </div>
+  </div>
+  <!-- Footer Alt Satır ve Modal Bitiş -->
 
         <script>
             const buttons = document.querySelectorAll('#pagination .page-button');
@@ -626,7 +817,29 @@
 
         <!-- Custom Scripts -->
         <script src="../tr/on-kayit-formu.js"></script>
-        <script src="../tr/main.js"></script>
+        <script src="../tr/main.js"></script> <script src="kvkk-en.js"></script>
+        <!-- Pikaday JS -->
+        <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+        <script>
+          var picker = new Pikaday({
+            field: document.getElementById('kurulusTarihi'),
+            format: 'DD-MM-YYYY',
+            maxDate: new Date(),
+            i18n: {
+              previousMonth : 'Previous Month',
+              nextMonth     : 'Next Month',
+              months        : ['January','February','March','April','May','June','July','August','September','October','November','December'],
+              weekdays      : ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+              weekdaysShort : ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+            },
+            toString(date, format) {
+              const day = (date.getDate()<10 ? '0' : '') + date.getDate();
+              const month = (date.getMonth()+1<10 ? '0' : '') + (date.getMonth()+1);
+              const year = date.getFullYear();
+              return `${day}-${month}-${year}`;
+            }
+          });
+        </script>
 
 </body>
 

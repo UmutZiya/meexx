@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <!-- Css -->
-  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/style.css"> <link rel="stylesheet" href="./assets/kvkk.css">
   <link rel="stylesheet" href="./assets/fuar-kunye.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -118,8 +118,8 @@
               <span id="selectedLang">TR</span> <i class="fas fa-chevron-down"></i>
             </button>
             <div class="lang-dropdown-menu" id="langDropdownMenu">
-              <a href="index.html" class="lang-option" data-lang="tr">TR</a>
-              <a href="" class="lang-option" data-lang="en">EN</a>
+              <a href="#" class="lang-option" data-lang="tr">TR</a>
+              <a href="../en/exhibiton-identification.html" class="lang-option" data-lang="en">EN</a>
             </div>
           </div>
           <!-- Dil Dropdown Bitiş -->
@@ -160,7 +160,7 @@
       <div class="menu-header-actions-fs">
         <div class="lang-switch">
           <a href="online-bilet.html" class="trigger-button">ONLINE BILET</a>
-          <a href="#" class="active" data-lang="tr" data-translate="lang.tr">TR</a> | <a href="" class=""
+          <a href="#" class="active" data-lang="tr" data-translate="lang.tr">TR</a> | <a href="../en/exhibiton-identification.html" class=""
             data-lang="en" data-translate="lang.en">EN</a>
         </div>
         <button class="close-menu-btn" aria-label="Menüyü Kapat">
@@ -374,7 +374,7 @@
 
             <div class="info-item-kunye">
               <div class="info-title-kunye">Fuar Konusu:</div>
-              <div class="info-content-kunye">Yük Mühendisliği Hizmetleri</div>
+              <div class="info-content-kunye">Makine Fuarı</div>
             </div>
 
             <div class="info-item-kunye">
@@ -527,6 +527,29 @@
     </div>
   </footer>
 
+    <!-- Footer Alt Satır ve Modal Başlangıç -->
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-content">
+        <div class="footer-bottom-left">
+          <span>Copyright © 2025 MEEXX Her Hakkı Saklıdır</span>
+        </div>
+        <div class="footer-bottom-right">
+          <a href="#" class="footer-link" data-modal="kvkk">KVKK</a> •
+          <a href="#" class="footer-link" data-modal="gizlilik">GİZLİLİK SÖZLEŞMESİ</a> •
+          <a href="#" class="footer-link" data-modal="kullanici">KULLANICI SÖZLEŞMESİ</a>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Yapısı -->
+    <div id="footerModal" class="footer-modal">
+      <div class="footer-modal-content">
+        <span class="footer-modal-close">&times;</span>
+        <div id="footer-modal-title" class="footer-modal-title"></div>
+        <div id="footer-modal-body" class="footer-modal-body"></div>
+      </div>
+    </div>
+    <!-- Footer Alt Satır ve Modal Bitiş -->
+
     <script>
 
 
@@ -543,7 +566,7 @@
 
     <!-- Custom Scripts -->
     <script src="hakkimizda.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js"></script> <script src="kvkk.js"></script>
 
 </body>
 

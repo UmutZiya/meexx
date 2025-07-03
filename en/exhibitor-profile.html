@@ -9,13 +9,15 @@
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <!-- Css -->
   <link rel="stylesheet" href="../tr/assets/style.css">
+  <link rel="stylesheet" href="../tr/assets/kvkk.css">
   <link rel="stylesheet" href="../tr/assets/katilimci-profili.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> <link rel="icon" type="favicon" href="images/meex-favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="icon" type="favicon" href="images/meex-favicon.png">
 
   <link rel="icon" type="image" href="./images/lesexpo-favicon.png">
   <style>
@@ -56,47 +58,103 @@
       </a>
 
       <nav class="main-nav">
-        <ul class="">
-          <!-- nav-toggle-button class'ı menüyü açar -->
-          <li><a href="#" class="nav-toggle-button" data-translate="nav.discoverBFM">LES-EXPO<i
-                class="fas fa-chevron-down"></i></a></li>
-          <li><a href="#" class="nav-toggle-button" data-translate="nav.organizeFair">Exhibitor<i
-                class="fas fa-chevron-down"></i></a></li>
-          <li><a href="#" class="nav-toggle-button" data-translate="nav.visitBFM">Visitor<i
-                class="fas fa-chevron-down"></i></a></li>
-          <li><a href="#" class="nav-toggle-button" data-translate="nav.events">Events<i
-                class="fas fa-chevron-down"></i></a></li>
-          <li><a href="#" class="nav-toggle-button" data-translate="nav.events">Media<i
-                class="fas fa-chevron-down"></i></a></li>
-          <li><a href="contact.html" data-translate="nav.contactUs">Contact</a></li>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">MEEXX <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="exhibiton-identification.html">Exhibition Identification</a></li>
+              <li><a href="exhibition-area.html">Exhibition Area</a></li>
+              <li><a href="how-to-reach.html">How To Reach</a></li>
+              <li><a href="#">Exhibition Post Report</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Exhibitor <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="exhibitor-profile.html">Exhibitor Profile</a></li>
+              <li><a href="pre-registration-form.html">Pre-Registration Form</a></li>
+              <li><a href="why-exhibit.html">Why Exhibit ?</a></li>
+              <li><a href="#">Exhibitor List 2025</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Visitor<i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="visitor-profile.html">Visitor Profile</a></li>
+              <li><a href="why-visit.html">Why Should You Visit ?</a></li>
+              <li><a href="faq.html">Frequently Asked Questions</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Events<i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="b2b-meeting.html">B2B Meetings</a></li>
+              <li><a href="#">MEEXX Insights</a></li>
+              <li><a href="#">MEEXX Experience</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Media<i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="media-logo.html">Logo</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Corporate Identity</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
         </ul>
-
       </nav>
 
       <div class="header-actions">
-        <div class="lang-switch mt-4 ms-4">
+        <div class="lang-switch mt-4">
           <div class="header-search">
-            <input type="text" class="header-search-input" placeholder="Ara...">
+            <input type="text" class="header-search-input" placeholder="Search...">
             <button class="header-search-button">
               <i class="fas fa-search"></i>
             </button>
           </div>
-          <a href="online-bilet.html" class="trigger-button">Onlıne Tıcket</a>
-          <a href="../tr/katilimci-profili.html" class="" data-lang="tr" data-translate="lang.tr">TR</a> | <a href="#"
-            class="active" data-lang="en" data-translate="lang.en">EN</a>
+          <a href="online-ticket.html" class="trigger-button">ONLINE TICKET</a>
+          <!-- Dil Dropdown Başlangıç -->
+          <div class="lang-dropdown">
+            <button class="lang-dropdown-toggle" id="langDropdownBtn">
+              <span id="selectedLang">TR</span> <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="lang-dropdown-menu" id="langDropdownMenu">
+              <a href="../tr/index.html" class="lang-option" data-lang="tr">TR</a>
+              <a href="#" class="lang-option" data-lang="en">EN</a>
+            </div>
+          </div>
+          <!-- Dil Dropdown Bitiş -->
         </div>
-        <!-- nav-toggle-button class'ı menüyü açar -->
-
+        <div class="mobile-actions">
+          <button class="search-toggle-button" aria-label="Arama">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="mobile-menu-toggle nav-toggle-button" data-translate-aria-label="menu.toggleAriaLabel"
+            aria-label="Menüyü Aç/Kapat">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
       </div>
 
-      <!-- Mobil için Hamburger İkonu (nav-toggle-button class'ı menüyü açar/kapatır) -->
-      <button class="mobile-menu-toggle nav-toggle-button" data-translate-aria-label="menu.toggleAriaLabel"
-        aria-label="Menüyü Aç/Kapat">
-        <i class="fas fa-bars"></i>
-      </button>
     </div>
   </header>
   <!-- Header End -->
+  <!-- Mobil Arama Çubuğu -->
+  <div class="search-overlay">
+    <div class="search-container">
+      <div class="search-content">
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+  </div>
   <!-- Tam Ekran Overlay Menü -->
   <div class="fullscreen-menu">
     <div class="menu-header">
@@ -104,16 +162,12 @@
         <!-- Menüdeki logo -->
         <img src="./images/meexx logo.png" alt="" class="fs-2">
       </a>
-      <!-- <div class="menu-search-container">
-        <input type="text" data-translate-placeholder="menu.searchPlaceholder" placeholder="Search..."
-          class="menu-search-input">
-        <button class="menu-search-button"><i class="fas fa-search"></i></button>
-      </div> -->
+
       <div class="menu-header-actions-fs">
         <div class="lang-switch">
-          <a href="online-bilet.html" class="trigger-button">Onlıne Tıcket</a>
-          <a href="../tr/katilimci-profili.html" class="" data-lang="tr" data-translate="lang.tr">TR</a> | <a href="#"
-            class="active" data-lang="en" data-translate="lang.en">EN</a>
+          <a href="online-ticket.html" class="trigger-button">ONLINE TICKET</a>
+          <a href="../tr/index.html" class="active" data-lang="tr" data-translate="lang.tr">TR</a> | <a href="#"
+            class="" data-lang="en" data-translate="lang.en">EN</a>
         </div>
         <button class="close-menu-btn" aria-label="Menüyü Kapat">
           <i class="fas fa-times"></i>
@@ -126,11 +180,11 @@
         <!-- Başlığa tıklanınca menüyü kapatmak için nav-toggle-button ekledik -->
         <h3 class="nav-toggle-button">MEEXX</h3>
         <ul>
-          <li><a href="about-us.html">About</a></li>
+          <li><a href="about.html">About Us</a></li>
           <li><a href="exhibiton-identification.html">Exhibition Identification</a></li>
           <li><a href="exhibition-area.html">Exhibition Area</a></li>
-          <li><a href="how-to-reach.html">How To Reach?</a></li>
-          <li><a href="show-report.html">Post Show Report</a></li>
+          <li><a href="how-to-reach.html">How To Reach</a></li>
+          <li><a href="#">Exhibition Post Report</a></li>
         </ul>
       </div>
       <div class="menu-column">
@@ -138,15 +192,15 @@
         <ul>
           <li><a href="exhibitor-profile.html">Exhibitor Profile</a></li>
           <li><a href="pre-registration-form.html">Pre-Registration Form</a></li>
-          <li><a href="why-exhibit.html">Why Should You Exhibit?</a></li>
-          <li><a href="exhibitor-list.html">2026 Exhibitor List</a></li>
+          <li><a href="why-exhibit.html">Why Exhibit ?</a></li>
+          <li><a href="#">Exhibitor List 2025</a></li>
         </ul>
       </div>
       <div class="menu-column">
         <h3 class="nav-toggle-button" data-translate="menu.visitBFM">Visitor</h3>
         <ul>
           <li><a href="visitor-profile.html">Visitor Profile</a></li>
-          <li><a href="why-visit.html">Why Should You Visit?</a></li>
+          <li><a href="why-visit.html">Why Should You Visit ?</a></li>
           <li><a href="faq.html">Frequently Asked Questions</a></li>
         </ul>
       </div>
@@ -154,15 +208,15 @@
         <h3 class="nav-toggle-button">Events</h3>
         <ul>
           <li><a href="b2b-meeting.html">B2B Meetings</a></li>
-          <li><a href="les-insights.html">LES Insights</a></li>
-          <li><a href="les-experiences.html">LES experiences</a></li>
+          <li><a href="#">MEEXX Insights</a></li>
+          <li><a href="#">MEEXX Experience</a></li>
         </ul>
       </div>
       <div class="menu-column">
         <h3 class="nav-toggle-button">Media</h3>
         <ul>
           <li><a href="media-logo.html">Logo</a></li>
-          <li><a href="all-news.html">News</a></li>
+          <li><a href="#">News</a></li>
           <li><a href="#">Gallery</a></li>
           <li><a href="#">Corporate Identity</a></li>
         </ul>
@@ -178,14 +232,13 @@
 
     <div class="menu-footer">
       <!-- <span class="up-menu-f2f"> Powered By F2F Bilişim Reklam ve Danışmanlık Hizmetleri</span> -->
-      <span data-translate="menu.followUs">Follow us</span>
+      <span data-translate="menu.followUs">Follow Us</span>
       <div class="social-icons-menu">
-        <a href="https://www.facebook.com/lesexpofair" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://x.com/lesexpofair" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://www.instagram.com/lesexpofair/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/@lesexpofair" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.linkedin.com/company/les-expo-yük-mühendisliği-hizmetleri-fuarı/" target="_blank"><i
-                                class="fab fa-linkedin-in"></i></a>
+        <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
   </div>
@@ -236,7 +289,7 @@
                         </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="exhibitor-list.html">
+                        <a class="nav-link" href="#">
                           <i class="fas fa-angle-right me-2"></i>
                           <span data-translate="hakkimizda.sidebar.qualityPolicy">2026 Exhibitor List </span>
                         </a>
@@ -251,201 +304,116 @@
         <!-- Main content -->
         <div class="container-nze content-area">
           <section>
-            <h1 class="h1-ziyaretci ">LES-EXPO<br>Exhibitor Profile</h1>
+            <h1 class="h1-ziyaretci ">MEEXX<br>EXHIBITOR PROFILE</h1>
             <div class="card-grid-nze">
               <!-- Kart 1 -->
               <div class="card-nze">
                 <div class="icon-nze">
-                  <i class="fa-solid fa-industry"></i>
+                  <i class="fas fa-cogs text-2xl mb-2"></i>
                 </div>
-                <p class="card-text-nze">Crane Manufacturers and Sellers</p>
+                <p>CNC Machine Manufacturers</p>
               </div>
 
               <!-- Kart 2 -->
               <div class="card-nze">
                 <div class="icon-nze">
-                  <i class="fa-solid fa-truck-pickup"></i>
+                  <i class="fas fa-bolt text-2xl mb-2"></i>
                 </div>
-                <p class="card-text-nze">Tow Truck Manufacturers and Dealers</p>
+                <p>Laser, Plasma and Waterjet Cutting Systems Manufacturers</p>
               </div>
 
               <div class="card-nze">
                 <div class="icon-nze">
                   <i class="fa-solid fa-truck-moving"></i>
                 </div>
-                <p class="card-text-nze"> Trailer Manufacturers and Dealers</p>
+                <p>Press Brakes, Guillotine Shears and Sheet Metal Forming Machines</p>
               </div>
 
               <div class="card-nze">
                 <div class="icon-nze">
-                  <i class="fa-solid fa-toolbox"></i>
+                  <i class="fas fa-robot text-2xl mb-2"></i>
                 </div>
-                <p class="card-text-nze">Equipment Manufacturers and Sellers</p>
+                <p>Automation Systems and Industrial Robot Providers</p>
               </div>
 
               <div class="card-nze">
                 <div class="icon-nze">
-                  <i class="fa-solid fa-diagram-project"></i>
+                  <i class="fas fa-cube text-2xl mb-2"></i>
                 </div>
-                <p class="card-text-nze">Industrial Project Companies</p>
+                <p>3D Printer Manufacturers and Consumable Suppliers</p>
               </div>
 
               <!-- Kart 3 -->
               <div class="card-nze">
                 <div class="icon-nze">
-                  <i class="fa-solid fa-anchor"></i>
+                  <i class="fas fa-laptop-code text-2xl mb-2"></i>
                 </div>
-                <p class="card-text-nze">Maritime Services Companies</p>
+                <p>CAD/CAM and Manufacturing Software Developers</p>
               </div>
 
               <!-- Kart 4 -->
               <div class="card-nze">
                 <div class="icon-nze">
-                  <i class="fa-solid fa-ship"></i>
+                  <i class="fas fa-leaf text-2xl mb-2"></i>
                 </div>
-                <p class="card-text-nze">Sea Freight Companies</p>
+                <p>Energy Efficiency and Digital Factory Solutions</p>
               </div>
 
               <!-- Kart 5 -->
               <div class="card-nze">
                 <div class="icon-nze">
-                  <i class="fa-solid fa-warehouse"></i>
+                  <i class="fas fa-network-wired text-2xl mb-2"></i>
                 </div>
-                <p class="card-text-nze">Port Operators</p>
+                <p>Automation and Robotic Systems Integrators</p>
               </div>
 
               <!-- Kart 6 -->
               <div class="card-nze">
                 <div class="icon-nze">
-                  <i class="fa-solid fa-bolt"></i>
+                  <i class="fas fa-lightbulb text-2xl mb-2"></i>
                 </div>
-                <p class="card-text-nze">Energy Companies </p>
+                <p>Technology Companies Offering Project Consulting Services</p>
               </div>
 
               <div class="card-nze">
                 <div class="icon-nze">
-                  <i class="fa-solid fa-handshake"></i>
+                  <i class="fas fa-puzzle-piece text-2xl mb-2"></i>
                 </div>
-                <p class="card-text-nze"> Ship Brokerage Companies</p>
+                <p>Mold and Prototype Manufacturers</p>
               </div>
 
               <div class="card-nze">
                 <div class="icon-nze">
-                  <i class="fa-solid fa-weight-hanging"></i>
+                  <i class="fas fa-tools text-2xl mb-2"></i>
                 </div>
-                <p class="card-text-nze"> Heavy Load Transport Companies</p>
+                <p>Cutting Tools, Tool Holders and Accessories Manufacturers</p>
               </div>
 
               <div class="card-nze">
                 <div class="icon-nze">
-                  <i class="fa-solid fa-wind"></i>
+                  <i class="fas fa-database text-2xl mb-2"></i>
                 </div>
-                <p class="card-text-nze">Renewable Energy Companies</p>
+                <p>Industrial Software and Data Acquisition Systems</p>
               </div>
 
               <div class="card-nze">
                 <div class="icon-nze">
-                  <i class="fa-solid fa-dna"></i>
+                  <i class="fas fa-microchip text-2xl mb-2"></i>
                 </div>
-                <p class="card-text-nze">Steel Rope Manufacturers and Sellers</p>
+                <p>Sensor, Control, SCADA/PLC Solutions</p>
               </div>
 
               <div class="card-nze">
                 <div class="icon-nze">
-                  <i class="fa-solid fa-drafting-compass"></i>
+                  <i class="fas fa-wrench text-2xl mb-2"></i>
                 </div>
-                <p class="card-text-nze">Cargo Engineering Service Companies</p>
+                <p>Industrial Maintenance, Automation Spare Parts and Peripheral Suppliers</p>
               </div>
-
               <div class="card-nze">
                 <div class="icon-nze">
-                  <i class="fa-solid fa-route"></i>
+                  <i class="fas fa-chalkboard-teacher text-2xl mb-2"></i>
                 </div>
-                <p class="card-text-nze">Freight Forwarder Companies and Representatives</p>
-              </div>
-
-              <div class="card-nze">
-                <div class="icon-nze">
-                  <i class="fa-solid fa-fan"></i>
-                </div>
-                <p class="card-text-nze">Wind Turbine Manufacturers</p>
-              </div>
-
-              <div class="card-nze">
-                <div class="icon-nze">
-                  <i class="fa-solid fa-laptop-code"></i>
-                </div>
-                <p class="card-text-nze">ERP Software Companies</p>
-              </div>
-
-              <div class="card-nze">
-                <div class="icon-nze">
-                  <i class="fa-solid fa-file-contract"></i>
-                </div>
-                <p class="card-text-nze">Leasing Companies</p>
-              </div>
-
-              <div class="card-nze">
-                <div class="icon-nze">
-                  <i class="fa-solid fa-shield-halved"></i>
-                </div>
-                <p class="card-text-nze">Insurance Companies</p>
-              </div>
-
-              <div class="card-nze">
-                <div class="icon-nze">
-                  <i class="fa-solid fa-coins"></i>
-                </div>
-                <p class="card-text-nze">Finance Companies</p>
-              </div>
-
-              <div class="card-nze">
-                <div class="icon-nze">
-                  <i class="fa-solid fa-circle-notch"></i>
-                </div>
-                <p class="card-text-nze"> Tire Manufacturers and Sellers</p>
-              </div>
-
-              <div class="card-nze">
-                <div class="icon-nze">
-                  <i class="fa-solid fa-car-battery"></i>
-                </div>
-                <p class="card-text-nze">Battery Manufacturers and Sellers</p>
-              </div>
-
-              <div class="card-nze">
-                <div class="icon-nze">
-                  <i class="fa-solid fa-oil-can"></i>
-                </div>
-                <p class="card-text-nze">Oil Companies</p>
-              </div>
-
-              <div class="card-nze">
-                <div class="icon-nze">
-                  <i class="fa-solid fa-train"></i>
-                </div>
-                <p class="card-text-nze">Railway Transportation Service Companies</p>
-              </div>
-
-              <div class="card-nze">
-                <div class="icon-nze">
-                  <i class="fa-solid fa-plane"></i>
-                </div>
-                <p class="card-text-nze">Airline Transportation Service Companies</p>
-              </div>
-
-              <div class="card-nze">
-                <div class="icon-nze">
-                  <i class="fa-solid fa-truck"></i>
-                </div>
-                <p class="card-text-nze">Road Transport Service Companies</p>
-              </div>
-
-              <div class="card-nze">
-                <div class="icon-nze">
-                  <i class="fa-solid fa-ship"></i>
-                </div>
-                <p class="card-text-nze">Sea Freight Service Companies</p>
+                <p>Companies Providing Industrial Training and Certification Services</p>
               </div>
             </div>
           </section>
@@ -507,75 +475,103 @@
     </div>
 
     <!-- Footer Start -->
+    <!-- Footer Start -->
     <footer class="footer">
       <div class="footer-content mt-3">
         <div class="footer-left">
           <div class="logo-footer">
-            <img src="./images/lesexpologo-footer.png" alt="">
+            <img src="./images/meexx logo beyaz.png" alt="">
           </div>
           <p class="address">CONTACT INFORMATION</p>
-          <div class="contact-info">
-            <p><i class="fas fa-phone"></i><span>+90 549 458 56 10</span></p>
-            <p><i class="fas fa-phone"></i><span>+90 546 458 77 16</span></p>
-            <p><i class="fas fa-phone"></i><span>+90 549 458 01 34</span></p>
-            <p><i class="fas fa-envelope"></i><span>info@les-expo.com</span></p>
-            <p><i class="fas fa-envelope"></i><span>lesexpo@kfa.com.tr</span></p>
+          <div class="contact-info" style="font-size: 14px;">
+            <i class="fas fa-phone"></i> <span>0546 458 70 16</span>
+            </p>
+            <i class="fas fa-phone"></i> <span>0546 458 01 53</span>
+            </p>
+            <i class="fas fa-phone"></i> <span>0549 458 01 09</span>
+            </p>
+            <i class="fas fa-phone"></i> <span>0546 458 01 77</span>
+            </p>
+            <p><i class="fas fa-envelope"></i><span>info@meeexx.com.tr
+              </span></p>
+            <p><i class="fas fa-envelope"></i><span>meexx@kfa.com.tr </span></p>
           </div>
           <h4 class="follow-us">Follow us</h4>
           <div class="social-icons-footer">
-            <a href="https://www.facebook.com/lesexpofair" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://x.com/lesexpofair" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.instagram.com/lesexpofair/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@lesexpofair" target="_blank"><i class="fab fa-youtube"></i></a>
-            https://www.linkedin.com/company/les-expo-yük-mühendisliği-hizmetleri-fuarı/
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
 
         <div class="footer-right">
           <div class="footer-links">
             <div class="footer-column">
-              <h3>LES-EXPO</h3>
+              <h3>MEEXX</h3>
               <ul>
-                <li><a href="about-us.html">About</a></li>
-                <li><a href="exhibiton-identification.html">Exhibiton Identification</a></li>
-                <li><a href="exhibition-area.html">Exhibiton Area</a></li>
-                <li><a href="how-to-reach.html">How To Reach?</a></li>
-                <li><a href="show-report.html">Post Show Report</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="exhibiton-identification.html">Exhibition Identification</a></li>
+                <li><a href="exhibition-area.html">Exhibition Area</a></li>
+                <li><a href="how-to-reach.html">How To Reach</a></li>
+                <li><a href="#">Exhibition Post Report</a></li>
               </ul>
             </div>
 
             <div class="footer-column">
-              <h3>Exhibitor</h3>
+              <h3>EXHIBITORS</h3>
               <ul>
                 <li><a href="exhibitor-profile.html">Exhibitor Profile</a></li>
                 <li><a href="pre-registration-form.html">Pre-Registration Form</a></li>
-                <li><a href="why-exhibit.html">Why Should You Exhibit</a></li>
-                <li><a href="exhibitor-list.html">2026 Exhibitor List</a></li>
+                <li><a href="why-exhibit.html">Why Exhibit ?</a></li>
+                <li><a href="#">Exhibitor List 2025</a></li>
               </ul>
             </div>
 
             <div class="footer-column">
-              <h3>Visitor</h3>
+              <h3>VISITORS</h3>
               <ul>
                 <li><a href="visitor-profile.html">Visitor Profile</a></li>
-                <li><a href="why-visit.html">Why Should You Visit?</a></li>
+                <li><a href="why-visit.html">Why Should You Visit ?</a></li>
                 <li><a href="faq.html">Frequently Asked Questions</a></li>
               </ul>
             </div>
 
             <div class="footer-column">
-              <h3>Events</h3>
+              <h3>EVENTS</h3>
               <ul>
-                <li><a href="b2b-meeting.html">B2B Toplantıları</a></li>
-                <li><a href="all-news.html">Haberler</a></li>
-                <li><a href="les-insights.html">LES Insights</a></li>
-                <li><a href="les-experiences.html">LES Experiences</a></li>
+                <li><a href="b2b-meeting.html">B2B Meetings</a></li>
+                <li><a href="#">MEEXX Insights</a></li>
+                <li><a href="#">MEEXX Experience</a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </footer>
+    <!-- Footer Alt Satır ve Modal Başlangıç -->
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-content">
+        <div class="footer-bottom-left">
+          <span>Copyright © 2025 MEEXX All Rights Reserved</span>
+        </div>
+        <div class="footer-bottom-right">
+          <a href="#" class="footer-link" data-modal="kvkk">PDPL</a> •
+          <a href="#" class="footer-link" data-modal="gizlilik">PRIVACY AGREEMENT</a> •
+          <a href="#" class="footer-link" data-modal="kullanici">USER AGREEMENT</a>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Yapısı -->
+    <div id="footerModal" class="footer-modal">
+      <div class="footer-modal-content">
+        <span class="footer-modal-close">&times;</span>
+        <div id="footer-modal-title" class="footer-modal-title"></div>
+        <div id="footer-modal-body" class="footer-modal-body"></div>
+      </div>
+    </div>
+    <!-- Footer Alt Satır ve Modal Bitiş -->
 
     <script>
 
@@ -592,6 +588,7 @@
     <!-- Custom Scripts -->
     <script src="../tr/hakkimizda.js"></script>
     <script src="../tr/main.js"></script>
+    <script src="kvkk-en.js"></script>
 
 </body>
 

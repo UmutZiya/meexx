@@ -2112,14 +2112,14 @@ body {
 }
 
 .header-search-input {
-  width: 80px;
+  width: 103px;
   height: 36px;
   padding: 8px 40px 8px 15px;
   border: 1px solid #46b6d7;
   border-radius: 20px;
   background-color: #46b6d7;
   color: black;
-  font-size: 13px;
+  font-size: 12px;
   transition: all 0.3s ease;
 }
 
@@ -2131,7 +2131,7 @@ body {
   outline: none;
   background-color: #46b6d7;
   border-color: #fff;
-  width: 100px;
+  width: 110px;
 }
 
 .header-search-button {
@@ -2257,4 +2257,21 @@ body {
 
 .breadcrumb-1 a {
   color: rgb(0, 0, 0);
+}
+
+
+
+
+
+.banner {
+  position: relative;
+  background-image: url('./images/white-banner.jpg');
+  /* Görselin yolu */
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  /* Yüksekliği isteğe göre ayarlayın */
+  font-family: Arial, sans-serif;
+  align-items: center;
+  text-align: center;
 }

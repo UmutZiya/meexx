@@ -90,6 +90,13 @@ label {
       background-color: #0b5ed7;
     }
 
+    .btn-okf-1:disabled {
+      background-color: #ccc !important;
+      color: #888 !important;
+      cursor: not-allowed !important;
+      border: none;
+      opacity: 1;
+    }
 
 .radio-group {
   margin-top: 0.5rem;
