@@ -14,7 +14,7 @@
 
         .divider {
             height: 3px;
-            background-color: #e63946;
+            background-color: #0dcaf0;
             margin-bottom: 2rem;
         }
 
@@ -92,7 +92,7 @@
             right: 0;
             width: 3px;
             height: 100%;
-            background-color: #e63946;
+            background-color: #0dcaf0;
         }
 
         @media (max-width: 992px) {
