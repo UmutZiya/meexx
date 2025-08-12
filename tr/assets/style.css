@@ -1729,6 +1729,7 @@ body {
   .sidebar.show {
     transform: translateX(0);
     height: 100%;
+    margin-top: 0;
   }
 
   .sidebar-toggle-button {

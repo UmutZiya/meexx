@@ -155,8 +155,6 @@ tabs.forEach(tab => {
   });
 });
 
-
-
 // Smooth animations on load
 window.addEventListener('load', () => {
   document.body.style.opacity = '0';
@@ -165,3 +163,6 @@ window.addEventListener('load', () => {
     document.body.style.opacity = '1';
   }, 100);
 });
+
+
+// SPLASH

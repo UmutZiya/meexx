@@ -31,7 +31,7 @@
                         <div class="logo-title-2">${logo.title}</div>
                         <span class="logo-format-2">${logo.format}</span>
                     </div>
-                    <button class="download-btn-2" onclick="downloadLogo(${logo.id})">Logoyu İndir</button>
+                    <button class="download-btn-2" onclick="downloadLogo(${logo.id})">Download Logo</button>
                 `;
                 
                 container.appendChild(logoCard);
