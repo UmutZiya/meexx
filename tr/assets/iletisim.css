@@ -384,11 +384,16 @@
     width: 100%;
   }
 
-.footer-contact-info {
+.contact-info-1 {
     background: none !important;
     border: none !important;
     border-radius: 0 !important;
     padding: 0 !important;
     backdrop-filter: none !important;
     animation: none !important;
+}
+
+.contact-info-1 p {
+    margin: 0;
+    padding: 0;
 }

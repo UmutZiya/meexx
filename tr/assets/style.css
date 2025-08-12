@@ -946,10 +946,10 @@ ul {
 }
 
 .contact-info p {
-  margin-bottom: 8px;
   display: flex;
   align-items: center;
   position: relative;
+  margin: 0;
 }
 
 .contact-info p i {
