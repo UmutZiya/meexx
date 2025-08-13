@@ -9,7 +9,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  padding: 50px;
+  padding-left: 27px;
+  padding-top: 37px;
   max-width: 1200px;
   margin: 0 auto;
   line-height: 1.6;
@@ -37,9 +38,10 @@
 
 .title-left-kunye h1 {
   color: #000000;
-  font-size: 28px;
+  font-size: 34px;
   margin-bottom: 20px;
   font-weight: bold;
+  text-align: left;
 }
 
 .share-btn-kunye {
