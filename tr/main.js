@@ -401,6 +401,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (countdownContainer && hideBtn && restoreFab) {
     hideBtn.addEventListener('click', function () {
       countdownContainer.classList.add('slide-out');
+      
     });
     restoreFab.addEventListener('click', function () {
       countdownContainer.classList.remove('slide-out');
