@@ -118,6 +118,39 @@ const countries = {
     IE: { cities: [
         { value: "dublin", text: "Dublin" }, { value: "cork", text: "Cork" }, { value: "limerick", text: "Limerick" }, { value: "galway", text: "Galway" }, { value: "waterford", text: "Waterford" }, { value: "drogehda", text: "Drogehda" }, { value: "dundalk", text: "Dundalk" }, { value: "navan", text: "Navan" }, { value: "enni", text: "Ennis" }, { value: "kilkenny", text: "Kilkenny" }
     ], phoneCode: "+353", flagUrl: "https://upload.wikimedia.org/wikipedia/commons/4/45/Flag_of_Ireland.svg", phonePlaceholder: "87 123 4567" },
+    EG: { cities: [
+        { value: "cairo", text: "Cairo" }, { value: "alexandria", text: "Alexandria" }, { value: "giza", text: "Giza" }, { value: "shubra_el_kheima", text: "Shubra El-Kheima" }, { value: "port_said", text: "Port Said" }
+    ], phoneCode: "+20", flagUrl: "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg", phonePlaceholder: "100 123 4567" },
+    ZA: { cities: [
+        { value: "johannesburg", text: "Johannesburg" }, { value: "cape_town", text: "Cape Town" }, { value: "durban", text: "Durban" }, { value: "pretoria", text: "Pretoria" }, { value: "port_elizabeth", text: "Port Elizabeth" }
+    ], phoneCode: "+27", flagUrl: "https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg", phonePlaceholder: "82 123 4567" },
+    SA: { cities: [
+        { value: "riyadh", text: "Riyadh" }, { value: "jeddah", text: "Jeddah" }, { value: "mecca", text: "Mecca" }, { value: "medina", text: "Medina" }, { value: "dammam", text: "Dammam" }
+    ], phoneCode: "+966", flagUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg", phonePlaceholder: "50 123 4567" },
+    AE: { cities: [
+        { value: "abu_dhabi", text: "Abu Dhabi" }, { value: "dubai", text: "Dubai" }, { value: "sharjah", text: "Sharjah" }, { value: "al_ain", text: "Al Ain" }, { value: "ajman", text: "Ajman" }
+    ], phoneCode: "+971", flagUrl: "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg", phonePlaceholder: "50 123 4567" },
+    MY: { cities: [
+        { value: "kuala_lumpur", text: "Kuala Lumpur" }, { value: "george_town", text: "George Town" }, { value: "ipoh", text: "Ipoh" }, { value: "shah_alam", text: "Shah Alam" }, { value: "petaling_jaya", text: "Petaling Jaya" }
+    ], phoneCode: "+60", flagUrl: "https://upload.wikimedia.org/wikipedia/commons/6/66/Flag_of_Malaysia.svg", phonePlaceholder: "12 345 6789" },
+    ID: { cities: [
+        { value: "jakarta", text: "Jakarta" }, { value: "surabaya", text: "Surabaya" }, { value: "bandung", text: "Bandung" }, { value: "medan", text: "Medan" }, { value: "bekasi", text: "Bekasi" }
+    ], phoneCode: "+62", flagUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg", phonePlaceholder: "812 3456 789" },
+    TH: { cities: [
+        { value: "bangkok", text: "Bangkok" }, { value: "nonthaburi", text: "Nonthaburi" }, { value: "nakhon_ratchasima", text: "Nakhon Ratchasima" }, { value: "chiang_mai", text: "Chiang Mai" }, { value: "hat_yai", text: "Hat Yai" }
+    ], phoneCode: "+66", flagUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg", phonePlaceholder: "81 234 5678" },
+    SG: { cities: [
+        { value: "singapore", text: "Singapore" }
+    ], phoneCode: "+65", flagUrl: "https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Singapore.svg", phonePlaceholder: "8123 4567" },
+    CO: { cities: [
+        { value: "bogota", text: "Bogota" }, { value: "medellin", text: "Medellin" }, { value: "cali", text: "Cali" }, { value: "barranquilla", text: "Barranquilla" }, { value: "cartagena", text: "Cartagena" }
+    ], phoneCode: "+57", flagUrl: "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg", phonePlaceholder: "321 1234567" },
+    CL: { cities: [
+        { value: "santiago", text: "Santiago" }, { value: "valparaiso", text: "Valparaiso" }, { value: "concepcion", text: "Concepcion" }, { value: "la_serena", text: "La Serena" }, { value: "antofagasta", text: "Antofagasta" }
+    ], phoneCode: "+56", flagUrl: "https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg", phonePlaceholder: "9 1234 5678" },
+    MA: { cities: [
+        { value: "casablanca", text: "Casablanca" }
+    ], phoneCode: "+212", flagUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg", phonePlaceholder: "661 234567" },
     FI: { cities: [
         { value: "helsinki", text: "Helsinki" }, { value: "espoo", text: "Espoo" }, { value: "tampere", text: "Tampere" }, { value: "vantaa", text: "Vantaa" }, { value: "oulu", text: "Oulu" }, { value: "turku", text: "Turku" }, { value: "jyvaskyla", text: "Jyvaskyla" }, { value: "lahti", text: "Lahti" }, { value: "kuopio", text: "Kuopio" }, { value: "pori", text: "Pori" }
     ], phoneCode: "+358", flagUrl: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg", phonePlaceholder: "40 123 4567" },
