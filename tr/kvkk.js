@@ -233,3 +233,45 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+// KVKK Modal açma fonksiyonu
+document.addEventListener('DOMContentLoaded', function () {
+    var kvkkLabel = document.getElementById('kvkkLabel');
+    var kvkkModal = document.getElementById('kvkkModal');
+    var kvkkModalClose = document.getElementById('kvkkModalClose');
+    var kvkkModalKapat = document.getElementById('kvkkModalKapat');
+    var kvkkModalKabul = document.getElementById('kvkkModalKabul');
+    var kvkkModalBody = document.getElementById('kvkk-modal-body');
+    var kvkkModalTitle = document.getElementById('kvkk-modal-title');
+    var formGonderBtn = document.getElementById('formGonderBtn');
+    var kabulEdiyorum = document.getElementById('kabulEdiyorum');
+
+    if (kvkkLabel && kvkkModal) {
+        kvkkLabel.addEventListener('click', function (e) {
+            // Sadece checkbox'a tıklanmadıysa modalı aç
+            if (e.target.tagName !== 'INPUT') {
+                kvkkModal.style.display = 'flex';
+                // KVKK içeriğini yükle (kvkk.js'den veya statik olarak)
+                if (typeof footerModalContents !== 'undefined' && footerModalContents.kvkk) {
+                    kvkkModalTitle.textContent = footerModalContents.kvkk.title;
+                    kvkkModalBody.innerHTML = footerModalContents.kvkk.content;
+                }
+            }
+        });
+    }
+    // Modal kapama butonları
+    if (kvkkModalClose) kvkkModalClose.onclick = function () { kvkkModal.style.display = 'none'; };
+    if (kvkkModalKapat) kvkkModalKapat.onclick = function () { kvkkModal.style.display = 'none'; };
+    if (kvkkModalKabul) kvkkModalKabul.onclick = function () {
+        kvkkModal.style.display = 'none';
+        // Hemen Yerinizi Ayırtın butonunu aktif et
+        if (formGonderBtn) formGonderBtn.disabled = false;
+        if (kabulEdiyorum) kabulEdiyorum.checked = true;
+    };
+    // Modal dışında tıklayınca kapansın
+    if (kvkkModal) {
+        kvkkModal.addEventListener('click', function (e) {
+            if (e.target === kvkkModal) kvkkModal.style.display = 'none';
+        });
+    }
+});

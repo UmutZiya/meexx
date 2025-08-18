@@ -181,6 +181,261 @@ const countries = {
         phoneCode: "+7",
         flagUrl: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Russia.svg",
         phonePlaceholder: "999 123-45-67"
+    },
+    italya: {
+        cities: [
+            { value: "roma", text: "Roma" },
+            { value: "milano", text: "Milano" },
+            { value: "napoli", text: "Napoli" },
+            { value: "torino", text: "Torino" },
+            { value: "palermo", text: "Palermo" },
+            { value: "genova", text: "Genova" },
+            { value: "bologna", text: "Bologna" },
+            { value: "firenze", text: "Firenze" },
+            { value: "bari", text: "Bari" },
+            { value: "catania", text: "Catania" }
+        ],
+        phoneCode: "+39",
+        flagUrl: "https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg",
+        phonePlaceholder: "312 345 6789"
+    },
+    ispanya: {
+        cities: [
+            { value: "madrid", text: "Madrid" },
+            { value: "barselona", text: "Barselona" },
+            { value: "valensiya", text: "Valensiya" },
+            { value: "sevilla", text: "Sevilla" },
+            { value: "zaragoza", text: "Zaragoza" },
+            { value: "malaga", text: "Malaga" },
+            { value: "murcia", text: "Murcia" },
+            { value: "palma", text: "Palma" },
+            { value: "laspalmas", text: "Las Palmas" },
+            { value: "bilbao", text: "Bilbao" }
+        ],
+        phoneCode: "+34",
+        flagUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg",
+        phonePlaceholder: "612 34 56 78"
+    },
+    hollanda: {
+        cities: [
+            { value: "amsterdam", text: "Amsterdam" },
+            { value: "rotterdam", text: "Rotterdam" },
+            { value: "lahey", text: "Lahey" },
+            { value: "utrecht", text: "Utrecht" },
+            { value: "eindhoven", text: "Eindhoven" },
+            { value: "tilburg", text: "Tilburg" },
+            { value: "groningen", text: "Groningen" },
+            { value: "almere", text: "Almere" },
+            { value: "breda", text: "Breda" },
+            { value: "nijmegen", text: "Nijmegen" }
+        ],
+        phoneCode: "+31",
+        flagUrl: "https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg",
+        phonePlaceholder: "6 12345678"
+    },
+    belcika: {
+        cities: [
+            { value: "bruksell", text: "Brüksel" },
+            { value: "anvers", text: "Anvers" },
+            { value: "gent", text: "Gent" },
+            { value: "charleroi", text: "Charleroi" },
+            { value: "liege", text: "Liège" },
+            { value: "brugge", text: "Brugge" },
+            { value: "namur", text: "Namur" },
+            { value: "leuven", text: "Leuven" },
+            { value: "mons", text: "Mons" },
+            { value: "aalst", text: "Aalst" }
+        ],
+        phoneCode: "+32",
+        flagUrl: "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg",
+        phonePlaceholder: "470 12 34 56"
+    },
+    isvicre: {
+        cities: [
+            { value: "zuri", text: "Zürih" },
+            { value: "cenevre", text: "Cenevre" },
+            { value: "basel", text: "Basel" },
+            { value: "bern", text: "Bern" },
+            { value: "lausanne", text: "Lausanne" },
+            { value: "luzern", text: "Luzern" },
+            { value: "stgallen", text: "St. Gallen" },
+            { value: "lugano", text: "Lugano" },
+            { value: "biel", text: "Biel/Bienne" },
+            { value: "thun", text: "Thun" }
+        ],
+        phoneCode: "+41",
+        flagUrl: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg",
+        phonePlaceholder: "79 123 45 67"
+    },
+    avusturya: {
+        cities: [
+            { value: "vienna", text: "Viyana" },
+            { value: "graz", text: "Graz" },
+            { value: "linz", text: "Linz" },
+            { value: "salzburg", text: "Salzburg" },
+            { value: "innsbruck", text: "Innsbruck" },
+            { value: "klagenfurt", text: "Klagenfurt" },
+            { value: "villach", text: "Villach" },
+            { value: "wels", text: "Wels" },
+            { value: "stpoelten", text: "St. Pölten" },
+            { value: "dornbirn", text: "Dornbirn" }
+        ],
+        phoneCode: "+43",
+        flagUrl: "https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Austria.svg",
+        phonePlaceholder: "660 1234567"
+    },
+    polonya: {
+        cities: [
+            { value: "warszawa", text: "Varşova" },
+            { value: "krakow", text: "Krakow" },
+            { value: "lodz", text: "Lodz" },
+            { value: "wroclaw", text: "Wroclaw" },
+            { value: "poznan", text: "Poznan" },
+            { value: "gdansk", text: "Gdansk" },
+            { value: "szczecin", text: "Szczecin" },
+            { value: "bydgoszcz", text: "Bydgoszcz" },
+            { value: "lublin", text: "Lublin" },
+            { value: "katowice", text: "Katowice" }
+        ],
+        phoneCode: "+48",
+        flagUrl: "https://upload.wikimedia.org/wikipedia/commons/1/12/Flag_of_Poland.svg",
+        phonePlaceholder: "501 234 567"
+    },
+    cekya: {
+        cities: [
+            { value: "prag", text: "Prag" },
+            { value: "brno", text: "Brno" },
+            { value: "ostrava", text: "Ostrava" },
+            { value: "plzen", text: "Plzen" },
+            { value: "liberec", text: "Liberec" },
+            { value: "olomouc", text: "Olomouc" },
+            { value: "usti", text: "Usti nad Labem" },
+            { value: "hradec", text: "Hradec Králové" },
+            { value: "pardubice", text: "Pardubice" },
+            { value: "zlin", text: "Zlín" }
+        ],
+        phoneCode: "+420",
+        flagUrl: "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_Czech_Republic.svg",
+        phonePlaceholder: "601 123 456"
+    },
+    macaristan: {
+        cities: [
+            { value: "budapest", text: "Budapeşte" },
+            { value: "debrecen", text: "Debrecen" },
+            { value: "szeged", text: "Szeged" },
+            { value: "miskolc", text: "Miskolc" },
+            { value: "pecs", text: "Pécs" },
+            { value: "gyor", text: "Győr" },
+            { value: "nyiregyhaza", text: "Nyíregyháza" },
+            { value: "kecskemet", text: "Kecskemét" },
+            { value: "szombathely", text: "Szombathely" },
+            { value: "szolnok", text: "Szolnok" }
+        ],
+        phoneCode: "+36",
+        flagUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg",
+        phonePlaceholder: "20 123 4567"
+    },
+    bulgaristan: {
+        cities: [
+            { value: "sofya", text: "Sofya" },
+            { value: "plovdiv", text: "Plovdiv" },
+            { value: "varna", text: "Varna" },
+            { value: "burgaz", text: "Burgaz" },
+            { value: "ruse", text: "Ruse" },
+            { value: "stara", text: "Stara Zagora" },
+            { value: "pleven", text: "Pleven" },
+            { value: "dobrich", text: "Dobrich" },
+            { value: "shumen", text: "Shumen" },
+            { value: "pernik", text: "Pernik" }
+        ],
+        phoneCode: "+359",
+        flagUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg",
+        phonePlaceholder: "87 123 4567"
+    },
+    romanya: {
+        cities: [
+            { value: "bükreş", text: "Bükreş" },
+            { value: "cluj", text: "Cluj-Napoca" },
+            { value: "timisoara", text: "Timişoara" },
+            { value: "iasi", text: "Iaşi" },
+            { value: "constanta", text: "Constanţa" },
+            { value: "craiova", text: "Craiova" },
+            { value: "brasov", text: "Braşov" },
+            { value: "galati", text: "Galaţi" },
+            { value: "ploiesti", text: "Ploieşti" },
+            { value: "oradea", text: "Oradea" }
+        ],
+        phoneCode: "+40",
+        flagUrl: "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg",
+        phonePlaceholder: "721 234 567"
+    },
+    yunanistan: {
+        cities: [
+            { value: "atina", text: "Atina" },
+            { value: "selanik", text: "Selanik" },
+            { value: "patras", text: "Patras" },
+            { value: "kandiye", text: "Kandiye" },
+            { value: "larisa", text: "Larisa" },
+            { value: "volos", text: "Volos" },
+            { value: "yoannina", text: "Yoannina" },
+            { value: "trikala", text: "Trikala" },
+            { value: "serres", text: "Serres" },
+            { value: "kavala", text: "Kavala" }
+        ],
+        phoneCode: "+30",
+        flagUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg",
+        phonePlaceholder: "691 234 5678"
+    },
+    ukrayna: {
+        cities: [
+            { value: "kiev", text: "Kiev" },
+            { value: "lviv", text: "Lviv" },
+            { value: "odessa", text: "Odessa" },
+            { value: "dnipro", text: "Dnipro" },
+            { value: "kharkiv", text: "Kharkiv" },
+            { value: "zaporizhia", text: "Zaporizhia" },
+            { value: "kryvyi", text: "Kryvyi Rih" },
+            { value: "mykolaiv", text: "Mykolaiv" },
+            { value: "mariupol", text: "Mariupol" },
+            { value: "vinnitsa", text: "Vinnitsa" }
+        ],
+        phoneCode: "+380",
+        flagUrl: "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg",
+        phonePlaceholder: "50 123 4567"
+    },
+    abd: {
+        cities: [
+            { value: "newyork", text: "New York" },
+            { value: "losangeles", text: "Los Angeles" },
+            { value: "chicago", text: "Chicago" },
+            { value: "houston", text: "Houston" },
+            { value: "phoenix", text: "Phoenix" },
+            { value: "philadelphia", text: "Philadelphia" },
+            { value: "sanantonio", text: "San Antonio" },
+            { value: "sandiego", text: "San Diego" },
+            { value: "dallas", text: "Dallas" },
+            { value: "sanjose", text: "San Jose" }
+        ],
+        phoneCode: "+1",
+        flagUrl: "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
+        phonePlaceholder: "201 123 4567"
+    },
+    kanada: {
+        cities: [
+            { value: "toronto", text: "Toronto" },
+            { value: "vancouver", text: "Vancouver" },
+            { value: "montreal", text: "Montreal" },
+            { value: "calgary", text: "Calgary" },
+            { value: "edmonton", text: "Edmonton" },
+            { value: "ottawa", text: "Ottawa" },
+            { value: "winnipeg", text: "Winnipeg" },
+            { value: "quebec", text: "Quebec City" },
+            { value: "hamilton", text: "Hamilton" },
+            { value: "kitchener", text: "Kitchener" }
+        ],
+        phoneCode: "+1",
+        flagUrl: "https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg",
+        phonePlaceholder: "416 123 4567"
     }
 };
 

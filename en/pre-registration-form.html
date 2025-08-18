@@ -290,12 +290,47 @@
               <div class="form-group">
                 <label for="ulke">Country *</label>
                 <select class="form-select" id="ulke" required>
-                  <option value="">Please Choose</option>
-                  <option value="turkiye">Turkey</option>
-                  <option value="almanya">Germany</option>
-                  <option value="fransa">France</option>
-                  <option value="ingiltere">England</option>
-                  <option value="rusya">Russia</option>
+                  <option value="">Select</option>
+                  <option value="TR">Turkey</option>
+                  <option value="DE">Germany</option>
+                  <option value="US">United States</option>
+                  <option value="GB">United Kingdom</option>
+                  <option value="FR">France</option>
+                  <option value="IT">Italy</option>
+                  <option value="ES">Spain</option>
+                  <option value="RU">Russia</option>
+                  <option value="CN">China</option>
+                  <option value="JP">Japan</option>
+                  <option value="KR">South Korea</option>
+                  <option value="IN">India</option>
+                  <option value="BR">Brazil</option>
+                  <option value="CA">Canada</option>
+                  <option value="AU">Australia</option>
+                  <option value="NL">Netherlands</option>
+                  <option value="SE">Sweden</option>
+                  <option value="CH">Switzerland</option>
+                  <option value="AE">United Arab Emirates</option>
+                  <option value="SA">Saudi Arabia</option>
+                  <option value="ZA">South Africa</option>
+                  <option value="EG">Egypt</option>
+                  <option value="NG">Nigeria</option>
+                  <option value="MA">Morocco</option>
+                  <option value="MX">Mexico</option>
+                  <option value="AR">Argentina</option>
+                  <option value="CO">Colombia</option>
+                  <option value="CL">Chile</option>
+                  <option value="ID">Indonesia</option>
+                  <option value="MY">Malaysia</option>
+                  <option value="TH">Thailand</option>
+                  <option value="SG">Singapore</option>
+                  <option value="PL">Poland</option>
+                  <option value="AT">Austria</option>
+                  <option value="BE">Belgium</option>
+                  <option value="DK">Denmark</option>
+                  <option value="FI">Finland</option>
+                  <option value="GR">Greece</option>
+                  <option value="PT">Portugal</option>
+                  <option value="IE">Ireland</option>
                 </select>
               </div>
             </div>
@@ -374,11 +409,11 @@
                 <div class="radio-group">
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="ziyaret" id="ziyaretEvet" value="evet" required>
-                    <label class="form-check-label" for="ziyaretEvet">Evet</label>
+                    <label class="form-check-label" for="ziyaretEvet">Yes</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="ziyaret" id="ziyaretHayir" value="hayir">
-                    <label class="form-check-label" for="ziyaretHayir">Hayır</label>
+                    <label class="form-check-label" for="ziyaretHayir">No</label>
                   </div>
                 </div>
               </div>
@@ -400,13 +435,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="kurulusTarihi">Establishment Date of Your Company *</label>
-                <input type="text" class="form-control" id="kurulusTarihi" placeholder="GG-AA-YYYY" required
-                  autocomplete="off">
-              </div>
-            </div>
+            <!-- Establishment Date of Your Company field removed -->
           </div>
 
           <!-- Seventh Row -->
@@ -422,24 +451,7 @@
                 </select>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="ihracatCirosu">Your company's export turnover *</label>
-                <div class="input-group">
-                  <span class="input-group-text">USD</span>
-                  <input type="text" class="form-control" id="ihracatCirosu" required>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="toplamCirosu">Your company's total turnover *</label>
-                <div class="input-group">
-                  <span class="input-group-text">USD</span>
-                  <input type="text" class="form-control" id="toplamCirosu" required>
-                </div>
-              </div>
-            </div>
+            <!-- Export and total turnover fields removed -->
           </div>
 
           <!-- Eighth Row -->
@@ -447,7 +459,12 @@
             <div class="col-12">
               <div class="form-group">
                 <label for="personelSayisi">Number of personnel employed in your company *</label>
-                <input type="number" class="form-control" id="personelSayisi" required>
+                <select class="form-select" id="personelSayisi" required>
+                  <option value="">Select</option>
+                  <option value="0-49">0-49</option>
+                  <option value="50-99">50-99</option>
+                  <option value="100+">100+</option>
+                </select>
               </div>
             </div>
           </div>
@@ -566,10 +583,14 @@
               var pdplModalCloseBtn = document.getElementById('pdplModalCloseBtn');
               var pdplModalAcceptBtn = document.getElementById('pdplModalAcceptBtn');
 
-              // PDPL text (fill with your actual text)
-              pdplModalBody.innerHTML = `
-                        <p>This is where the Information Text regarding the Use and Protection of Personal Data (PDPL) will appear. Please provide the actual text here.</p>
-                      `;
+              // PDPL text (fill with your actual text or import from kvkk-en.js)
+              if (typeof footerModalContents !== 'undefined' && footerModalContents.kvkk) {
+                pdplModalBody.innerHTML = footerModalContents.kvkk.content;
+                var pdplModalTitle = document.getElementById('pdpl-modal-title');
+                if (pdplModalTitle) pdplModalTitle.textContent = 'Information Text (PDPL)';
+              } else {
+                pdplModalBody.innerHTML = `<p>This is where the Information Text regarding the Use and Protection of Personal Data (PDPL) will appear. Please provide the actual text here.</p>`;
+              }
 
               // Button disabled by default
               formSubmitBtn.disabled = true;
@@ -581,11 +602,8 @@
 
               // Label click opens modal if not checked, unchecks if already checked
               pdplLabel.addEventListener('click', function (e) {
-                if (!pdplCheckbox.checked) {
-                  pdplModal.style.display = 'block';
-                } else {
-                  pdplCheckbox.checked = false;
-                  formSubmitBtn.disabled = true;
+                if (e.target.tagName !== 'INPUT') {
+                  pdplModal.style.display = 'flex';
                 }
               });
 
@@ -630,52 +648,52 @@
 
     <!-- Logo Slider -->
     <div class="container-fluid logo-slider">
-      <div class="logo-slider-container">
-        <!-- First Slide -->
-        <div class="logo-slide">
-          <a href="https://ymbd.org" class="logo-link" target="_blank">
-            <div class="logo-img-container">
-              <img src="./images/yukmuhlogo.png" alt="YMB" class="logo-img-slider">
-            </div>
-            <div class="logo-text"></div>
-          </a>
-          <a href="https://www.kfa.com.tr" class="logo-link" target="_blank">
-            <div class="logo-img-container">
-              <img src="./images/kfa-logo.png" alt="KFA" class="logo-img-slider">
-            </div>
-            <div class="logo-text"></div>
-          </a>
-          <a href="https://www.tetsiad.org.tr" class="logo-link" target="_blank">
-            <div class="logo-img-container">
-              <img src="./images/ifmlogo_300x130.png" alt="ifm" class="logo-img-slider">
-            </div>
-            <div class="logo-text"></div>
-          </a>
-        </div>
+    <div class="logo-slider-container">
+      <!-- First Slide -->
+      <div class="logo-slide">
+        <a href="https://www.btso.org.tr" class="logo-link" target="_blank">
+          <div class="logo-img-container">
+            <img src="./images/btso-logo.png" alt="YMB" class="logo-img-slider">
+          </div>
+          <div class="logo-text"></div>
+        </a>
+        <a href="https://www.mib.org.tr" class="logo-link" target="_blank">
+          <div class="logo-img-container">
+            <img src="./images/mib-logo.png" alt="KFA" class="logo-img-slider">
+          </div>
+          <div class="logo-text"></div>
+        </a>
+        <a href="https://bfm.webonalti.net" class="logo-link" target="_blank">
+          <div class="logo-img-container">
+            <img src="./images/logo-beyaz.png" alt="TETSİAD" class="logo-img-slider">
+          </div>
+          <div class="logo-text"></div>
+        </a>
+      </div>
 
-        <!-- Second Slide (duplicate for seamless looping) -->
-        <div class="logo-slide">
-          <a href="https://ymbd.org" class="logo-link" target="_blank">
-            <div class="logo-img-container">
-              <img src="./images/yukmuhlogo.png" alt="YMB" class="logo-img-slider">
-            </div>
-            <div class="logo-text"></div>
-          </a>
-          <a href="https://www.kfa.com.tr" class="logo-link" target="_blank">
-            <div class="logo-img-container">
-              <img src="./images/kfa-logo.png" alt="KFA" class="logo-img-slider">
-            </div>
-            <div class="logo-text"></div>
-          </a>
-          <a href="https://www.tetsiad.org.tr" class="logo-link" target="_blank">
-            <div class="logo-img-container">
-              <img src="./images/ifmlogo_300x130.png" alt="ifm" class="logo-img-slider">
-            </div>
-            <div class="logo-text"></div>
-          </a>
-        </div>
+      <!-- Second Slide (duplicate for seamless looping) -->
+      <div class="logo-slide">
+        <a href="https://www.btso.org.tr" class="logo-link" target="_blank">
+          <div class="logo-img-container">
+            <img src="./images/btso-logo.png" alt="YMB" class="logo-img-slider">
+          </div>
+          <div class="logo-text"></div>
+        </a>
+        <a href="https://www.mib.org.tr" class="logo-link" target="_blank">
+          <div class="logo-img-container">
+            <img src="./images/mib-logo.png" alt="KFA" class="logo-img-slider">
+          </div>
+          <div class="logo-text"></div>
+        </a>
+        <a href="https://bfm.webonalti.net" class="logo-link" target="_blank">
+          <div class="logo-img-container">
+            <img src="./images/logo-beyaz.png" alt="TETSİAD" class="logo-img-slider">
+          </div>
+          <div class="logo-text"></div>
+        </a>
       </div>
     </div>
+  </div>
 
     <!-- Footer Start -->
     <!-- Footer Start -->
@@ -812,7 +830,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Custom Scripts -->
-    <script src="../tr/on-kayit-formu.js"></script>
+    <script src="pre-registration-form.js"></script>
     <script src="../tr/main.js"></script>
     <script src="kvkk-en.js"></script>
     <!-- Pikaday JS -->

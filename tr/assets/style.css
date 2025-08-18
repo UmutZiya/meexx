@@ -1190,8 +1190,7 @@ ul {
 }
 
 .countdown-display {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: none;
   gap: 10px;
   margin-bottom: 15px;
 }
