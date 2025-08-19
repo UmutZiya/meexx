@@ -4,18 +4,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>MEEXX MAKİNE VE TEKNOLOJİ FUARI</title>
+  <title>MEEXX MAKİNE VE TEKNOLOJİ FUARI</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <!-- Css -->
-  <link rel="stylesheet" href="./assets/style.css"> <link rel="stylesheet" href="./assets/kvkk.css">
+  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/kvkk.css">
   <link rel="stylesheet" href="./assets/katilimci-listesi.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> <link rel="icon" type="favicon" href="images/meex-favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="icon" type="favicon" href="images/meex-favicon.png">
 
   <link rel="icon" type="image" href="./images/lesexpo-favicon.png">
   <style>
@@ -153,8 +155,8 @@
       <div class="menu-header-actions-fs">
         <div class="lang-switch">
           <a href="online-bilet.html" class="trigger-button">ONLINE BILET</a>
-          <a href="#" class="active" data-lang="tr" data-translate="lang.tr">TR</a> | <a href="" class=""
-            data-lang="en" data-translate="lang.en">EN</a>
+          <a href="#" class="active" data-lang="tr" data-translate="lang.tr">TR</a> | <a href="" class="" data-lang="en"
+            data-translate="lang.en">EN</a>
         </div>
         <button class="close-menu-btn" aria-label="Menüyü Kapat">
           <i class="fas fa-times"></i>
@@ -225,8 +227,7 @@
         <a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
         <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="" target="_blank"><i
-            class="fab fa-linkedin-in"></i></a>
+        <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
   </div>
@@ -237,75 +238,75 @@
       <a href="index.html">Ana Sayfa /</a>
       <a href="katilimci-listesi.html">Katılımcı Listesi</a>
     </div>
+  </div>
+  <div class="container-klf">
+    <h1>2026 Katılımcı Listesi</h1>
 
-    <div class="container-klf">
-      <h1>2026 Katılımcı Listesi</h1>
+    <div class="year-indicator-klf">
+    </div>
 
-      <div class="year-indicator-klf">
+    <div class="filters-klf">
+      <div class="filter-group-klf">
+        <label for="firma-adi">Firma Adı</label>
+        <input type="text" id="firma-adi" class="filter-input-klf" placeholder="Firma adı giriniz...">
       </div>
 
-      <div class="filters-klf">
-        <div class="filter-group-klf">
-          <label for="firma-adi">Firma Adı</label>
-          <input type="text" id="firma-adi" class="filter-input-klf" placeholder="Firma adı giriniz...">
-        </div>
-
-        <div class="filter-group-klf">
-          <label for="adres-ulke">Ülke</label>
-          <div class="custom-select-klf">
-            <div class="select-selected-klf" id="selected-country">Türkiye</div>
-            <div class="select-arrow-klf">&#9662;</div>
-            <div class="select-items-klf select-hide-klf" id="country-items">
-              <div class="search-container-klf">
-                <input type="text" id="country-search" placeholder="Ara...">
-                <span class="search-icon-klf">&#128269;</span>
-              </div>
-              <div class="options-container-klf">
-              </div>
+      <div class="filter-group-klf">
+        <label for="adres-ulke">Ülke</label>
+        <div class="custom-select-klf">
+          <div class="select-selected-klf" id="selected-country">Türkiye</div>
+          <div class="select-arrow-klf">&#9662;</div>
+          <div class="select-items-klf select-hide-klf" id="country-items">
+            <div class="search-container-klf">
+              <input type="text" id="country-search" placeholder="Ara...">
+              <span class="search-icon-klf">&#128269;</span>
             </div>
-          </div>
-        </div>
-
-        <div class="filter-group-klf">
-          <label for="urun-gruplari">Ürün Grupları</label>
-          <div class="custom-select-klf">
-            <div class="select-selected-klf" id="selected-product">Vinç Sistemleri</div>
-            <div class="select-arrow-klf">&#9662;</div>
-            <div class="select-items-klf select-hide-klf" id="product-items">
-              <div class="options-container-klf">
-                <div class="select-item-klf" data-value="vinc-sistemleri">Vinç Sistemleri</div>
-                <div class="select-item-klf" data-value="kaldirma-ekipmanlari">Kaldırma Ekipmanları</div>
-                <div class="select-item-klf" data-value="tasima-sistemleri">Taşıma Sistemleri</div>
-                <div class="select-item-klf" data-value="yuk-dengeleme">Yük Dengeleme</div>
-                <div class="select-item-klf" data-value="konteyner-sistemleri">Konteyner Sistemleri</div>
-                <div class="select-item-klf" data-value="forklift-ekipmanlari">Forklift Ekipmanları</div>
-                <div class="select-item-klf" data-value="agir-yuk-tasima">Ağır Yük Taşıma</div>
-              </div>
+            <div class="options-container-klf">
             </div>
           </div>
         </div>
       </div>
 
-      <div class="divider-klf"></div>
-
-      <div class="table-container-klf">
-        <table id="participants-table">
-          <thead>
-            <tr>
-              <th>Firma Adı</th>
-              <th>Ülke</th>
-              <th>Salon</th>
-              <th>Stant No</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Veriler JavaScript ile doldurulacak -->
-          </tbody>
-        </table>
+      <div class="filter-group-klf">
+        <label for="urun-gruplari">Ürün Grupları</label>
+        <div class="custom-select-klf">
+          <div class="select-selected-klf" id="selected-product">Vinç Sistemleri</div>
+          <div class="select-arrow-klf">&#9662;</div>
+          <div class="select-items-klf select-hide-klf" id="product-items">
+            <div class="options-container-klf">
+              <div class="select-item-klf" data-value="vinc-sistemleri">Vinç Sistemleri</div>
+              <div class="select-item-klf" data-value="kaldirma-ekipmanlari">Kaldırma Ekipmanları</div>
+              <div class="select-item-klf" data-value="tasima-sistemleri">Taşıma Sistemleri</div>
+              <div class="select-item-klf" data-value="yuk-dengeleme">Yük Dengeleme</div>
+              <div class="select-item-klf" data-value="konteyner-sistemleri">Konteyner Sistemleri</div>
+              <div class="select-item-klf" data-value="forklift-ekipmanlari">Forklift Ekipmanları</div>
+              <div class="select-item-klf" data-value="agir-yuk-tasima">Ağır Yük Taşıma</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Logo Slider -->
+    <div class="divider-klf"></div>
+
+    <div class="table-container-klf">
+      <table id="participants-table">
+        <thead>
+          <tr>
+            <th>Firma Adı</th>
+            <th>Ülke</th>
+            <th>Salon</th>
+            <th>Stant No</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Veriler JavaScript ile doldurulacak -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Logo Slider -->
   <div class="container-fluid logo-slider">
     <div class="logo-slider-container">
       <!-- First Slide -->
@@ -354,96 +355,96 @@
     </div>
   </div>
 
-    <!-- Footer Start -->
-    <footer class="footer">
-      <div class="footer-content mt-3">
-        <div class="footer-left">
-          <div class="logo-footer">
-            <img src="./images/lesexpologo-footer.png" alt="">
-          </div>
-          <p class="address">İLETİŞİM BİLGİLERİ</p>
-          <div class="contact-info" style="font-size: 14px;">
+  <!-- Footer Start -->
+  <footer class="footer">
+    <div class="footer-content mt-3">
+      <div class="footer-left">
+        <div class="logo-footer">
+          <img src="./images/lesexpologo-footer.png" alt="">
+        </div>
+        <p class="address">İLETİŞİM BİLGİLERİ</p>
+        <div class="contact-info" style="font-size: 14px;">
           <i class="fas fa-phone"></i> <span>0546 458 70 16</span> <br>
           <i class="fas fa-phone"></i> <span>0224 294 85 50</span>
           <p><i class="fas fa-envelope"></i><span>info@meexx.com.tr
             </span></p>
           <p><i class="fas fa-envelope"></i><span>meexx@kfa.com.tr </span></p>
         </div>
-          <h4 class="follow-us">Bizi Takip Edin</h4>
-          <div class="social-icons-footer">
+        <h4 class="follow-us">Bizi Takip Edin</h4>
+        <div class="social-icons-footer">
           <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
           <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
           <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
           <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-          <a href="#" target="_blank"><i
-              class="fab fa-linkedin-in"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         </div>
-        </div>
+      </div>
 
-        <div class="footer-right">
-          <div class="footer-links">
-            <div class="footer-column">
-              <h3>MEEXX</h3>
-              <ul>
-                <li><a href="hakkimizda.html">Hakkında</a></li>
-                <li><a href="fuar-kunyesi.html">Fuar Künyesi</a></li>
-                <li><a href="fuar-alani.html">Fuar Alanı</a></li>
-                <li><a href="ulasim.html">Nasıl Ulaşırım ?</a></li>
-                <li><a href="fuar-sonuc-raporu.html">Fuar Sonuç Raporu</a></li>
-              </ul>
-            </div>
+      <div class="footer-right">
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>MEEXX</h3>
+            <ul>
+              <li><a href="hakkimizda.html">Hakkında</a></li>
+              <li><a href="fuar-kunyesi.html">Fuar Künyesi</a></li>
+              <li><a href="fuar-alani.html">Fuar Alanı</a></li>
+              <li><a href="ulasim.html">Nasıl Ulaşırım ?</a></li>
+              <li><a href="fuar-sonuc-raporu.html">Fuar Sonuç Raporu</a></li>
+            </ul>
+          </div>
 
-            <div class="footer-column">
-              <h3>KATILIMCI</h3>
-              <ul>
-                <li><a href="katilimci-profili.html">Katılımcı Profili</a></li>
-                <li><a href="on-kayit-formu.html">Ön Kayıt Formu</a></li>
-                <li><a href="katilimci-profili.html">Neden Katılmalısınız ?</a></li>
-                <li><a href="#">Katılımcı Listesi 2026</a></li>
-              </ul>
-            </div>
+          <div class="footer-column">
+            <h3>KATILIMCI</h3>
+            <ul>
+              <li><a href="katilimci-profili.html">Katılımcı Profili</a></li>
+              <li><a href="on-kayit-formu.html">Ön Kayıt Formu</a></li>
+              <li><a href="katilimci-profili.html">Neden Katılmalısınız ?</a></li>
+              <li><a href="#">Katılımcı Listesi 2026</a></li>
+            </ul>
+          </div>
 
-            <div class="footer-column">
-              <h3>ZİYARETÇİ</h3>
-              <ul>
-                <li><a href="ziyaretci-profili.html">Ziyaretçi Profili</a></li>
-                <li><a href="neden-ziyaret-etmelisiniz.html">Neden Ziyaret Etmelisiniz?</a></li>
-                <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
-              </ul>
-            </div>
+          <div class="footer-column">
+            <h3>ZİYARETÇİ</h3>
+            <ul>
+              <li><a href="ziyaretci-profili.html">Ziyaretçi Profili</a></li>
+              <li><a href="neden-ziyaret-etmelisiniz.html">Neden Ziyaret Etmelisiniz?</a></li>
+              <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+            </ul>
+          </div>
 
-            <div class="footer-column">
-              <h3>ETKİNLİKLER</h3>
-              <ul>
-                <li><a href="b2b-toplantıları.html">B2B Toplantıları</a></li>
-                <li><a href="#">Haberler</a></li>
-                <li><a href="insights.html">LES Insights</a></li>
-                <li><a href="experience.html">LES Experiences</a></li>
-              </ul>
-            </div>
+          <div class="footer-column">
+            <h3>ETKİNLİKLER</h3>
+            <ul>
+              <li><a href="b2b-toplantıları.html">B2B Toplantıları</a></li>
+              <li><a href="#">Haberler</a></li>
+              <li><a href="insights.html">LES Insights</a></li>
+              <li><a href="experience.html">LES Experiences</a></li>
+            </ul>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script>
+  <script>
 
 
 
-    </script>
+  </script>
 
-    <!-- Bootstrap Bundle JS (includes Popper) - Load BEFORE custom scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-      crossorigin="anonymous"></script>
+  <!-- Bootstrap Bundle JS (includes Popper) - Load BEFORE custom scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Custom Scripts -->
-    <script src="hakkimizda.js"></script>
-    <script src="main.js"></script> <script src="kvkk.js"></script>
-    <script src="katilimci-listesi.js"></script>
+  <!-- Custom Scripts -->
+  <script src="hakkimizda.js"></script>
+  <script src="main.js"></script>
+  <script src="kvkk.js"></script>
+  <script src="katilimci-listesi.js"></script>
 
 </body>
 

@@ -248,292 +248,293 @@
       <a href="home.html">Home Page /</a>
       <a href="pre-registration-form.html">Pre-Registration Form</a>
     </div>
+  </div>
 
-    <div class="container my-5">
-      <div class="form-container">
-        <form>
-          <!-- First Row -->
-          <div class="row mb-4">
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="sirketAdmini">Company Name *</label>
-                <input type="text" class="form-control" id="sirketAdmini" required>
-              </div>
+  <div class="container my-5">
+    <div class="form-container">
+      <form>
+        <!-- First Row -->
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="sirketAdmini">Company Name *</label>
+              <input type="text" class="form-control" id="sirketAdmini" required>
             </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="adinaSoyadina">Name and Surname *</label>
-                <input type="text" class="form-control" id="adinaSoyadina" required>
-              </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="adinaSoyadina">Name and Surname *</label>
+              <input type="text" class="form-control" id="adinaSoyadina" required>
             </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="gorevTitle">Job Title *</label>
-                <input type="text" class="form-control" id="gorevTitle" required>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="gorevTitle">Job Title *</label>
+              <input type="text" class="form-control" id="gorevTitle" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="sirketAdresi">Address *</label>
+              <textarea class="form-control" id="sirketAdresi" rows="3" required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third Row -->
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="ulke">Country *</label>
+              <select class="form-select" id="ulke" required>
+                <option value="">Select</option>
+                <option value="TR">Turkey</option>
+                <option value="DE">Germany</option>
+                <option value="US">United States</option>
+                <option value="GB">United Kingdom</option>
+                <option value="FR">France</option>
+                <option value="IT">Italy</option>
+                <option value="ES">Spain</option>
+                <option value="RU">Russia</option>
+                <option value="CN">China</option>
+                <option value="JP">Japan</option>
+                <option value="KR">South Korea</option>
+                <option value="IN">India</option>
+                <option value="BR">Brazil</option>
+                <option value="CA">Canada</option>
+                <option value="AU">Australia</option>
+                <option value="NL">Netherlands</option>
+                <option value="SE">Sweden</option>
+                <option value="CH">Switzerland</option>
+                <option value="AE">United Arab Emirates</option>
+                <option value="SA">Saudi Arabia</option>
+                <option value="ZA">South Africa</option>
+                <option value="EG">Egypt</option>
+                <option value="NG">Nigeria</option>
+                <option value="MA">Morocco</option>
+                <option value="MX">Mexico</option>
+                <option value="AR">Argentina</option>
+                <option value="CO">Colombia</option>
+                <option value="CL">Chile</option>
+                <option value="ID">Indonesia</option>
+                <option value="MY">Malaysia</option>
+                <option value="TH">Thailand</option>
+                <option value="SG">Singapore</option>
+                <option value="PL">Poland</option>
+                <option value="AT">Austria</option>
+                <option value="BE">Belgium</option>
+                <option value="DK">Denmark</option>
+                <option value="FI">Finland</option>
+                <option value="GR">Greece</option>
+                <option value="PT">Portugal</option>
+                <option value="IE">Ireland</option>
+                <option value="EG">Egypt</option>
+                <option value="ZA">South Africa</option>
+                <option value="SA">Saudi Arabia</option>
+                <option value="AE">United Arab Emirates</option>
+                <option value="MY">Malaysia</option>
+                <option value="ID">Indonesia</option>
+                <option value="TH">Thailand</option>
+                <option value="SG">Singapore</option>
+                <option value="CO">Colombia</option>
+                <option value="CL">Chile</option>
+                <option value="MA">Morocco</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="sehir">City *</label>
+              <select class="form-select" id="sehir" required>
+                <option value="">Please select country first</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="telefon">Phone Number *</label>
+              <div class="input-group">
+                <span class="input-group-text" id="phoneCode">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" alt="TR" width="20"
+                    id="countryFlag">
+                  +90
+                </span>
+                <input type="tel" class="form-control" id="telefon" placeholder="501 234 56 78" required>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Second Row -->
-          <div class="row mb-4">
-            <div class="col-12">
-              <div class="form-group">
-                <label for="sirketAdresi">Address *</label>
-                <textarea class="form-control" id="sirketAdresi" rows="3" required></textarea>
-              </div>
+        <!-- Fourth Row -->
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="epostaAdresi">E-mail *</label>
+              <input type="email" class="form-control" id="epostaAdresi" required>
             </div>
           </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="webSitesi">Website</label>
+              <input type="url" class="form-control" id="webSitesi">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="faaliyetAlaniniziGiriniz">Company Activity *</label>
+              <input type="text" class="form-control" id="faaliyetAlaniniziGiriniz" required>
+            </div>
+          </div>
+        </div>
 
-          <!-- Third Row -->
-          <div class="row mb-4">
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="ulke">Country *</label>
-                <select class="form-select" id="ulke" required>
-                  <option value="">Select</option>
-                  <option value="TR">Turkey</option>
-                  <option value="DE">Germany</option>
-                  <option value="US">United States</option>
-                  <option value="GB">United Kingdom</option>
-                  <option value="FR">France</option>
-                  <option value="IT">Italy</option>
-                  <option value="ES">Spain</option>
-                  <option value="RU">Russia</option>
-                  <option value="CN">China</option>
-                  <option value="JP">Japan</option>
-                  <option value="KR">South Korea</option>
-                  <option value="IN">India</option>
-                  <option value="BR">Brazil</option>
-                  <option value="CA">Canada</option>
-                  <option value="AU">Australia</option>
-                  <option value="NL">Netherlands</option>
-                  <option value="SE">Sweden</option>
-                  <option value="CH">Switzerland</option>
-                  <option value="AE">United Arab Emirates</option>
-                  <option value="SA">Saudi Arabia</option>
-                  <option value="ZA">South Africa</option>
-                  <option value="EG">Egypt</option>
-                  <option value="NG">Nigeria</option>
-                  <option value="MA">Morocco</option>
-                  <option value="MX">Mexico</option>
-                  <option value="AR">Argentina</option>
-                  <option value="CO">Colombia</option>
-                  <option value="CL">Chile</option>
-                  <option value="ID">Indonesia</option>
-                  <option value="MY">Malaysia</option>
-                  <option value="TH">Thailand</option>
-                  <option value="SG">Singapore</option>
-                  <option value="PL">Poland</option>
-                  <option value="AT">Austria</option>
-                  <option value="BE">Belgium</option>
-                  <option value="DK">Denmark</option>
-                  <option value="FI">Finland</option>
-                  <option value="GR">Greece</option>
-                  <option value="PT">Portugal</option>
-                  <option value="IE">Ireland</option>
-                  <option value="EG">Egypt</option>
-                  <option value="ZA">South Africa</option>
-                  <option value="SA">Saudi Arabia</option>
-                  <option value="AE">United Arab Emirates</option>
-                  <option value="MY">Malaysia</option>
-                  <option value="ID">Indonesia</option>
-                  <option value="TH">Thailand</option>
-                  <option value="SG">Singapore</option>
-                  <option value="CO">Colombia</option>
-                  <option value="CL">Chile</option>
-                  <option value="MA">Morocco</option>
-                </select>
-              </div>
+        <!-- Fifth Row -->
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="urunGrubuGiriniz">Products *</label>
+              <input type="text" class="form-control" id="urunGrubuGiriniz" required>
             </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="sehir">City *</label>
-                <select class="form-select" id="sehir" required>
-                  <option value="">Please select country first</option>
-                </select>
-              </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="markalarinizGiriniz">Please enter the brand name *</label>
+              <input type="text" class="form-control" id="markalarinizGiriniz" required>
             </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="telefon">Phone Number *</label>
-                <div class="input-group">
-                  <span class="input-group-text" id="phoneCode">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" alt="TR"
-                      width="20" id="countryFlag">
-                    +90
-                  </span>
-                  <input type="tel" class="form-control" id="telefon" placeholder="501 234 56 78" required>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="ayrintiliMerkezi">Square meter prices that you have requested *</label>
+              <input type="text" class="form-control" id="ayrintiliMerkezi" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sixth Row -->
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Would you like us to visit your company? *</label>
+              <div class="radio-group">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="ziyaret" id="ziyaretEvet" value="evet" required>
+                  <label class="form-check-label" for="ziyaretEvet">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="ziyaret" id="ziyaretHayir" value="hayir">
+                  <label class="form-check-label" for="ziyaretHayir">No</label>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Fourth Row -->
-          <div class="row mb-4">
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="epostaAdresi">E-mail *</label>
-                <input type="email" class="form-control" id="epostaAdresi" required>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="webSitesi">Website</label>
-                <input type="url" class="form-control" id="webSitesi">
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="faaliyetAlaniniziGiriniz">Company Activity *</label>
-                <input type="text" class="form-control" id="faaliyetAlaniniziGiriniz" required>
-              </div>
-            </div>
-          </div>
-
-          <!-- Fifth Row -->
-          <div class="row mb-4">
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="urunGrubuGiriniz">Products *</label>
-                <input type="text" class="form-control" id="urunGrubuGiriniz" required>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="markalarinizGiriniz">Please enter the brand name *</label>
-                <input type="text" class="form-control" id="markalarinizGiriniz" required>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="ayrintiliMerkezi">Square meter prices that you have requested *</label>
-                <input type="text" class="form-control" id="ayrintiliMerkezi" required>
-              </div>
-            </div>
-          </div>
-
-          <!-- Sixth Row -->
-          <div class="row mb-4">
-            <div class="col-md-4">
-              <div class="form-group">
-                <label>Would you like us to visit your company? *</label>
-                <div class="radio-group">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="ziyaret" id="ziyaretEvet" value="evet" required>
-                    <label class="form-check-label" for="ziyaretEvet">Yes</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="ziyaret" id="ziyaretHayir" value="hayir">
-                    <label class="form-check-label" for="ziyaretHayir">No</label>
-                  </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Detailed Information About Fair Participation *</label>
+              <div class="radio-group-form">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="katilim" id="katilimIstiyorum" value="istiyorum"
+                    required>
+                  <label class="form-check-label" for="katilimIstiyorum">I want</label>
                 </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label>Detailed Information About Fair Participation *</label>
-                <div class="radio-group-form">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="katilim" id="katilimIstiyorum" value="istiyorum"
-                      required>
-                    <label class="form-check-label" for="katilimIstiyorum">I want</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="katilim" id="katilimIstemiyorum"
-                      value="istemiyorum">
-                    <label class="form-check-label" for="katilimIstemiyorum">I don't want</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Establishment Date of Your Company field removed -->
-          </div>
-
-          <!-- Seventh Row -->
-          <div class="row mb-4">
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="aktiviteTuru">The type of activity of your company *</label>
-                <select class="form-select" id="aktiviteTuru" required>
-                  <option selected>Choose</option>
-                  <option value="uretici">Exporter</option>
-                  <option value="ithalatci">Producer</option>
-
-                </select>
-              </div>
-            </div>
-            <!-- Export and total turnover fields removed -->
-          </div>
-
-          <!-- Eighth Row -->
-          <div class="row mb-4">
-            <div class="col-12">
-              <div class="form-group">
-                <label for="personelSayisi">Number of personnel employed in your company *</label>
-                <select class="form-select" id="personelSayisi" required>
-                  <option value="">Select</option>
-                  <option value="0-49">0-49</option>
-                  <option value="50-99">50-99</option>
-                  <option value="100+">100+</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <!-- National Fairs Section -->
-          <div class="section-title mb-3">Participation of your company in national fairs</div>
-          <div id="nationalFairsContainer">
-            <div class="form-row-container">
-              <div class="row mb-4 national-fair-row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="ulusalFuarAdi">Fair name</label>
-                    <input type="text" class="form-control" id="ulusalFuarAdi">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="ulusalKatilimYili">Year of Participation</label>
-                    <input type="text" class="form-control" id="ulusalKatilimYili">
-                  </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="katilim" id="katilimIstemiyorum"
+                    value="istemiyorum">
+                  <label class="form-check-label" for="katilimIstemiyorum">I don't want</label>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row mb-4">
-            <div class="col-12 text-end">
-              <button type="button" class="btn btn-dark" id="addNationalFair">Add New</button>
+          <!-- Establishment Date of Your Company field removed -->
+        </div>
+
+        <!-- Seventh Row -->
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="aktiviteTuru">The type of activity of your company *</label>
+              <select class="form-select" id="aktiviteTuru" required>
+                <option selected>Choose</option>
+                <option value="uretici">Exporter</option>
+                <option value="ithalatci">Producer</option>
+
+              </select>
             </div>
           </div>
-          <!-- International Fairs Section -->
-          <div class="section-title mb-3">Participation of your company in international fairs</div>
-          <div id="internationalFairsContainer">
-            <div class="form-row-container">
-              <div class="row mb-4 international-fair-row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="uluslararasiFuarAdi">Fair name</label>
-                    <input type="text" class="form-control" id="uluslararasiFuarAdi">
-                  </div>
+          <!-- Export and total turnover fields removed -->
+        </div>
+
+        <!-- Eighth Row -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="personelSayisi">Number of personnel employed in your company *</label>
+              <select class="form-select" id="personelSayisi" required>
+                <option value="">Select</option>
+                <option value="0-49">0-49</option>
+                <option value="50-99">50-99</option>
+                <option value="100+">100+</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- National Fairs Section -->
+        <div class="section-title mb-3">Participation of your company in national fairs</div>
+        <div id="nationalFairsContainer">
+          <div class="form-row-container">
+            <div class="row mb-4 national-fair-row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="ulusalFuarAdi">Fair name</label>
+                  <input type="text" class="form-control" id="ulusalFuarAdi">
                 </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="uluslararasiKatilimYili">Year of Participation</label>
-                    <input type="text" class="form-control" id="uluslararasiKatilimYili">
-                  </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="ulusalKatilimYili">Year of Participation</label>
+                  <input type="text" class="form-control" id="ulusalKatilimYili">
                 </div>
               </div>
             </div>
           </div>
-          <div class="row mb-4">
-            <div class="col-12 text-end">
-              <button type="button" class="btn btn-dark" id="addInternationalFair">Add New</button>
+        </div>
+        <div class="row mb-4">
+          <div class="col-12 text-end">
+            <button type="button" class="btn btn-dark" id="addNationalFair">Add New</button>
+          </div>
+        </div>
+        <!-- International Fairs Section -->
+        <div class="section-title mb-3">Participation of your company in international fairs</div>
+        <div id="internationalFairsContainer">
+          <div class="form-row-container">
+            <div class="row mb-4 international-fair-row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="uluslararasiFuarAdi">Fair name</label>
+                  <input type="text" class="form-control" id="uluslararasiFuarAdi">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="uluslararasiKatilimYili">Year of Participation</label>
+                  <input type="text" class="form-control" id="uluslararasiKatilimYili">
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-12 text-end">
+            <button type="button" class="btn btn-dark" id="addInternationalFair">Add New</button>
+          </div>
+        </div>
 
 
-          <!-- Certificates Section -->
-          <!-- <div class="section-title mb-3">Your Certificates and Awards</div>
+        <!-- Certificates Section -->
+        <!-- <div class="section-title mb-3">Your Certificates and Awards</div>
                     <div id="certificatesContainer">
                         <div class="form-row-container">
                             <div class="row mb-4 certificate-row">
@@ -557,298 +558,298 @@
                         </div>
                     </div> -->
 
-          <!-- Terms and Modal Section -->
-          <div class="row mb-4">
-            <div class="col-12">
-              <div class="onay-kutusu-okf-1">
-                <label for="acceptPDPL" id="pdplLabel" style="cursor:pointer;">
-                  <input type="checkbox" id="acceptPDPL" style="pointer-events:none;">
-                  I have read and accept the Information Text regarding the Use and Protection of Personal Data.
-                </label>
-                <button class="btn-okf-1" id="formSubmitBtn" type="submit" disabled>Book Your Place Now</button>
-              </div>
+        <!-- Terms and Modal Section -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="onay-kutusu-okf-1">
+              <label for="acceptPDPL" id="pdplLabel" style="cursor:pointer;">
+                <input type="checkbox" id="acceptPDPL" style="pointer-events:none;">
+                I have read and accept the Information Text regarding the Use and Protection of Personal Data.
+              </label>
+              <button class="btn-okf-1" id="formSubmitBtn" type="submit" disabled>Book Your Place Now</button>
             </div>
           </div>
+        </div>
 
-          <!-- PDPL Modal -->
-          <div id="pdplModal" class="footer-modal" style="display:none;">
-            <div class="footer-modal-content">
-              <span class="footer-modal-close" id="pdplModalClose">&times;</span>
-              <div id="pdpl-modal-title" class="footer-modal-title">Information Text (PDPL)</div>
-              <div id="pdpl-modal-body" class="footer-modal-body"></div>
-              <div style="margin-top:20px; text-align:right;">
-                <button id="pdplModalCloseBtn" class="btn btn-secondary" type="button">Close</button>
-                <button id="pdplModalAcceptBtn" class="btn btn-primary" type="button">I Accept</button>
-              </div>
+        <!-- PDPL Modal -->
+        <div id="pdplModal" class="footer-modal" style="display:none;">
+          <div class="footer-modal-content">
+            <span class="footer-modal-close" id="pdplModalClose">&times;</span>
+            <div id="pdpl-modal-title" class="footer-modal-title">Information Text (PDPL)</div>
+            <div id="pdpl-modal-body" class="footer-modal-body"></div>
+            <div style="margin-top:20px; text-align:right;">
+              <button id="pdplModalCloseBtn" class="btn btn-secondary" type="button">Close</button>
+              <button id="pdplModalAcceptBtn" class="btn btn-primary" type="button">I Accept</button>
             </div>
           </div>
+        </div>
 
-          <script>
-            document.addEventListener('DOMContentLoaded', function () {
-              var pdplModalBody = document.getElementById('pdpl-modal-body');
-              var pdplCheckbox = document.getElementById('acceptPDPL');
-              var pdplLabel = document.getElementById('pdplLabel');
-              var formSubmitBtn = document.getElementById('formSubmitBtn');
-              var pdplModal = document.getElementById('pdplModal');
-              var pdplModalClose = document.getElementById('pdplModalClose');
-              var pdplModalCloseBtn = document.getElementById('pdplModalCloseBtn');
-              var pdplModalAcceptBtn = document.getElementById('pdplModalAcceptBtn');
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            var pdplModalBody = document.getElementById('pdpl-modal-body');
+            var pdplCheckbox = document.getElementById('acceptPDPL');
+            var pdplLabel = document.getElementById('pdplLabel');
+            var formSubmitBtn = document.getElementById('formSubmitBtn');
+            var pdplModal = document.getElementById('pdplModal');
+            var pdplModalClose = document.getElementById('pdplModalClose');
+            var pdplModalCloseBtn = document.getElementById('pdplModalCloseBtn');
+            var pdplModalAcceptBtn = document.getElementById('pdplModalAcceptBtn');
 
-              // PDPL text (fill with your actual text or import from kvkk-en.js)
-              if (typeof footerModalContents !== 'undefined' && footerModalContents.kvkk) {
-                pdplModalBody.innerHTML = footerModalContents.kvkk.content;
-                var pdplModalTitle = document.getElementById('pdpl-modal-title');
-                if (pdplModalTitle) pdplModalTitle.textContent = 'Information Text (PDPL)';
-              } else {
-                pdplModalBody.innerHTML = `<p>This is where the Information Text regarding the Use and Protection of Personal Data (PDPL) will appear. Please provide the actual text here.</p>`;
-              }
+            // PDPL text (fill with your actual text or import from kvkk-en.js)
+            if (typeof footerModalContents !== 'undefined' && footerModalContents.kvkk) {
+              pdplModalBody.innerHTML = footerModalContents.kvkk.content;
+              var pdplModalTitle = document.getElementById('pdpl-modal-title');
+              if (pdplModalTitle) pdplModalTitle.textContent = 'Information Text (PDPL)';
+            } else {
+              pdplModalBody.innerHTML = `<p>This is where the Information Text regarding the Use and Protection of Personal Data (PDPL) will appear. Please provide the actual text here.</p>`;
+            }
 
-              // Button disabled by default
-              formSubmitBtn.disabled = true;
+            // Button disabled by default
+            formSubmitBtn.disabled = true;
 
-              // Prevent direct checkbox click
-              pdplCheckbox.addEventListener('click', function (e) {
-                e.preventDefault();
-              });
+            // Prevent direct checkbox click
+            pdplCheckbox.addEventListener('click', function (e) {
+              e.preventDefault();
+            });
 
-              // Label click opens modal if not checked, unchecks if already checked
-              pdplLabel.addEventListener('click', function (e) {
-                if (e.target.tagName !== 'INPUT') {
-                  pdplModal.style.display = 'flex';
-                }
-              });
-
-              // Modal close (X or Close)
-              pdplModalClose.addEventListener('click', function () {
-                pdplModal.style.display = 'none';
-              });
-              pdplModalCloseBtn.addEventListener('click', function () {
-                pdplModal.style.display = 'none';
-              });
-
-              // Accept in modal
-              pdplModalAcceptBtn.addEventListener('click', function () {
-                pdplCheckbox.checked = true;
-                formSubmitBtn.disabled = false;
-                pdplModal.style.display = 'none';
-              });
-
-              // If checkbox is unchecked, disable button
-              pdplCheckbox.addEventListener('change', function () {
-                if (!pdplCheckbox.checked) {
-                  formSubmitBtn.disabled = true;
-                }
-              });
-
-              // Prevent submit if not accepted
-              var form = document.querySelector('form');
-              if (form) {
-                form.addEventListener('submit', function (e) {
-                  if (!pdplCheckbox.checked) {
-                    e.preventDefault();
-                    alert('You must accept the Information Text regarding the Use and Protection of Personal Data to submit the form.');
-                  }
-                });
+            // Label click opens modal if not checked, unchecks if already checked
+            pdplLabel.addEventListener('click', function (e) {
+              if (e.target.tagName !== 'INPUT') {
+                pdplModal.style.display = 'flex';
               }
             });
-          </script>
 
-        </form>
-      </div>
-    </div>
+            // Modal close (X or Close)
+            pdplModalClose.addEventListener('click', function () {
+              pdplModal.style.display = 'none';
+            });
+            pdplModalCloseBtn.addEventListener('click', function () {
+              pdplModal.style.display = 'none';
+            });
 
-    <!-- Logo Slider -->
-    <div class="container-fluid logo-slider">
-      <div class="logo-slider-container">
-        <!-- First Slide -->
-        <div class="logo-slide">
-          <a href="https://www.btso.org.tr" class="logo-link" target="_blank">
-            <div class="logo-img-container">
-              <img src="./images/btso-logo.png" alt="YMB" class="logo-img-slider">
-            </div>
-            <div class="logo-text"></div>
-          </a>
-          <a href="https://www.mib.org.tr" class="logo-link" target="_blank">
-            <div class="logo-img-container">
-              <img src="./images/mib-logo.png" alt="KFA" class="logo-img-slider">
-            </div>
-            <div class="logo-text"></div>
-          </a>
-          <a href="https://bfm.webonalti.net" class="logo-link" target="_blank">
-            <div class="logo-img-container">
-              <img src="./images/logo-beyaz.png" alt="TETSİAD" class="logo-img-slider">
-            </div>
-            <div class="logo-text"></div>
-          </a>
-        </div>
+            // Accept in modal
+            pdplModalAcceptBtn.addEventListener('click', function () {
+              pdplCheckbox.checked = true;
+              formSubmitBtn.disabled = false;
+              pdplModal.style.display = 'none';
+            });
 
-        <!-- Second Slide (duplicate for seamless looping) -->
-        <div class="logo-slide">
-          <a href="https://www.btso.org.tr" class="logo-link" target="_blank">
-            <div class="logo-img-container">
-              <img src="./images/btso-logo.png" alt="YMB" class="logo-img-slider">
-            </div>
-            <div class="logo-text"></div>
-          </a>
-          <a href="https://www.mib.org.tr" class="logo-link" target="_blank">
-            <div class="logo-img-container">
-              <img src="./images/mib-logo.png" alt="KFA" class="logo-img-slider">
-            </div>
-            <div class="logo-text"></div>
-          </a>
-          <a href="https://bfm.webonalti.net" class="logo-link" target="_blank">
-            <div class="logo-img-container">
-              <img src="./images/logo-beyaz.png" alt="TETSİAD" class="logo-img-slider">
-            </div>
-            <div class="logo-text"></div>
-          </a>
-        </div>
-      </div>
-    </div>
+            // If checkbox is unchecked, disable button
+            pdplCheckbox.addEventListener('change', function () {
+              if (!pdplCheckbox.checked) {
+                formSubmitBtn.disabled = true;
+              }
+            });
 
-    <!-- Footer Start -->
-    <!-- Footer Start -->
-    <footer class="footer">
-      <div class="footer-content mt-3">
-        <div class="footer-left">
-          <div class="logo-footer">
-            <img src="./images/meexx logo beyaz.png" alt="">
-          </div>
-          <p class="address">CONTACT INFORMATION</p>
-          <div class="contact-info" style="font-size: 14px;">
-            <i class="fas fa-phone"></i> <span>0546 458 70 16</span> <br>
-            <i class="fas fa-phone"></i> <span>0224 294 85 50</span>
-            <p><i class="fas fa-envelope"></i><span>info@meexx.com.tr
-              </span></p>
-            <p><i class="fas fa-envelope"></i><span>meexx@kfa.com.tr </span></p>
-          </div>
-          <h4 class="follow-us">Follow us</h4>
-          <div class="social-icons-footer">
-            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-
-        <div class="footer-right">
-          <div class="footer-links">
-            <div class="footer-column">
-              <h3>MEEXX</h3>
-              <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="exhibiton-identification.html">Exhibition Identification</a></li>
-                <li><a href="exhibition-area.html">Exhibition Area</a></li>
-                <li><a href="how-to-reach.html">How To Reach</a></li>
-                <li><a href="#">Exhibition Post Report</a></li>
-              </ul>
-            </div>
-
-            <div class="footer-column">
-              <h3>EXHIBITORS</h3>
-              <ul>
-                <li><a href="exhibitor-profile.html">Exhibitor Profile</a></li>
-                <li><a href="pre-registration-form.html">Pre-Registration Form</a></li>
-                <li><a href="why-exhibit.html">Why Exhibit ?</a></li>
-                <li><a href="#">Exhibitor List 2025</a></li>
-              </ul>
-            </div>
-
-            <div class="footer-column">
-              <h3>VISITORS</h3>
-              <ul>
-                <li><a href="visitor-profile.html">Visitor Profile</a></li>
-                <li><a href="why-visit.html">Why Should You Visit ?</a></li>
-                <li><a href="faq.html">Frequently Asked Questions</a></li>
-              </ul>
-            </div>
-
-            <div class="footer-column">
-              <h3>EVENTS</h3>
-              <ul>
-                <li><a href="b2b-meeting.html">B2B Meetings</a></li>
-                <li><a href="#">MEEXX Trend Areas</a></li>
-                <li><a href="#">MEEXX Experience</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- Footer Alt Satır ve Modal Başlangıç -->
-    <div class="footer-bottom-bar">
-      <div class="footer-bottom-content">
-        <div class="footer-bottom-left">
-          <span>Copyright © 2025 MEEXX All Rights Reserved</span>
-        </div>
-        <div class="footer-bottom-right">
-          <a href="#" class="footer-link" data-modal="kvkk">PDPL</a> •
-          <a href="#" class="footer-link" data-modal="gizlilik">PRIVACY AGREEMENT</a> •
-          <a href="#" class="footer-link" data-modal="kullanici">USER AGREEMENT</a>
-        </div>
-        <div class="footer-bottom-signed">
-          <span>Powered by <a href="https://www.f2fbilisim.com" target="_blank">F2F Bilişim</a></span>
-        </div>
-      </div>
-    </div>
-    <!-- Modal Yapısı -->
-    <div id="footerModal" class="footer-modal">
-      <div class="footer-modal-content">
-        <span class="footer-modal-close">&times;</span>
-        <div id="footer-modal-title" class="footer-modal-title"></div>
-        <div id="footer-modal-body" class="footer-modal-body"></div>
-      </div>
-    </div>
-    <!-- Footer Alt Satır ve Modal Bitiş -->
-
-    <script>
-      const buttons = document.querySelectorAll('#pagination .page-button');
-
-      buttons.forEach(button => {
-        button.addEventListener('click', () => {
-          buttons.forEach(btn => {
-            btn.classList.remove('btn-danger');
-            btn.classList.add('btn-outline-danger');
+            // Prevent submit if not accepted
+            var form = document.querySelector('form');
+            if (form) {
+              form.addEventListener('submit', function (e) {
+                if (!pdplCheckbox.checked) {
+                  e.preventDefault();
+                  alert('You must accept the Information Text regarding the Use and Protection of Personal Data to submit the form.');
+                }
+              });
+            }
           });
+        </script>
 
-          button.classList.remove('btn-outline-danger');
-          button.classList.add('btn-danger');
+      </form>
+    </div>
+  </div>
+
+  <!-- Logo Slider -->
+  <div class="container-fluid logo-slider">
+    <div class="logo-slider-container">
+      <!-- First Slide -->
+      <div class="logo-slide">
+        <a href="https://www.btso.org.tr" class="logo-link" target="_blank">
+          <div class="logo-img-container">
+            <img src="./images/btso-logo.png" alt="YMB" class="logo-img-slider">
+          </div>
+          <div class="logo-text"></div>
+        </a>
+        <a href="https://www.mib.org.tr" class="logo-link" target="_blank">
+          <div class="logo-img-container">
+            <img src="./images/mib-logo.png" alt="KFA" class="logo-img-slider">
+          </div>
+          <div class="logo-text"></div>
+        </a>
+        <a href="https://bfm.webonalti.net" class="logo-link" target="_blank">
+          <div class="logo-img-container">
+            <img src="./images/logo-beyaz.png" alt="TETSİAD" class="logo-img-slider">
+          </div>
+          <div class="logo-text"></div>
+        </a>
+      </div>
+
+      <!-- Second Slide (duplicate for seamless looping) -->
+      <div class="logo-slide">
+        <a href="https://www.btso.org.tr" class="logo-link" target="_blank">
+          <div class="logo-img-container">
+            <img src="./images/btso-logo.png" alt="YMB" class="logo-img-slider">
+          </div>
+          <div class="logo-text"></div>
+        </a>
+        <a href="https://www.mib.org.tr" class="logo-link" target="_blank">
+          <div class="logo-img-container">
+            <img src="./images/mib-logo.png" alt="KFA" class="logo-img-slider">
+          </div>
+          <div class="logo-text"></div>
+        </a>
+        <a href="https://bfm.webonalti.net" class="logo-link" target="_blank">
+          <div class="logo-img-container">
+            <img src="./images/logo-beyaz.png" alt="TETSİAD" class="logo-img-slider">
+          </div>
+          <div class="logo-text"></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Start -->
+  <!-- Footer Start -->
+  <footer class="footer">
+    <div class="footer-content mt-3">
+      <div class="footer-left">
+        <div class="logo-footer">
+          <img src="./images/meexx logo beyaz.png" alt="">
+        </div>
+        <p class="address">CONTACT INFORMATION</p>
+        <div class="contact-info" style="font-size: 14px;">
+          <i class="fas fa-phone"></i> <span>0546 458 70 16</span> <br>
+          <i class="fas fa-phone"></i> <span>0224 294 85 50</span>
+          <p><i class="fas fa-envelope"></i><span>info@meexx.com.tr
+            </span></p>
+          <p><i class="fas fa-envelope"></i><span>meexx@kfa.com.tr </span></p>
+        </div>
+        <h4 class="follow-us">Follow us</h4>
+        <div class="social-icons-footer">
+          <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>MEEXX</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="exhibiton-identification.html">Exhibition Identification</a></li>
+              <li><a href="exhibition-area.html">Exhibition Area</a></li>
+              <li><a href="how-to-reach.html">How To Reach</a></li>
+              <li><a href="#">Exhibition Post Report</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>EXHIBITORS</h3>
+            <ul>
+              <li><a href="exhibitor-profile.html">Exhibitor Profile</a></li>
+              <li><a href="pre-registration-form.html">Pre-Registration Form</a></li>
+              <li><a href="why-exhibit.html">Why Exhibit ?</a></li>
+              <li><a href="#">Exhibitor List 2025</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>VISITORS</h3>
+            <ul>
+              <li><a href="visitor-profile.html">Visitor Profile</a></li>
+              <li><a href="why-visit.html">Why Should You Visit ?</a></li>
+              <li><a href="faq.html">Frequently Asked Questions</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>EVENTS</h3>
+            <ul>
+              <li><a href="b2b-meeting.html">B2B Meetings</a></li>
+              <li><a href="#">MEEXX Trend Areas</a></li>
+              <li><a href="#">MEEXX Experience</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer Alt Satır ve Modal Başlangıç -->
+  <div class="footer-bottom-bar">
+    <div class="footer-bottom-content">
+      <div class="footer-bottom-left">
+        <span>Copyright © 2025 MEEXX All Rights Reserved</span>
+      </div>
+      <div class="footer-bottom-right">
+        <a href="#" class="footer-link" data-modal="kvkk">PDPL</a> •
+        <a href="#" class="footer-link" data-modal="gizlilik">PRIVACY AGREEMENT</a> •
+        <a href="#" class="footer-link" data-modal="kullanici">USER AGREEMENT</a>
+      </div>
+      <div class="footer-bottom-signed">
+        <span>Powered by <a href="https://www.f2fbilisim.com" target="_blank">F2F Bilişim</a></span>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Yapısı -->
+  <div id="footerModal" class="footer-modal">
+    <div class="footer-modal-content">
+      <span class="footer-modal-close">&times;</span>
+      <div id="footer-modal-title" class="footer-modal-title"></div>
+      <div id="footer-modal-body" class="footer-modal-body"></div>
+    </div>
+  </div>
+  <!-- Footer Alt Satır ve Modal Bitiş -->
+
+  <script>
+    const buttons = document.querySelectorAll('#pagination .page-button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        buttons.forEach(btn => {
+          btn.classList.remove('btn-danger');
+          btn.classList.add('btn-outline-danger');
         });
+
+        button.classList.remove('btn-outline-danger');
+        button.classList.add('btn-danger');
       });
+    });
 
 
 
-      /* Navbar Fixed */
-      window.addEventListener('scroll', function () {
-        const navbar = document.querySelector('.main-header');
-        if (window.scrollY > 50) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
-        }
-      });
+    /* Navbar Fixed */
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.main-header');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
 
 
-    </script>
+  </script>
 
-    <!-- Bootstrap Bundle JS (includes Popper) - Load BEFORE custom scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-      crossorigin="anonymous"></script>
+  <!-- Bootstrap Bundle JS (includes Popper) - Load BEFORE custom scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Custom Scripts -->
-    <script src="pre-registration-form.js"></script>
-    <script src="../tr/main.js"></script>
-    <script src="kvkk-en.js"></script>
-    <!-- Pikaday JS -->
-    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
-    <script>
+  <!-- Custom Scripts -->
+  <script src="pre-registration-form.js"></script>
+  <script src="../tr/main.js"></script>
+  <script src="kvkk-en.js"></script>
+  <!-- Pikaday JS -->
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <script>
 
-    </script>
+  </script>
 
 </body>
 
