@@ -733,7 +733,17 @@ const countries = {
         phoneCode: "+1",
         flagUrl: "https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg",
         phonePlaceholder: "416 123 4567"
-    }
+    },
+
+    diger: {
+        cities: [
+            { value: "diger", text: "Diğer" },
+        ],
+        phoneCode: "",
+        flagUrl: "0",
+        phonePlaceholder: ""
+    },
+    
 };
 
 // Ülke seçildiğinde şehirleri ve telefon kodunu güncelle
