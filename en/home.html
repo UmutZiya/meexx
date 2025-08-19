@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../tr/assets/index.css">
   <link rel="stylesheet" href="../tr/assets/pop-up.css">
   <link rel="stylesheet" href="../tr/assets/kvkk.css">
+  <link rel="stylesheet" href="../tr/assets/splash-screen.css">
   <!-- Font Awesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,6 +39,27 @@
 </head>
 
 <body>
+
+  <!-- Splash Screen -->
+
+  <div id="splash-screen"
+    style="position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+    <div class="background-animation" style="position:absolute;top:0;left:0;width:100vw;height:100vh;z-index:1;">
+      <div class="conveyor-belt"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+    <div class="container" style="z-index:2;">
+      <div class="logo-container">
+        <h1 class="main-title">MEEXX</h1>
+        <p class="subtitle">MACHINERY AND TECHNOLOGIES</p>
+        <div class="year">2025</div>
+      </div>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Header Start -->
   <header class="main-header">
@@ -674,8 +696,7 @@
   </div>
   <!-- Footer Alt Satır ve Modal Bitiş -->
 
-
-
+  
   <script>
 
   </script>
@@ -696,6 +717,7 @@
   <script src="../tr/stant-talebi.js"></script>
   <script src="../tr/main.js"></script>
   <script src="kvkk-en.js"></script>
+  <script src="../tr/splash-screen.js"></script>
 </body>
 
 </html>

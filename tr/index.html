@@ -43,7 +43,22 @@
 <body>
 
   <!-- Splash Screen - ALWAYS SHOWS FIRST -->
-
+  <div id="splash-screen" style="position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+    <div class="background-animation" style="position:absolute;top:0;left:0;width:100vw;height:100vh;z-index:1;">
+      <div class="conveyor-belt"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+    <div class="container" style="z-index:2;">
+      <div class="logo-container">
+        <h1 class="main-title">MEEXX</h1>
+        <p class="subtitle">Makine ve Teknolojileri Fuarı</p>
+        <div class="year">2025</div>
+      </div>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
+      </div>
+    </div>
+  </div>
   <!-- Splash Screen End -->
 
   <!-- Header Start -->
@@ -659,20 +674,20 @@
   </footer>
   <!-- Footer Alt Satır ve Modal Başlangıç -->
   <div class="footer-bottom-bar">
-      <div class="footer-bottom-content">
-        <div class="footer-bottom-left">
-          <span>Copyright © 2025 MEEXX Her Hakkı Saklıdır</span>
-        </div>
-        <div class="footer-bottom-right">
-          <a href="#" class="footer-link" data-modal="kvkk">KVKK</a> •
-          <a href="#" class="footer-link" data-modal="gizlilik">GİZLİLİK SÖZLEŞMESİ</a> •
-          <a href="#" class="footer-link" data-modal="kullanici">KULLANICI SÖZLEŞMESİ</a>
-        </div>
-        <div class="footer-bottom-signed">
-          <span>Powered by <a href="https://www.f2fbilisim.com" target="_blank">F2F Bilişim</a></span>
-        </div>
+    <div class="footer-bottom-content">
+      <div class="footer-bottom-left">
+        <span>Copyright © 2025 MEEXX Her Hakkı Saklıdır</span>
+      </div>
+      <div class="footer-bottom-right">
+        <a href="#" class="footer-link" data-modal="kvkk">KVKK</a> •
+        <a href="#" class="footer-link" data-modal="gizlilik">GİZLİLİK SÖZLEŞMESİ</a> •
+        <a href="#" class="footer-link" data-modal="kullanici">KULLANICI SÖZLEŞMESİ</a>
+      </div>
+      <div class="footer-bottom-signed">
+        <span>Powered by <a href="https://www.f2fbilisim.com" target="_blank">F2F Bilişim</a></span>
       </div>
     </div>
+  </div>
   <!-- Modal Yapısı -->
   <div id="footerModal" class="footer-modal">
     <div class="footer-modal-content">
@@ -702,6 +717,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
+  <script src="splash-screen.js"></script>
   <script src="index.js"></script>
   <script src="main.js"></script>
   <script src="popup.js"></script>

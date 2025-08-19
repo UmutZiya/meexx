@@ -164,5 +164,3 @@ window.addEventListener('load', () => {
   }, 100);
 });
 
-
-// SPLASH
