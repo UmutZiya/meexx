@@ -20,6 +20,12 @@
   <link rel="icon" type="favicon" href="images/meex-favicon.png">
 
   <link rel="icon" type="image" href="./images/lesexpo-favicon.png">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("TPnTeHx2CEuLc0aa6"); // Buraya kendi PUBLIC KEY'inizi yazın
+    })();
+  </script>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -69,7 +75,7 @@
     <div class="container-navbar">
       <a href="index.html" class="logo mt-5">
         <!-- Gerçek logo dosyanızın yolunu buraya ekleyin -->
-        <img src="./images/meexx logo.png" class="" alt="">
+        <img src="./images/MEEXX_LOGO_tr.png" class="" alt="">
       </a>
 
       <nav class="main-nav">
@@ -150,7 +156,7 @@
             <i class="fas fa-search"></i>
           </button>
           <button class="mobile-menu-toggle nav-toggle-button" data-translate-aria-label="menu.toggleAriaLabel"
-            aria-label="Menüyü Aç/Kapat">
+            aria-label="Menüyü Aç/Kapat" type="button">
             <i class="fas fa-bars"></i>
           </button>
         </div>
@@ -175,7 +181,7 @@
     <div class="menu-header">
       <a href="index.html" class="logo-menu">
         <!-- Menüdeki logo -->
-        <img src="./images/meexx logo.png" alt="" class="fs-2">
+        <img src="./images/MEEXX_LOGO_tr.png" alt="" class="fs-2">
       </a>
 
       <div class="menu-header-actions-fs">
@@ -280,21 +286,22 @@
         <h2 class="form-title">
           📝 İletişim Formu
         </h2>
-        <form>
+        <form id="contact-form" onsubmit="sendEmail(event)">
           <div class="form-row">
             <div class="form-group">
               <label for="name">Ad Soyad</label>
-              <input type="text" id="name" name="name" required>
+              <input type="text" id="name" name="from_name" required>
             </div>
-            <div class="form-group">
-              <label for="company">E-Posta</label>
-              <input type="text" id="company" name="company" required>
-            </div>
-          </div>
 
-          <div class="form-group">
-            <label for="email">Konu</label>
-            <input type="email" id="email" name="email" required>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="from_email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="company">Konu</label>
+              <input type="text" id="company" name="subject" required>
+            </div>
           </div>
 
           <div class="form-group">
@@ -531,7 +538,19 @@
   <!-- Footer Alt Satır ve Modal Bitiş -->
 
   <script>
+    function sendEmail(event) {
+      event.preventDefault();
 
+      emailjs.sendForm('service_c2doosm', 'template_1kt9fso', '#contact-form')
+        .then(function (response) {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Mesajınız başarıyla gönderildi!');
+          document.getElementById('contact-form').reset();
+        }, function (error) {
+          console.log('FAILED...', error);
+          alert('Mesajınız gönderilirken bir hata oluştu.');
+        });
+    }
   </script>
 
   <!-- Bootstrap Bundle JS (includes Popper) - Load BEFORE custom scripts -->

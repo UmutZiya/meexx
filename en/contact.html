@@ -20,6 +20,12 @@
   <link rel="icon" type="favicon" href="images/meex-favicon.png">
 
   <link rel="icon" type="image" href="./images/lesexpo-favicon.png">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("TPnTeHx2CEuLc0aa6"); // Buraya kendi PUBLIC KEY'inizi yazın
+    })();
+  </script>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -71,7 +77,7 @@
     <div class="container-navbar">
       <a href="home.html" class="logo mt-5">
         <!-- Gerçek logo dosyanızın yolunu buraya ekleyin -->
-        <img src="./images/meexx logo.png" class="" alt="">
+        <img src="./images/MEEXX_LOGO_en.png" class="" alt="">
       </a>
 
       <nav class="main-nav">
@@ -177,7 +183,7 @@
     <div class="menu-header">
       <a href="home.html" class="logo-menu">
         <!-- Menüdeki logo -->
-        <img src="./images/meexx logo.png" alt="" class="fs-2">
+        <img src="./images/MEEXX_LOGO_en.png" alt="" class="fs-2">
       </a>
 
       <div class="menu-header-actions-fs">
@@ -282,26 +288,27 @@
         <h2 class="form-title">
           📝 Contact Form
         </h2>
-        <form>
+        <form id="contact-form" onsubmit="sendEmail(event)">
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name Surname</label>
-              <input type="text" id="name" name="name" required>
+              <input type="text" id="name" name="from_name" required>
             </div>
             <div class="form-group">
               <label for="company">Email</label>
-              <input type="text" id="company" name="company" required>
+              <input type="email" id="company" id="email" name="from_email" required>
             </div>
           </div>
 
           <div class="form-group">
             <label for="email">Subject</label>
-            <input type="email" id="email" name="email" required>
+            <input type="text" id="company" name="subject" required>
           </div>
 
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Lütfen detaylı bilgi veriniz..." required></textarea>
+            <textarea id="message" name="message" placeholder="Please provide detailed information..."
+              required></textarea>
           </div>
 
           <button type="submit" class="submit-btn">
@@ -531,7 +538,19 @@
 
   <script>
 
-
+    function sendEmail(event) {
+      event.preventDefault();
+    
+      emailjs.sendForm('service_c2doosm', 'template_1kt9fso', '#contact-form')
+        .then(function (response) {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Your message has been sent successfully!');
+          document.getElementById('contact-form').reset();
+        }, function (error) {
+          console.log('FAILED...', error);
+          alert('An error occurred while sending your message.');
+        });
+    }
   </script>
 
   <!-- Bootstrap Bundle JS (includes Popper) - Load BEFORE custom scripts -->

@@ -22,6 +22,12 @@
     <link rel="icon" type="image" href="./images/lesexpo-favicon.png">
     <!-- Pikaday CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("TPnTeHx2CEuLc0aa6"); // Buraya kendi PUBLIC KEY'inizi yazın
+        })();
+    </script>
     <style>
         .banner {
             position: relative;
@@ -56,7 +62,7 @@
         <div class="container-navbar">
             <a href="index.html" class="logo mt-5">
                 <!-- Gerçek logo dosyanızın yolunu buraya ekleyin -->
-                <img src="./images/meexx logo.png" class="" alt="">
+                <img src="./images/MEEXX_LOGO_tr.png" class="" alt="">
             </a>
 
             <nav class="main-nav">
@@ -162,7 +168,7 @@
         <div class="menu-header">
             <a href="index.html" class="logo-menu">
                 <!-- Menüdeki logo -->
-                <img src="./images/meexx logo.png" alt="" class="fs-2">
+                <img src="./images/MEEXX_LOGO_tr.png" alt="" class="fs-2">
             </a>
 
             <div class="menu-header-actions-fs">
@@ -254,25 +260,25 @@
     </div>
     <div class="container my-5">
         <div class="form-container">
-            <form>
+            <form id="pre-registration-form" onsubmit="sendPreRegistrationEmail(event)">
                 <!-- First Row -->
                 <div class="row mb-4">
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="sirketAdmini">Şirket Adınız *</label>
-                            <input type="text" class="form-control" id="sirketAdmini" required>
+                            <input type="text" class="form-control" id="sirketAdmini" name="company_name" required>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="adinaSoyadina">Adınız Soyadınız *</label>
-                            <input type="text" class="form-control" id="adinaSoyadina" required>
+                            <input type="text" class="form-control" id="adinaSoyadina" name="full_name" required>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="gorevTitle">Göreviniz *</label>
-                            <input type="text" class="form-control" id="gorevTitle" required>
+                            <input type="text" class="form-control" id="gorevTitle" name="position" required>
                         </div>
                     </div>
                 </div>
@@ -282,7 +288,7 @@
                     <div class="col-12">
                         <div class="form-group">
                             <label for="sirketAdresi">Şirket Adresiniz *</label>
-                            <textarea class="form-control" id="sirketAdresi" rows="3" required></textarea>
+                            <textarea class="form-control" id="sirketAdresi" name="company_address" rows="3" required></textarea>
                         </div>
                     </div>
                 </div>
@@ -292,7 +298,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="ulke">Ülke *</label>
-                            <select class="form-select" id="ulke" required>
+                            <select class="form-select" id="ulke" name="country" required>
                                 <option value="">Lütfen Seçiniz</option>
                                 <option value="turkiye">Türkiye</option>
                                 <option value="almanya">Almanya</option>
@@ -346,7 +352,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="sehir">Şehir *</label>
-                            <select class="form-select" id="sehir" required>
+                            <select class="form-select" id="sehir" name="city" required>
                                 <option value="">Lütfen Önce Ülke Seçiniz</option>
                             </select>
                         </div>
@@ -360,7 +366,7 @@
                                         alt="TR" width="20" id="countryFlag">
                                     +90
                                 </span>
-                                <input type="tel" class="form-control" id="telefon" placeholder="501 234 56 78"
+                                <input type="tel" class="form-control" id="telefon" name="phone" placeholder="501 234 56 78"
                                     required>
                             </div>
                         </div>
@@ -372,19 +378,19 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="epostaAdresi">E-Posta Adresiniz *</label>
-                            <input type="email" class="form-control" id="epostaAdresi" required>
+                            <input type="email" class="form-control" id="epostaAdresi" name="email" required>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="webSitesi">Web Sitesi Adresiniz/Giriniz</label>
-                            <input type="text" class="form-control" id="webSitesi" placeholder="example.com">
+                            <input type="text" class="form-control" id="webSitesi" name="website" placeholder="example.com">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="faaliyetAlaniniziGiriniz">Faaliyet Alanınızı Giriniz *</label>
-                            <input type="text" class="form-control" id="faaliyetAlaniniziGiriniz" required>
+                            <input type="text" class="form-control" id="faaliyetAlaniniziGiriniz" name="activity_field" required>
                         </div>
                     </div>
                 </div>
@@ -394,19 +400,19 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="urunGrubuGiriniz">Ürün Grubunuzu Giriniz *</label>
-                            <input type="text" class="form-control" id="urunGrubuGiriniz" required>
+                            <input type="text" class="form-control" id="urunGrubuGiriniz" name="product_group" required>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="markalarinizGiriniz">Markalarınızı Giriniz *</label>
-                            <input type="text" class="form-control" id="markalarinizGiriniz" required>
+                            <input type="text" class="form-control" id="markalarinizGiriniz" name="brands" required>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="ayrintiliMerkezi">Ayırtmak İstediğiniz Metrekareyi Giriniz *</label>
-                            <input type="text" class="form-control" id="ayrintiliMerkezi" required>
+                            <input type="text" class="form-control" id="ayrintiliMerkezi" name="desired_meter_square" required>
                         </div>
                     </div>
                 </div>
@@ -418,13 +424,13 @@
                             <label>Firmanızı Ziyaret Etmemizi İster Misiniz? *</label>
                             <div class="radio-group">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="ziyaret" id="ziyaretEvet"
-                                        value="evet" required>
+                                    <input class="form-check-input" type="radio" name="visit_request" id="ziyaretEvet"
+                                        value="Evet" required>
                                     <label class="form-check-label" for="ziyaretEvet">Evet</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="ziyaret" id="ziyaretHayir"
-                                        value="hayir">
+                                    <input class="form-check-input" type="radio" name="visit_request" id="ziyaretHayir"
+                                        value="Hayir">
                                     <label class="form-check-label" for="ziyaretHayir">Hayır</label>
                                 </div>
                             </div>
@@ -435,13 +441,13 @@
                             <label>Fuar Katılım Hakkında Ayrıntılı Bilgi *</label>
                             <div class="radio-group-form">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="katilim" id="katilimIstiyorum"
-                                        value="istiyorum" required>
+                                    <input class="form-check-input" type="radio" name="participation_info" id="katilimIstiyorum"
+                                        value="İstiyorum" required>
                                     <label class="form-check-label" for="katilimIstiyorum">İstiyorum</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="katilim" id="katilimIstemiyorum"
-                                        value="istemiyorum">
+                                    <input class="form-check-input" type="radio" name="participation_info" id="katilimIstemiyorum"
+                                        value="İstemiyorum">
                                     <label class="form-check-label" for="katilimIstemiyorum">İstemiyorum</label>
                                 </div>
                             </div>
@@ -455,7 +461,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="aktiviteTuru">Firmanızın Aktivite Türü *</label>
-                            <select class="form-select" id="aktiviteTuru" required>
+                            <select class="form-select" id="aktiviteTuru" name="activity_type" required>
                                 <option selected>Seçiniz</option>
                                 <option value="uretici">Üretici</option>
                                 <option value="ithalatci">İthalatçı</option>
@@ -475,7 +481,7 @@
                     <div class="col-12">
                         <div class="form-group">
                             <label for="personelSayisi">Firmanızda İstihdam Edilen Personel Sayısı *</label>
-                            <select class="form-select" id="personelSayisi" required>
+                            <select class="form-select" id="personelSayisi" name="employee_count" required>
                                 <option value="">Seçiniz</option>
                                 <option value="0-49">0-49</option>
                                 <option value="50-99">50-99</option>
@@ -493,13 +499,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="ulusalFuarAdi">Fuar Adı</label>
-                                    <input type="text" class="form-control" id="ulusalFuarAdi">
+                                    <input type="text" class="form-control" id="ulusalFuarAdi" name="national_fair_name[]">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="ulusalKatilimYili">Katılım Yılı</label>
-                                    <input type="text" class="form-control" id="ulusalKatilimYili">
+                                    <input type="text" class="form-control" id="ulusalKatilimYili" name="national_fair_year[]">
                                 </div>
                             </div>
                         </div>
@@ -519,13 +525,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="uluslararasiFuarAdi">Fuar Adı</label>
-                                    <input type="text" class="form-control" id="uluslararasiFuarAdi">
+                                    <input type="text" class="form-control" id="uluslararasiFuarAdi" name="international_fair_name[]">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="uluslararasiKatilimYili">Katılım Yılı</label>
-                                    <input type="text" class="form-control" id="uluslararasiKatilimYili">
+                                    <input type="text" class="form-control" id="uluslararasiKatilimYili" name="international_fair_year[]">
                                 </div>
                             </div>
                         </div>
@@ -541,11 +547,11 @@
                     <div class="col-12">
                         <div class="onay-kutusu-okf-1">
                             <label for="kabulEdiyorum" id="kvkkLabel" style="cursor:pointer;">
-                                <input type="checkbox" id="kabulEdiyorum" style="pointer-events:none;">
+                                <input type="checkbox" id="kabulEdiyorum" name="kvkk_consent" style="pointer-events:none;" value="Kabul Edildi">
                                 Aydınlatma Metni ve Kişisel Verilerin Kullanılması ve Korunması ile ilgili
                                 bilgilendirme yazısını okudum, kabul ediyorum.
                             </label>
-                            <button class="btn-okf-1" id="formGonderBtn" type="submit" disabled>Hemen Yerinizi
+                            <button class="btn-okf-1" id="formGonderBtn" type="submit">Hemen Yerinizi
                                 Ayırtın</button>
                         </div>
                     </div>
@@ -703,6 +709,53 @@
     <!-- Footer Alt Satır ve Modal Bitiş -->
 
     <script>
+        function sendPreRegistrationEmail(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = new FormData(form);
+            const templateParams = {};
+
+            // Tekil alanları toplama
+            for (const [key, value] of formData.entries()) {
+                if (!key.endsWith('[]')) { // Dizi olmayan alanları al
+                    templateParams[key] = value;
+                }
+            }
+
+            // Ulusal fuar bilgilerini birleştirme
+            const nationalFairNames = formData.getAll('national_fair_name[]');
+            const nationalFairYears = formData.getAll('national_fair_year[]');
+            let nationalFairsString = '';
+            for (let i = 0; i < nationalFairNames.length; i++) {
+                if (nationalFairNames[i] || nationalFairYears[i]) {
+                    nationalFairsString += `- Fuar Adı: ${nationalFairNames[i] || ''} (Yıl: ${nationalFairYears[i] || ''})<br>`;
+                }
+            }
+            templateParams['national_fairs'] = nationalFairsString || 'Bilgi girilmedi.';
+
+            // Uluslararası fuar bilgilerini birleştirme
+            const internationalFairNames = formData.getAll('international_fair_name[]');
+            const internationalFairYears = formData.getAll('international_fair_year[]');
+            let internationalFairsString = '';
+            for (let i = 0; i < internationalFairNames.length; i++) {
+                if (internationalFairNames[i] || internationalFairYears[i]) {
+                    internationalFairsString += `- Fuar Adı: ${internationalFairNames[i] || ''} (Yıl: ${internationalFairYears[i] || ''})<br>`;
+                }
+            }
+            templateParams['international_fairs'] = internationalFairsString || 'Bilgi girilmedi.';
+
+            emailjs.send('service_c2doosm', 'template_lyrdqw9', templateParams)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Ön kayıt formunuz başarıyla gönderildi!');
+                    form.reset();
+                }, function (error) {
+                    console.log('FAILED...', error);
+                    alert('Ön kayıt formunuz gönderilirken bir hata oluştu.');
+                });
+        }
+
         const buttons = document.querySelectorAll('#pagination .page-button');
 
 
@@ -727,7 +780,6 @@
                 navbar.classList.remove('scrolled');
             }
         });
-
 
     </script>
 

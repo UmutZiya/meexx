@@ -25,8 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Menüyü Aç/Kapat Butonlarına Tıklama Olayı
   menuToggleButtons.forEach(button => {
+      // Güvenli olması için button type'ını ayarla (form içinde yeniden yüklemeyi önler)
+      if (button.tagName === 'BUTTON' && !button.getAttribute('type')) {
+          button.setAttribute('type', 'button');
+      }
       button.addEventListener('click', (e) => {
           e.preventDefault(); // Linklerin (#) sayfayı yukarı atmasını engelle
+          e.stopPropagation(); // Olayın üst elemanlara taşmasını engelle
 
           // Eğer tıklanan buton mobil toggle ise veya menü kapalıysa, menünün durumunu değiştir.
           // Eğer menü zaten açıksa ve tıklanan normal bir menü linkiyse, sadece kapat.
@@ -57,6 +62,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // İsteğe Bağlı: Esc tuşu ile menüyü kapatma
   document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && fullscreenMenu.classList.contains('active')) {
+          closeMenu();
+      }
+  });
+
+  // Pencere yeniden boyutlanınca menüyü kapat ve body scroll'u geri ver
+  window.addEventListener('resize', () => {
+      if (fullscreenMenu.classList.contains('active')) {
+          closeMenu();
+      }
+  });
+
+  // Menü dışına tıklayınca kapat
+  document.addEventListener('click', (e) => {
+      if (fullscreenMenu.classList.contains('active') && !fullscreenMenu.contains(e.target)) {
           closeMenu();
       }
   });

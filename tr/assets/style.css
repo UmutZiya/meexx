@@ -355,6 +355,8 @@ ul {
   color: #fff;
   overflow-y: auto;
   /* İçerik sığmazsa scroll çıksın */
+  -webkit-overflow-scrolling: touch;
+  /* iOS'ta momentum scroll */
 
   /* Başlangıç durumu: Gizli ve yukarıda */
   opacity: 0;
@@ -362,6 +364,8 @@ ul {
   /* Başlangıçta görünmez ve tıklanamaz */
   transform: translateY(-100%);
   /* Başlangıçta tamamen yukarıda */
+  pointer-events: none;
+  /* Gizliyken etkileşimi kapat, alt içerik kaydırılabilsin */
 
   /* Geçiş animasyonları */
   transition: transform 0.4s ease, opacity 0.4s ease, visibility 0s linear 0.4s;
@@ -382,6 +386,8 @@ ul {
   /* Ortalar */
   transform: translateY(0);
   /* Son pozisyonuna (normal yerine) kaydır */
+  pointer-events: auto;
+  /* Yalnızca aktifken etkileşime izin ver */
 
 
   /* Aktif olurken visibility gecikmesini sıfırlamak/kaldırmak için transition'ı tekrar tanımlayabiliriz
@@ -488,6 +494,19 @@ ul {
 
 .close-menu-btn:hover {
   transform: rotate(90deg);
+}
+
+/* Mobilde kapatma (X) butonunu kenardan içeri al */
+@media (max-width: 768px) {
+  .menu-header {
+    padding-right: 10px;
+  }
+  .menu-header-actions-fs {
+    gap: 14px;
+  }
+  .close-menu-btn {
+    margin-right: 6px;
+  }
 }
 
 .menu-content {
@@ -656,6 +675,8 @@ ul {
   .mobile-actions {
     display: flex;
     margin-left: 0;
+    position: relative;
+    z-index: 1002; /* Logonun üzerimde kal */
   }
 
   .logo {
