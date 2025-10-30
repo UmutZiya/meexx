@@ -413,73 +413,381 @@
             <!-- Ürün Grupları -->
             <div class="section-title">Ürün Grupları</div>
             <div class="product-groups">
-                <div class="product-group-item">
-                    <input type="checkbox" id="tulPerde" name="urunGruplari[]" value="Tül & Perde">
-                    <label for="tulPerde">Tül & Perde</label>
+                <!-- 1. Talaşlı İmalat & Tezgâhlar -->
+                <div class="product-category">
+                    <h4>1. Talaşlı İmalat & Tezgâhlar</h4>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="cnc_isleme" name="urunGruplari[]" value="CNC işleme merkezleri (dik, yatay, 5 eksen)">
+                        <label for="cnc_isleme">CNC işleme merkezleri (dik, yatay, 5 eksen)</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="cnc_torna" name="urunGruplari[]" value="CNC ve konvansiyonel torna tezgâhları">
+                        <label for="cnc_torna">CNC ve konvansiyonel torna tezgâhları</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="freze_taslama" name="urunGruplari[]" value="Freze, taşlama, delme, rayba tezgâhları">
+                        <label for="freze_taslama">Freze, taşlama, delme, rayba tezgâhları</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="tel_erezyon" name="urunGruplari[]" value="Tel erezyon (EDM), dalma erezyon tezgâhları">
+                        <label for="tel_erezyon">Tel erezyon (EDM), dalma erezyon tezgâhları</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="kalipcilik" name="urunGruplari[]" value="Kalıpçılık ve prototipleme tezgâhları">
+                        <label for="kalipcilik">Kalıpçılık ve prototipleme tezgâhları</label>
+                    </div>
                 </div>
-                <div class="product-group-item">
-                    <input type="checkbox" id="tul" name="urunGruplari[]" value="Tül">
-                    <label for="tul">Tül</label>
+
+                <!-- 2. Sac İşleme Teknolojileri -->
+                <div class="product-category">
+                    <h4>2. Sac İşleme Teknolojileri</h4>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="lazer_kesim" name="urunGruplari[]" value="Lazer ve plazma kesim makineleri">
+                        <label for="lazer_kesim">Lazer ve plazma kesim makineleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="abkantpres" name="urunGruplari[]" value="Abkantpresler, panel bender sistemleri">
+                        <label for="abkantpres">Abkantpresler, panel bender sistemleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="giyotin" name="urunGruplari[]" value="Giyotin makaslar, pançpresler">
+                        <label for="giyotin">Giyotin makaslar, pançpresler</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="rulo_acici" name="urunGruplari[]" value="Rulo açıcı, doğrultucu, besleyici sistemler">
+                        <label for="rulo_acici">Rulo açıcı, doğrultucu, besleyici sistemler</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="rulo_bukme" name="urunGruplari[]" value="Rulo bükme, kenar kıvırma ve form verme makineleri">
+                        <label for="rulo_bukme">Rulo bükme, kenar kıvırma ve form verme makineleri</label>
+                    </div>
                 </div>
-                <div class="product-group-item">
-                    <input type="checkbox" id="perde" name="urunGruplari[]" value="Perde">
-                    <label for="perde">Perde</label>
+
+                <!-- 3. Kaynak, Birleştirme ve Kesme Teknolojileri -->
+                <div class="product-category">
+                    <h4>3. Kaynak, Birleştirme ve Kesme Teknolojileri</h4>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="mig_mag_tig" name="urunGruplari[]" value="MIG/MAG/TIG kaynak makineleri">
+                        <label for="mig_mag_tig">MIG/MAG/TIG kaynak makineleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="kaynak_robot" name="urunGruplari[]" value="Kaynak robotları ve otomasyon sistemleri">
+                        <label for="kaynak_robot">Kaynak robotları ve otomasyon sistemleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="direnc_kaynak" name="urunGruplari[]" value="Direnç, nokta ve ark kaynağı sistemleri">
+                        <label for="direnc_kaynak">Direnç, nokta ve ark kaynağı sistemleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="kaynak_sarf" name="urunGruplari[]" value="Kaynak sarf malzemeleri, torçlar, pozisyonerler">
+                        <label for="kaynak_sarf">Kaynak sarf malzemeleri, torçlar, pozisyonerler</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="termal_kesme" name="urunGruplari[]" value="Termal kesme sistemleri">
+                        <label for="termal_kesme">Termal kesme sistemleri</label>
+                    </div>
                 </div>
-                <div class="product-group-item">
-                    <input type="checkbox" id="hazirPerde" name="urunGruplari[]" value="Hazır Perde">
-                    <label for="hazirPerde">Hazır Perde</label>
+
+                <!-- 4. Otomasyon, Robotik ve Hareket Kontrol Sistemleri -->
+                <div class="product-category">
+                    <h4>4. Otomasyon, Robotik ve Hareket Kontrol Sistemleri</h4>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="endustriyel_robot" name="urunGruplari[]" value="Endüstriyel robotlar, cobot'lar">
+                        <label for="endustriyel_robot">Endüstriyel robotlar, cobot'lar</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="agv_amr" name="urunGruplari[]" value="AGV/AMR taşıma robotları">
+                        <label for="agv_amr">AGV/AMR taşıma robotları</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="plc_hmi" name="urunGruplari[]" value="PLC, HMI, servo sürücü ve motor sistemleri">
+                        <label for="plc_hmi">PLC, HMI, servo sürücü ve motor sistemleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="haberlesme" name="urunGruplari[]" value="Endüstriyel haberleşme ve SCADA çözümleri">
+                        <label for="haberlesme">Endüstriyel haberleşme ve SCADA çözümleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="makine_gorus" name="urunGruplari[]" value="Makine görüsü, sensör ve güvenlik teknolojileri">
+                        <label for="makine_gorus">Makine görüsü, sensör ve güvenlik teknolojileri</label>
+                    </div>
                 </div>
-                <div class="product-group-item">
-                    <input type="checkbox" id="brode" name="urunGruplari[]" value="Brode">
-                    <label for="brode">Brode</label>
+
+                <!-- 5. Kesici Takımlar, Tutucular ve Fikstürleme Sistemleri -->
+                <div class="product-category">
+                    <h4>5. Kesici Takımlar, Tutucular ve Fikstürleme Sistemleri</h4>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="karbur_takimlar" name="urunGruplari[]" value="Karbür, seramik, elmas takımlar ve insertler">
+                        <label for="karbur_takimlar">Karbür, seramik, elmas takımlar ve insertler</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="takim_tutucu" name="urunGruplari[]" value="Takım tutucular, pensler, mandrenler">
+                        <label for="takim_tutucu">Takım tutucular, pensler, mandrenler</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="aparatlar" name="urunGruplari[]" value="Aparatlar, mengeneler ve modüler fikstürler">
+                        <label for="aparatlar">Aparatlar, mengeneler ve modüler fikstürler</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="sogutma_sivisi" name="urunGruplari[]" value="Soğutma sıvıları ve takım yönetim sistemleri">
+                        <label for="sogutma_sivisi">Soğutma sıvıları ve takım yönetim sistemleri</label>
+                    </div>
                 </div>
-                <div class="product-group-item">
-                    <input type="checkbox" id="gipur" name="urunGruplari[]" value="Gipür">
-                    <label for="gipur">Gipür</label>
+
+                <!-- 6-17 diğer kategoriler benzer şekilde devam eder... -->
+                <!-- Kısaltılmış hali için sadece başlıkları ekliyorum -->
+                <div class="product-category">
+                    <h4>6. Ölçüm, Kalite ve Metroloji Sistemleri</h4>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="cmm_olcum" name="urunGruplari[]" value="CMM koordinat ölçüm cihazları">
+                        <label for="cmm_olcum">CMM koordinat ölçüm cihazları</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="lazer_tarayici" name="urunGruplari[]" value="Lazer tarayıcılar, profilometreler">
+                        <label for="lazer_tarayici">Lazer tarayıcılar, profilometreler</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="yuzey_puruzluluk" name="urunGruplari[]" value="Yüzey pürüzlülük, sertlik ve kalınlık ölçüm cihazları">
+                        <label for="yuzey_puruzluluk">Yüzey pürüzlülük, sertlik ve kalınlık ölçüm cihazları</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="ndt_kalibrasyon" name="urunGruplari[]" value="NDT, kalibrasyon ve veri analiz sistemleri">
+                        <label for="ndt_kalibrasyon">NDT, kalibrasyon ve veri analiz sistemleri</label>
+                    </div>
                 </div>
-                <div class="product-group-item">
-                    <input type="checkbox" id="transferBaskili" name="urunGruplari[]" value="Transfer Baskılı Ürünler">
-                    <label for="transferBaskili">Transfer Baskılı Ürünler</label>
+
+                <div class="product-category">
+                    <h4>7. Katmanlı İmalat (3D Baskı) ve Tersine Mühendislik</h4>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="metal_3d" name="urunGruplari[]" value="Metal ve polimer 3D yazıcılar">
+                        <label for="metal_3d">Metal ve polimer 3D yazıcılar</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="toz_filament" name="urunGruplari[]" value="Toz, filament ve reçine malzemeler">
+                        <label for="toz_filament">Toz, filament ve reçine malzemeler</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="destek_giderme" name="urunGruplari[]" value="Destek giderme ve yüzey finişleme sistemleri">
+                        <label for="destek_giderme">Destek giderme ve yüzey finişleme sistemleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="3d_tarayici" name="urunGruplari[]" value="3D tarayıcılar ve tersine mühendislik yazılımları">
+                        <label for="3d_tarayici">3D tarayıcılar ve tersine mühendislik yazılımları</label>
+                    </div>
                 </div>
-                <div class="product-group-item">
-                    <input type="checkbox" id="aksesuarlar1" name="urunGruplari[]" value="Aksesuarlar">
-                    <label for="aksesuarlar1">Aksesuarlar</label>
+
+                <!-- 8. Plastik, Kauçuk ve Kompozit İşleme Makineleri -->
+                <div class="product-category">
+                    <h4>8. Plastik, Kauçuk ve Kompozit İşleme Makineleri</h4>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="enjeksiyon" name="urunGruplari[]" value="Enjeksiyon, ekstrüzyon, şişirme makineleri">
+                        <label for="enjeksiyon">Enjeksiyon, ekstrüzyon, şişirme makineleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="isil_sekillendirme" name="urunGruplari[]" value="Isıl şekillendirme, termoform sistemleri">
+                        <label for="isil_sekillendirme">Isıl şekillendirme, termoform sistemleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="granulatorler" name="urunGruplari[]" value="Granülatörler, kırıcılar, kurutucular">
+                        <label for="granulatorler">Granülatörler, kırıcılar, kurutucular</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="kaliplar_kompozit" name="urunGruplari[]" value="Kalıplar, kompozit sarım ve kürleme çözümleri">
+                        <label for="kaliplar_kompozit">Kalıplar, kompozit sarım ve kürleme çözümleri</label>
+                    </div>
                 </div>
-                <div class="product-group-item">
-                    <input type="checkbox" id="perdeMekanizmalari" name="urunGruplari[]" value="Perde Mekanizmaları">
-                    <label for="perdeMekanizmalari">Perde Mekanizmaları</label>
+
+                <!-- 9. Proses ve Üretim Makineleri -->
+                <div class="product-category">
+                    <h4>9. Proses ve Üretim Makineleri</h4>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="gida_proses" name="urunGruplari[]" value="Gıda, kimya, ilaç, boya proses makineleri">
+                        <label for="gida_proses">Gıda, kimya, ilaç, boya proses makineleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="karistirici" name="urunGruplari[]" value="Karıştırıcılar, reakörler, pompa ve dozaj sistemleri">
+                        <label for="karistirici">Karıştırıcılar, reakörler, pompa ve dozaj sistemleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="ambalaj" name="urunGruplari[]" value="Ambalaj, dolum ve etiketleme makineleri">
+                        <label for="ambalaj">Ambalaj, dolum ve etiketleme makineleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="hat_konveyor" name="urunGruplari[]" value="Hat içi konveyör ve otomasyon sistemleri">
+                        <label for="hat_konveyor">Hat içi konveyör ve otomasyon sistemleri</label>
+                    </div>
                 </div>
-                <div class="product-group-item">
-                    <input type="checkbox" id="mobilyaDosemelik" name="urunGruplari[]" value="Mobilya & Döşemelik">
-                    <label for="mobilyaDosemelik">Mobilya & Döşemelik</label>
+
+                <!-- 10. Yüzey İşlem, Isıl İşlem ve Kaplama Teknolojileri -->
+                <div class="product-category">
+                    <h4>10. Yüzey İşlem, Isıl İşlem ve Kaplama Teknolojileri</h4>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="kumlama" name="urunGruplari[]" value="Kumlama, shotpeening, vibrasyonlu finisaj">
+                        <label for="kumlama">Kumlama, shotpeening, vibrasyonlu finisaj</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="boya_hatlari" name="urunGruplari[]" value="Elektrostatik ve ıslak boya hatları">
+                        <label for="boya_hatlari">Elektrostatik ve ıslak boya hatları</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="pvd_cvd" name="urunGruplari[]" value="PVD, CVD, DLC kaplama sistemleri">
+                        <label for="pvd_cvd">PVD, CVD, DLC kaplama sistemleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="nitrasyon" name="urunGruplari[]" value="Nitrasyon, sementasyon ve ısıl işlem fırınları">
+                        <label for="nitrasyon">Nitrasyon, sementasyon ve ısıl işlem fırınları</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="ultrasonik" name="urunGruplari[]" value="Ultrasonik temizleme ve yıkama sistemleri">
+                        <label for="ultrasonik">Ultrasonik temizleme ve yıkama sistemleri</label>
+                    </div>
                 </div>
-                <div class="product-group-item">
-                    <input type="checkbox" id="dosemelikKumas" name="urunGruplari[]" value="Döşemelik Kumaş">
-                    <label for="dosemelikKumas">Döşemelik Kumaş</label>
+
+                <!-- 11. Güç Aktarım, Hidrolik & Pnömatik Sistemler -->
+                <div class="product-category">
+                    <h4>11. Güç Aktarım, Hidrolik & Pnömatik Sistemler</h4>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="reduktorler" name="urunGruplari[]" value="Redüktörler, kaplinler, miller ve rulmanlar">
+                        <label for="reduktorler">Redüktörler, kaplinler, miller ve rulmanlar</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="hidrolik_guc" name="urunGruplari[]" value="Hidrolik güç üniteleri, silindir ve valfler">
+                        <label for="hidrolik_guc">Hidrolik güç üniteleri, silindir ve valfler</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="pnomatik" name="urunGruplari[]" value="Pnömatik kontrol ve hava hazırlama sistemleri">
+                        <label for="pnomatik">Pnömatik kontrol ve hava hazırlama sistemleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="hortum_baglanti" name="urunGruplari[]" value="Hortum, bağlantı elemanları ve sızdırmazlık ürünleri">
+                        <label for="hortum_baglanti">Hortum, bağlantı elemanları ve sızdırmazlık ürünleri</label>
+                    </div>
                 </div>
-                <div class="product-group-item">
-                    <input type="checkbox" id="dosemelikDeri" name="urunGruplari[]" value="Döşemelik Deri, Suni Deri">
-                    <label for="dosemelikDeri">Döşemelik Deri, Suni Deri</label>
+
+                <!-- 12. Endüstriyel Enerji ve Tesis Ekipmanları -->
+                <div class="product-category">
+                    <h4>12. Endüstriyel Enerji ve Tesis Ekipmanları</h4>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="kompresorler" name="urunGruplari[]" value="Kompresörler, vakum pompaları">
+                        <label for="kompresorler">Kompresörler, vakum pompaları</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="jenerator" name="urunGruplari[]" value="Jeneratör, UPS ve güç kalitesi sistemleri">
+                        <label for="jenerator">Jeneratör, UPS ve güç kalitesi sistemleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="hvac" name="urunGruplari[]" value="Endüstriyel fan, HVAC, chiller ve soğutma çözümleri">
+                        <label for="hvac">Endüstriyel fan, HVAC, chiller ve soğutma çözümleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="enerji_izleme" name="urunGruplari[]" value="Enerji izleme ve verimlilik sistemleri">
+                        <label for="enerji_izleme">Enerji izleme ve verimlilik sistemleri</label>
+                    </div>
                 </div>
-                <div class="product-group-item">
-                    <input type="checkbox" id="aksesuarlar2" name="urunGruplari[]" value="Aksesuarlar">
-                    <label for="aksesuarlar2">Aksesuarlar</label>
+
+                <!-- 13. Malzeme, Sarf ve Endüstriyel Bileşenler -->
+                <div class="product-category">
+                    <h4>13. Malzeme, Sarf ve Endüstriyel Bileşenler</h4>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="celik_alasim" name="urunGruplari[]" value="Çelik, alüminyum, döküm ve alaşım malzemeler">
+                        <label for="celik_alasim">Çelik, alüminyum, döküm ve alaşım malzemeler</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="plastik_levha" name="urunGruplari[]" value="Endüstriyel plastikler ve kompozit levhalar">
+                        <label for="plastik_levha">Endüstriyel plastikler ve kompozit levhalar</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="baglanti_elemani" name="urunGruplari[]" value="Bağlantı elemanları, contalar, yaylar, sızdırmazlık ürünleri">
+                        <label for="baglanti_elemani">Bağlantı elemanları, contalar, yaylar, sızdırmazlık ürünleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="yag_gres" name="urunGruplari[]" value="Endüstriyel yağlar, gresler ve kimyasallar">
+                        <label for="yag_gres">Endüstriyel yağlar, gresler ve kimyasallar</label>
+                    </div>
                 </div>
-                <div class="product-group-item">
-                    <input type="checkbox" id="dekoStyle" name="urunGruplari[]" value="Deko & Style">
-                    <label for="dekoStyle">Deko & Style</label>
+
+                <!-- 14. İntralojistik ve Fabrika İçi Taşıma Sistemleri -->
+                <div class="product-category">
+                    <h4>14. İntralojistik ve Fabrika İçi Taşıma Sistemleri</h4>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="konveyor_palet" name="urunGruplari[]" value="Konveyör, paletleme ve depaletleme sistemleri">
+                        <label for="konveyor_palet">Konveyör, paletleme ve depaletleme sistemleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="depo_raf" name="urunGruplari[]" value="Depo raf ve WMS çözümleri">
+                        <label for="depo_raf">Depo raf ve WMS çözümleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="otomatik_depo" name="urunGruplari[]" value="Otomatik depolama (AS/RS) ve hat içi taşıma sistemleri">
+                        <label for="otomatik_depo">Otomatik depolama (AS/RS) ve hat içi taşıma sistemleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="palet_kasa" name="urunGruplari[]" value="Palet, kasa ve istifleme yardımcı ekipmanları">
+                        <label for="palet_kasa">Palet, kasa ve istifleme yardımcı ekipmanları</label>
+                    </div>
                 </div>
-                <div class="product-group-item">
-                    <input type="checkbox" id="dekoratifKumas" name="urunGruplari[]" value="Dekoratif Kumaş">
-                    <label for="dekoratifKumas">Dekoratif Kumaş</label>
+
+                <!-- 15. MRO (Bakım-Onarım) ve Teknik Hizmetler -->
+                <div class="product-category">
+                    <h4>15. MRO (Bakım-Onarım) ve Teknik Hizmetler</h4>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="kestirimci_bakim" name="urunGruplari[]" value="Kestirimci bakım sistemleri">
+                        <label for="kestirimci_bakim">Kestirimci bakım sistemleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="titresim_analiz" name="urunGruplari[]" value="Titreşim ve termal analiz cihazları">
+                        <label for="titresim_analiz">Titreşim ve termal analiz cihazları</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="yedek_parca" name="urunGruplari[]" value="Yedek parça, bakım sarf ve el aletleri">
+                        <label for="yedek_parca">Yedek parça, bakım sarf ve el aletleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="servis_revizyon" name="urunGruplari[]" value="Servis, revizyon ve retrofit hizmetleri">
+                        <label for="servis_revizyon">Servis, revizyon ve retrofit hizmetleri</label>
+                    </div>
                 </div>
-                <div class="product-group-item">
-                    <input type="checkbox" id="dekoratifAksesuarlar" name="urunGruplari[]" value="Dekoratif Aksesuarlar">
-                    <label for="dekoratifAksesuarlar">Dekoratif Aksesuarlar</label>
+
+                <!-- 16. Yazılım ve Dijital İkiz Teknolojileri -->
+                <div class="product-category">
+                    <h4>16. Yazılım ve Dijital İkiz Teknolojileri</h4>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="cad_cam" name="urunGruplari[]" value="CAD/CAM/CAE yazılımları">
+                        <label for="cad_cam">CAD/CAM/CAE yazılımları</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="plm_erp" name="urunGruplari[]" value="PLM, ERP, MES üretim yönetim çözümleri">
+                        <label for="plm_erp">PLM, ERP, MES üretim yönetim çözümleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="dijital_ikiz" name="urunGruplari[]" value="Dijital ikiz ve veri analitiği sistemleri">
+                        <label for="dijital_ikiz">Dijital ikiz ve veri analitiği sistemleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="siber_guvenlik" name="urunGruplari[]" value="Siber güvenlik ve bulut tabanlı üretim platformları">
+                        <label for="siber_guvenlik">Siber güvenlik ve bulut tabanlı üretim platformları</label>
+                    </div>
                 </div>
-                <div class="product-group-item">
-                    <input type="checkbox" id="hauteCouture" name="urunGruplari[]" value="Haute Couture">
-                    <label for="hauteCouture">Haute Couture</label>
+
+                <!-- 17. Kurumsal Hizmetler ve Destek Kuruluşları -->
+                <div class="product-category">
+                    <h4>17. Kurumsal Hizmetler ve Destek Kuruluşları</h4>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="finansman" name="urunGruplari[]" value="Finansman, leasing ve sigorta hizmetleri">
+                        <label for="finansman">Finansman, leasing ve sigorta hizmetleri</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="egitim_danismanlik" name="urunGruplari[]" value="Eğitim, sertifikasyon ve danışmanlık firmaları">
+                        <label for="egitim_danismanlik">Eğitim, sertifikasyon ve danışmanlık firmaları</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="yayincilik" name="urunGruplari[]" value="Yayıncılık ve sektörel medya">
+                        <label for="yayincilik">Yayıncılık ve sektörel medya</label>
+                    </div>
+                    <div class="product-group-item">
+                        <input type="checkbox" id="kumelenme" name="urunGruplari[]" value="Kümelenme, OSB ve teknopark temsilcilikleri">
+                        <label for="kumelenme">Kümelenme, OSB ve teknopark temsilcilikleri</label>
+                    </div>
                 </div>
             </div>
             
@@ -572,8 +880,15 @@
                     <option value="">Seçiniz...</option>
                     <option value="Üretici">Üretici</option>
                     <option value="İthalatçı">İthalatçı</option>
-                    <option value="Distributor">Distributor</option>
-                    <option value="Toptancı">Toptancı</option>
+                    <option value="Distribütör">Distribütör</option>
+                    <option value="Bayi / Satıcı">Bayi / Satıcı</option>
+                    <option value="Mühendislik Firması">Mühendislik Firması</option>
+                    <option value="Taahhhüt / Proje Firması">Taahhhüt / Proje Firması</option>
+                    <option value="Servis / Bakım Hizmetleri">Servis / Bakım Hizmetleri</option>
+                    <option value="Yedek Parça Tedarikçisi">Yedek Parça Tedarikçisi</option>
+                    <option value="Yazılım / Otomasyon Firması">Yazılım / Otomasyon Firması</option>
+                    <option value="Ar-Ge / Teknoloji Geliştiricisi">Ar-Ge / Teknoloji Geliştiricisi</option>
+                    <option value="Eğitim / Danışmanlık Kuruluşu">Eğitim / Danışmanlık Kuruluşu</option>
                 </select>
             </div>
             

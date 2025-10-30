@@ -1,0 +1,161 @@
+.firma-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 40px;
+    background: #fff;
+}
+
+.firma-left {
+    padding: 30px;
+}
+
+.firma-right {
+    padding: 0;
+    position: relative;
+}
+
+.firma-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.firma-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.firma-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.firma-details {
+    margin-bottom: 40px;
+}
+
+.firma-details h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.detail-row {
+    display: flex;
+    margin-bottom: 8px;
+    align-items: flex-start;
+}
+
+.detail-label {
+    font-weight: 500;
+    color: #666;
+    min-width: 140px;
+    flex-shrink: 0;
+}
+
+.detail-value {
+    color: #333;
+    flex: 1;
+}
+
+.detail-value a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.detail-value a:hover {
+    text-decoration: underline;
+}
+
+.firma-address {
+    margin-bottom: 40px;
+}
+
+.firma-address h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.address-text {
+    color: #666;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.urun-gruplari {
+    margin-bottom: 40px;
+}
+
+.urun-gruplari h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.urun-kategori {
+    color: #2c5f5f;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.urun-liste {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.firma-logo-section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.main-logo {
+    max-width: 300px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .firma-container {
+        grid-template-columns: 1fr;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+    
+    .firma-right {
+        height: 250px;
+    }
+    
+    .firma-title {
+        font-size: 36px;
+    }
+    
+    .detail-row {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    
+    .detail-label {
+        min-width: auto;
+        margin-bottom: 5px;
+    }
+}
