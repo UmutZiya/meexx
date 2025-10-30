@@ -18,49 +18,11 @@ body {
 }
 
 .login-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 100vh;
-}
-
-.login-left {
-    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px 40px;
-    position: relative;
-    box-shadow: 4px 0 20px rgba(0,0,0,0.1);
-}
-
-.login-left::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 20% 80%, rgba(70, 182, 215, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(12, 36, 61, 0.05) 0%, transparent 50%);
-    pointer-events: none;
-}
-
-.login-right {
-    background-image: url('../images/foto\ mex\ 6.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.login-right::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    height: 100vh;
+    padding: 20px;
 }
 
 .login-form {
@@ -197,15 +159,7 @@ body {
 
 @media (max-width: 768px) {
     .login-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .login-right {
-        display: none;
-    }
-    
-    .login-left {
-        padding: 40px 20px;
+        padding: 20px;
     }
     
     .login-title {

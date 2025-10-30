@@ -263,802 +263,846 @@
     <div class="form-container">
         <h1 class="form-title">Katılımcı Bilgi Toplama Formu</h1>
         <p class="form-subtitle">Aşağıdaki bilgileri doğru ve eksiksiz bir şekilde doldurmanızı rica ederiz</p>
-        
+
+        <!-- Tab Navigation -->
+        <div class="tab-navigation">
+            <button type="button" class="tab-btn active" data-tab="tab1">1. Firma Bilgileri</button>
+            <button type="button" class="tab-btn" data-tab="tab2">2. Ürün Grupları</button>
+            <button type="button" class="tab-btn" data-tab="tab3">3. Tamamla</button>
+        </div>
+
         <form id="participantForm">
-            <!-- Firma Bilgileri -->
-            <div class="section-title">Firma Bilgileriniz</div>
-            
-            <div class="form-group">
-                <label class="form-label" for="firmaUnvani">Firma Unvanı <span class="required">*</span></label>
-                <input type="text" id="firmaUnvani" name="firmaUnvani" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="katalogFirmaIsmi">Katalog/Websitesi/Kapı Listeleri/Yerleşim Planlarında Kullanılacak Firma İsmi <span class="required">*</span></label>
-                <input type="text" id="katalogFirmaIsmi" name="katalogFirmaIsmi" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="firmaYetkilisi">Firma Yetkilisi <span class="required">*</span></label>
-                <input type="text" id="firmaYetkilisi" name="firmaYetkilisi" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="gorevi">Görevi <span class="required">*</span></label>
-                <input type="text" id="gorevi" name="gorevi" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="firmaAdresi">Firma Adresi <span class="required">*</span></label>
-                <textarea id="firmaAdresi" name="firmaAdresi" class="form-control" rows="3" required></textarea>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="firmaSabitTelefon">Firma Sabit Telefon</label>
-                <input type="tel" id="firmaSabitTelefon" name="firmaSabitTelefon" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="ulke">Ülke <span class="required">*</span></label>
-                <select id="ulke" name="ulke" class="form-select" required>
-                    <option value="">Lütfen Seçiniz</option>
-                    <option value="turkiye">Türkiye</option>
-                    <option value="almanya">Almanya</option>
-                    <option value="cin">Çin</option>
-                    <option value="japonya">Japonya</option>
-                    <option value="guneykore">Güney Kore</option>
-                    <option value="hindistan">Hindistan</option>
-                    <option value="brezilya">Brezilya</option>
-                    <option value="meksika">Meksika</option>
-                    <option value="arjantin">Arjantin</option>
-                    <option value="avustralya">Avustralya</option>
-                    <option value="isvec">İsveç</option>
-                    <option value="norvec">Norveç</option>
-                    <option value="danimarka">Danimarka</option>
-                    <option value="finlandiya">Finlandiya</option>
-                    <option value="portekiz">Portekiz</option>
-                    <option value="irlanda">İrlanda</option>
-                    <option value="misir">Mısır</option>
-                    <option value="guneyafrika">Güney Afrika</option>
-                    <option value="suudiarabistan">Suudi Arabistan</option>
-                    <option value="bae">BAE</option>
-                    <option value="malezya">Malezya</option>
-                    <option value="endonezya">Endonezya</option>
-                    <option value="tayland">Tayland</option>
-                    <option value="singapur">Singapur</option>
-                    <option value="kolombiya">Kolombiya</option>
-                    <option value="sili">Şili</option>
-                    <option value="fas">Fas</option>
-                    <option value="fransa">Fransa</option>
-                    <option value="ingiltere">İngiltere</option>
-                    <option value="rusya">Rusya</option>
-                    <option value="italya">İtalya</option>
-                    <option value="ispanya">İspanya</option>
-                    <option value="hollanda">Hollanda</option>
-                    <option value="belcika">Belçika</option>
-                    <option value="isvicre">İsviçre</option>
-                    <option value="avusturya">Avusturya</option>
-                    <option value="polonya">Polonya</option>
-                    <option value="cekya">Çekya</option>
-                    <option value="macaristan">Macaristan</option>
-                    <option value="bulgaristan">Bulgaristan</option>
-                    <option value="romanya">Romanya</option>
-                    <option value="yunanistan">Yunanistan</option>
-                    <option value="ukrayna">Ukrayna</option>
-                    <option value="abd">ABD</option>
-                    <option value="kanada">Kanada</option>
-                    <option value="diger">Diğer</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="sehir">Şehir <span class="required">*</span></label>
-                <select id="sehir" name="sehir" class="form-select" required>
-                    <option value="">Lütfen Önce Ülke Seçiniz</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="firmaEmail">Firma Email <span class="required">*</span></label>
-                <input type="email" id="firmaEmail" name="firmaEmail" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="firmaWebsitesi">Firma Websitesi</label>
-                <input type="url" id="firmaWebsitesi" name="firmaWebsitesi" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="salonNumarasi">Salon Numarası</label>
-                <input type="text" id="salonNumarasi" name="salonNumarasi" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="stantNumarasi">Stant Numarası</label>
-                <input type="text" id="stantNumarasi" name="stantNumarasi" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="yetkiliKisiTelefon">Yetkili Kişi Telefon <span class="required">*</span></label>
-                <input type="tel" id="yetkiliKisiTelefon" name="yetkiliKisiTelefon" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="yetkiliKisiEmail">Yetkili Kişi E-Posta Adresiniz <span class="required">*</span></label>
-                <input type="email" id="yetkiliKisiEmail" name="yetkiliKisiEmail" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label">Katalog/Websitesinde Kullanılacak Marka Logosu <span class="required">*</span></label>
-                <p style="font-size: 14px; color: #666; margin-bottom: 10px;">Lütfen Katalog/Websitesinde gözükmesini istediğiniz logonuzu yüksek çözünürlük veya vector versiyonunu PDF formatında buraya yükleyiniz.</p>
-                <div class="file-upload-container">
-                    <input type="file" id="katalogLogo" name="katalogLogo" class="file-input" accept=".pdf" required>
-                    <button type="button" class="file-upload-btn" onclick="document.getElementById('katalogLogo').click()">Dosya Seç</button>
-                    <button type="button" class="file-upload-btn" onclick="previewFile('katalogLogo')">Görüntüle</button>
-                    <div id="katalogLogoPreview" class="file-preview"></div>
+            <!-- Tab 1: Firma Bilgileri -->
+            <div class="tab-content active" id="tab1">
+                <div class="form-group">
+                    <label class="form-label" for="firmaUnvani">Firma Unvanı <span class="required">*</span></label>
+                    <input type="text" id="firmaUnvani" name="firmaUnvani" class="form-control" required>
                 </div>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label">Firma Logosu (5mb) <span class="required">*</span></label>
-                <p style="font-size: 14px; color: #666; margin-bottom: 10px;">Lütfen Firmanızın Logosunu 'PNG, JPG' formatlarında giriniz.</p>
-                <div class="file-upload-container">
-                    <input type="file" id="firmaLogo" name="firmaLogo" class="file-input" accept=".png,.jpg,.jpeg" required>
-                    <button type="button" class="file-upload-btn" onclick="document.getElementById('firmaLogo').click()">Dosya Seç</button>
-                    <button type="button" class="file-upload-btn" onclick="previewFile('firmaLogo')">Görüntüle</button>
-                    <div id="firmaLogoPreview" class="file-preview"></div>
+
+                <div class="form-group">
+                    <label class="form-label" for="katalogFirmaIsmi">Katalog/Websitesi/Kapı Listeleri/Yerleşim
+                        Planlarında Kullanılacak Firma İsmi <span class="required">*</span></label>
+                    <input type="text" id="katalogFirmaIsmi" name="katalogFirmaIsmi" class="form-control" required>
                 </div>
-            </div>
-            
-            <!-- Ürün Grupları -->
-            <div class="section-title">Ürün Grupları</div>
-            <div class="product-groups">
-                <!-- 1. Talaşlı İmalat & Tezgâhlar -->
-                <div class="product-category">
-                    <h4>1. Talaşlı İmalat & Tezgâhlar</h4>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="cnc_isleme" name="urunGruplari[]" value="CNC işleme merkezleri (dik, yatay, 5 eksen)">
-                        <label for="cnc_isleme">CNC işleme merkezleri (dik, yatay, 5 eksen)</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="cnc_torna" name="urunGruplari[]" value="CNC ve konvansiyonel torna tezgâhları">
-                        <label for="cnc_torna">CNC ve konvansiyonel torna tezgâhları</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="freze_taslama" name="urunGruplari[]" value="Freze, taşlama, delme, rayba tezgâhları">
-                        <label for="freze_taslama">Freze, taşlama, delme, rayba tezgâhları</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="tel_erezyon" name="urunGruplari[]" value="Tel erezyon (EDM), dalma erezyon tezgâhları">
-                        <label for="tel_erezyon">Tel erezyon (EDM), dalma erezyon tezgâhları</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="kalipcilik" name="urunGruplari[]" value="Kalıpçılık ve prototipleme tezgâhları">
-                        <label for="kalipcilik">Kalıpçılık ve prototipleme tezgâhları</label>
+
+                <div class="form-group">
+                    <label class="form-label" for="firmaYetkilisi">Firma Yetkilisi <span
+                            class="required">*</span></label>
+                    <input type="text" id="firmaYetkilisi" name="firmaYetkilisi" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="gorevi">Görevi <span class="required">*</span></label>
+                    <input type="text" id="gorevi" name="gorevi" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="firmaAdresi">Firma Adresi <span class="required">*</span></label>
+                    <textarea id="firmaAdresi" name="firmaAdresi" class="form-control" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="firmaSabitTelefon">Firma Sabit Telefon</label>
+                    <input type="tel" id="firmaSabitTelefon" name="firmaSabitTelefon" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="ulke">Ülke <span class="required">*</span></label>
+                    <select id="ulke" name="ulke" class="form-select" required>
+                        <option value="">Lütfen Seçiniz</option>
+                        <option value="turkiye">Türkiye</option>
+                        <option value="almanya">Almanya</option>
+                        <option value="cin">Çin</option>
+                        <option value="japonya">Japonya</option>
+                        <option value="guneykore">Güney Kore</option>
+                        <option value="hindistan">Hindistan</option>
+                        <option value="brezilya">Brezilya</option>
+                        <option value="meksika">Meksika</option>
+                        <option value="arjantin">Arjantin</option>
+                        <option value="avustralya">Avustralya</option>
+                        <option value="isvec">İsveç</option>
+                        <option value="norvec">Norveç</option>
+                        <option value="danimarka">Danimarka</option>
+                        <option value="finlandiya">Finlandiya</option>
+                        <option value="portekiz">Portekiz</option>
+                        <option value="irlanda">İrlanda</option>
+                        <option value="misir">Mısır</option>
+                        <option value="guneyafrika">Güney Afrika</option>
+                        <option value="suudiarabistan">Suudi Arabistan</option>
+                        <option value="bae">BAE</option>
+                        <option value="malezya">Malezya</option>
+                        <option value="endonezya">Endonezya</option>
+                        <option value="tayland">Tayland</option>
+                        <option value="singapur">Singapur</option>
+                        <option value="kolombiya">Kolombiya</option>
+                        <option value="sili">Şili</option>
+                        <option value="fas">Fas</option>
+                        <option value="fransa">Fransa</option>
+                        <option value="ingiltere">İngiltere</option>
+                        <option value="rusya">Rusya</option>
+                        <option value="italya">İtalya</option>
+                        <option value="ispanya">İspanya</option>
+                        <option value="hollanda">Hollanda</option>
+                        <option value="belcika">Belçika</option>
+                        <option value="isvicre">İsviçre</option>
+                        <option value="avusturya">Avusturya</option>
+                        <option value="polonya">Polonya</option>
+                        <option value="cekya">Çekya</option>
+                        <option value="macaristan">Macaristan</option>
+                        <option value="bulgaristan">Bulgaristan</option>
+                        <option value="romanya">Romanya</option>
+                        <option value="yunanistan">Yunanistan</option>
+                        <option value="ukrayna">Ukrayna</option>
+                        <option value="abd">ABD</option>
+                        <option value="kanada">Kanada</option>
+                        <option value="diger">Diğer</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="sehir">Şehir <span class="required">*</span></label>
+                    <select id="sehir" name="sehir" class="form-select" required>
+                        <option value="">Lütfen Önce Ülke Seçiniz</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="firmaEmail">Firma Email <span class="required">*</span></label>
+                    <input type="email" id="firmaEmail" name="firmaEmail" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="firmaWebsitesi">Firma Websitesi</label>
+                    <input type="url" id="firmaWebsitesi" name="firmaWebsitesi" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="salonNumarasi">Salon Numarası</label>
+                    <input type="text" id="salonNumarasi" name="salonNumarasi" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="stantNumarasi">Stant Numarası</label>
+                    <input type="text" id="stantNumarasi" name="stantNumarasi" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="yetkiliKisiTelefon">Yetkili Kişi Telefon <span
+                            class="required">*</span></label>
+                    <input type="tel" id="yetkiliKisiTelefon" name="yetkiliKisiTelefon" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="yetkiliKisiEmail">Yetkili Kişi E-Posta Adresiniz <span
+                            class="required">*</span></label>
+                    <input type="email" id="yetkiliKisiEmail" name="yetkiliKisiEmail" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Firma Logosu (5mb) <span class="required">*</span></label>
+                    <p style="font-size: 14px; color: #666; margin-bottom: 10px;">Lütfen Firmanızın Logosunu 'PNG, JPG'
+                        formatlarında giriniz.</p>
+                    <div class="file-upload-container">
+                        <input type="file" id="firmaLogo" name="firmaLogo" class="file-input" accept=".png,.jpg,.jpeg"
+                            required>
+                        <button type="button" class="file-upload-btn"
+                            onclick="document.getElementById('firmaLogo').click()">Dosya Seç</button>
+                        <button type="button" class="file-upload-btn"
+                            onclick="previewFile('firmaLogo')">Görüntüle</button>
+                        <div id="firmaLogoPreview" class="file-preview"></div>
                     </div>
                 </div>
 
-                <!-- 2. Sac İşleme Teknolojileri -->
-                <div class="product-category">
-                    <h4>2. Sac İşleme Teknolojileri</h4>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="lazer_kesim" name="urunGruplari[]" value="Lazer ve plazma kesim makineleri">
-                        <label for="lazer_kesim">Lazer ve plazma kesim makineleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="abkantpres" name="urunGruplari[]" value="Abkantpresler, panel bender sistemleri">
-                        <label for="abkantpres">Abkantpresler, panel bender sistemleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="giyotin" name="urunGruplari[]" value="Giyotin makaslar, pançpresler">
-                        <label for="giyotin">Giyotin makaslar, pançpresler</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="rulo_acici" name="urunGruplari[]" value="Rulo açıcı, doğrultucu, besleyici sistemler">
-                        <label for="rulo_acici">Rulo açıcı, doğrultucu, besleyici sistemler</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="rulo_bukme" name="urunGruplari[]" value="Rulo bükme, kenar kıvırma ve form verme makineleri">
-                        <label for="rulo_bukme">Rulo bükme, kenar kıvırma ve form verme makineleri</label>
+                <div class="form-group">
+                    <label class="form-label">Eğer marka olarak katılıyorsanız ve firma logonuzun haricinde bir marka
+                        logonuz varsa yükleyiniz <span class="required">*</span></label>
+                    <p style="font-size: 14px; color: #666; margin-bottom: 10px;"></p>
+                    <div class="file-upload-container">
+                        <input type="file" id="katalogLogo" name="katalogLogo" class="file-input" accept=".pdf"
+                            required>
+                        <button type="button" class="file-upload-btn"
+                            onclick="document.getElementById('katalogLogo').click()">Dosya Seç</button>
+                        <button type="button" class="file-upload-btn"
+                            onclick="previewFile('katalogLogo')">Görüntüle</button>
+                        <div id="katalogLogoPreview" class="file-preview"></div>
                     </div>
                 </div>
 
-                <!-- 3. Kaynak, Birleştirme ve Kesme Teknolojileri -->
-                <div class="product-category">
-                    <h4>3. Kaynak, Birleştirme ve Kesme Teknolojileri</h4>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="mig_mag_tig" name="urunGruplari[]" value="MIG/MAG/TIG kaynak makineleri">
-                        <label for="mig_mag_tig">MIG/MAG/TIG kaynak makineleri</label>
+            </div>
+
+            <!-- Tab 2: Ürün Grupları -->
+            <div class="tab-content" id="tab2">
+                <div class="section-title">Ürün Grupları</div>
+                <div class="product-groups">
+                    <!-- 1. Talaşlı İmalat & Tezgâhlar -->
+                    <div class="product-category">
+                        <h4>1. Talaşlı İmalat & Tezgâhlar</h4>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="cnc_isleme" name="urunGruplari[]"
+                                value="CNC işleme merkezleri (dik, yatay, 5 eksen)">
+                            <label for="cnc_isleme">CNC işleme merkezleri (dik, yatay, 5 eksen)</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="cnc_torna" name="urunGruplari[]"
+                                value="CNC ve konvansiyonel torna tezgâhları">
+                            <label for="cnc_torna">CNC ve konvansiyonel torna tezgâhları</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="freze_taslama" name="urunGruplari[]"
+                                value="Freze, taşlama, delme, rayba tezgâhları">
+                            <label for="freze_taslama">Freze, taşlama, delme, rayba tezgâhları</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="tel_erezyon" name="urunGruplari[]"
+                                value="Tel erezyon (EDM), dalma erezyon tezgâhları">
+                            <label for="tel_erezyon">Tel erezyon (EDM), dalma erezyon tezgâhları</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="kalipcilik" name="urunGruplari[]"
+                                value="Kalıpçılık ve prototipleme tezgâhları">
+                            <label for="kalipcilik">Kalıpçılık ve prototipleme tezgâhları</label>
+                        </div>
                     </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="kaynak_robot" name="urunGruplari[]" value="Kaynak robotları ve otomasyon sistemleri">
-                        <label for="kaynak_robot">Kaynak robotları ve otomasyon sistemleri</label>
+
+                    <!-- 2. Sac İşleme Teknolojileri -->
+                    <div class="product-category">
+                        <h4>2. Sac İşleme Teknolojileri</h4>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="lazer_kesim" name="urunGruplari[]"
+                                value="Lazer ve plazma kesim makineleri">
+                            <label for="lazer_kesim">Lazer ve plazma kesim makineleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="abkantpres" name="urunGruplari[]"
+                                value="Abkantpresler, panel bender sistemleri">
+                            <label for="abkantpres">Abkantpresler, panel bender sistemleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="giyotin" name="urunGruplari[]"
+                                value="Giyotin makaslar, pançpresler">
+                            <label for="giyotin">Giyotin makaslar, pançpresler</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="rulo_acici" name="urunGruplari[]"
+                                value="Rulo açıcı, doğrultucu, besleyici sistemler">
+                            <label for="rulo_acici">Rulo açıcı, doğrultucu, besleyici sistemler</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="rulo_bukme" name="urunGruplari[]"
+                                value="Rulo bükme, kenar kıvırma ve form verme makineleri">
+                            <label for="rulo_bukme">Rulo bükme, kenar kıvırma ve form verme makineleri</label>
+                        </div>
                     </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="direnc_kaynak" name="urunGruplari[]" value="Direnç, nokta ve ark kaynağı sistemleri">
-                        <label for="direnc_kaynak">Direnç, nokta ve ark kaynağı sistemleri</label>
+
+                    <!-- 3. Kaynak, Birleştirme ve Kesme Teknolojileri -->
+                    <div class="product-category">
+                        <h4>3. Kaynak, Birleştirme ve Kesme Teknolojileri</h4>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="mig_mag_tig" name="urunGruplari[]"
+                                value="MIG/MAG/TIG kaynak makineleri">
+                            <label for="mig_mag_tig">MIG/MAG/TIG kaynak makineleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="kaynak_robot" name="urunGruplari[]"
+                                value="Kaynak robotları ve otomasyon sistemleri">
+                            <label for="kaynak_robot">Kaynak robotları ve otomasyon sistemleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="direnc_kaynak" name="urunGruplari[]"
+                                value="Direnç, nokta ve ark kaynağı sistemleri">
+                            <label for="direnc_kaynak">Direnç, nokta ve ark kaynağı sistemleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="kaynak_sarf" name="urunGruplari[]"
+                                value="Kaynak sarf malzemeleri, torçlar, pozisyonerler">
+                            <label for="kaynak_sarf">Kaynak sarf malzemeleri, torçlar, pozisyonerler</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="termal_kesme" name="urunGruplari[]"
+                                value="Termal kesme sistemleri">
+                            <label for="termal_kesme">Termal kesme sistemleri</label>
+                        </div>
                     </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="kaynak_sarf" name="urunGruplari[]" value="Kaynak sarf malzemeleri, torçlar, pozisyonerler">
-                        <label for="kaynak_sarf">Kaynak sarf malzemeleri, torçlar, pozisyonerler</label>
+
+                    <!-- 4. Otomasyon, Robotik ve Hareket Kontrol Sistemleri -->
+                    <div class="product-category">
+                        <h4>4. Otomasyon, Robotik ve Hareket Kontrol Sistemleri</h4>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="endustriyel_robot" name="urunGruplari[]"
+                                value="Endüstriyel robotlar, cobot'lar">
+                            <label for="endustriyel_robot">Endüstriyel robotlar, cobot'lar</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="agv_amr" name="urunGruplari[]" value="AGV/AMR taşıma robotları">
+                            <label for="agv_amr">AGV/AMR taşıma robotları</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="plc_hmi" name="urunGruplari[]"
+                                value="PLC, HMI, servo sürücü ve motor sistemleri">
+                            <label for="plc_hmi">PLC, HMI, servo sürücü ve motor sistemleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="haberlesme" name="urunGruplari[]"
+                                value="Endüstriyel haberleşme ve SCADA çözümleri">
+                            <label for="haberlesme">Endüstriyel haberleşme ve SCADA çözümleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="makine_gorus" name="urunGruplari[]"
+                                value="Makine görüsü, sensör ve güvenlik teknolojileri">
+                            <label for="makine_gorus">Makine görüsü, sensör ve güvenlik teknolojileri</label>
+                        </div>
                     </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="termal_kesme" name="urunGruplari[]" value="Termal kesme sistemleri">
-                        <label for="termal_kesme">Termal kesme sistemleri</label>
+
+                    <!-- 5. Kesici Takımlar, Tutucular ve Fikstürleme Sistemleri -->
+                    <div class="product-category">
+                        <h4>5. Kesici Takımlar, Tutucular ve Fikstürleme Sistemleri</h4>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="karbur_takimlar" name="urunGruplari[]"
+                                value="Karbür, seramik, elmas takımlar ve insertler">
+                            <label for="karbur_takimlar">Karbür, seramik, elmas takımlar ve insertler</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="takim_tutucu" name="urunGruplari[]"
+                                value="Takım tutucular, pensler, mandrenler">
+                            <label for="takim_tutucu">Takım tutucular, pensler, mandrenler</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="aparatlar" name="urunGruplari[]"
+                                value="Aparatlar, mengeneler ve modüler fikstürler">
+                            <label for="aparatlar">Aparatlar, mengeneler ve modüler fikstürler</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="sogutma_sivisi" name="urunGruplari[]"
+                                value="Soğutma sıvıları ve takım yönetim sistemleri">
+                            <label for="sogutma_sivisi">Soğutma sıvıları ve takım yönetim sistemleri</label>
+                        </div>
+                    </div>
+                    <!-- 6. Ölçüm, Kalite ve Metroloji Sistemleri -->
+                    <div class="product-category">
+                        <h4>6. Ölçüm, Kalite ve Metroloji Sistemleri</h4>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="cmm_olcum" name="urunGruplari[]"
+                                value="CMM koordinat ölçüm cihazları">
+                            <label for="cmm_olcum">CMM koordinat ölçüm cihazları</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="lazer_tarayici" name="urunGruplari[]"
+                                value="Lazer tarayıcılar, profilometreler">
+                            <label for="lazer_tarayici">Lazer tarayıcılar, profilometreler</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="yuzey_puruzluluk" name="urunGruplari[]"
+                                value="Yüzey pürüzlülük, sertlik ve kalınlık ölçüm cihazları">
+                            <label for="yuzey_puruzluluk">Yüzey pürüzlülük, sertlik ve kalınlık ölçüm cihazları</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="ndt_kalibrasyon" name="urunGruplari[]"
+                                value="NDT, kalibrasyon ve veri analiz sistemleri">
+                            <label for="ndt_kalibrasyon">NDT, kalibrasyon ve veri analiz sistemleri</label>
+                        </div>
+                    </div>
+
+                    <!-- 7. Katmanlı İmalat (3D Baskı) ve Tersine Mühendislik -->
+                    <div class="product-category">
+                        <h4>7. Katmanlı İmalat (3D Baskı) ve Tersine Mühendislik</h4>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="metal_3d" name="urunGruplari[]"
+                                value="Metal ve polimer 3D yazıcılar">
+                            <label for="metal_3d">Metal ve polimer 3D yazıcılar</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="toz_filament" name="urunGruplari[]"
+                                value="Toz, filament ve reçine malzemeler">
+                            <label for="toz_filament">Toz, filament ve reçine malzemeler</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="destek_giderme" name="urunGruplari[]"
+                                value="Destek giderme ve yüzey finişleme sistemleri">
+                            <label for="destek_giderme">Destek giderme ve yüzey finişleme sistemleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="3d_tarayici" name="urunGruplari[]"
+                                value="3D tarayıcılar ve tersine mühendislik yazılımları">
+                            <label for="3d_tarayici">3D tarayıcılar ve tersine mühendislik yazılımları</label>
+                        </div>
+                    </div>
+
+                    <!-- 8. Plastik, Kauçuk ve Kompozit İşleme Makineleri -->
+                    <div class="product-category">
+                        <h4>8. Plastik, Kauçuk ve Kompozit İşleme Makineleri</h4>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="enjeksiyon" name="urunGruplari[]"
+                                value="Enjeksiyon, ekstrüzyon, şişirme makineleri">
+                            <label for="enjeksiyon">Enjeksiyon, ekstrüzyon, şişirme makineleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="isil_sekillendirme" name="urunGruplari[]"
+                                value="Isıl şekillendirme, termoform sistemleri">
+                            <label for="isil_sekillendirme">Isıl şekillendirme, termoform sistemleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="granulatorler" name="urunGruplari[]"
+                                value="Granülatörler, kırıcılar, kurutucular">
+                            <label for="granulatorler">Granülatörler, kırıcılar, kurutucular</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="kaliplar_kompozit" name="urunGruplari[]"
+                                value="Kalıplar, kompozit sarım ve kürleme çözümleri">
+                            <label for="kaliplar_kompozit">Kalıplar, kompozit sarım ve kürleme çözümleri</label>
+                        </div>
+                    </div>
+
+                    <!-- 9. Proses ve Üretim Makineleri -->
+                    <div class="product-category">
+                        <h4>9. Proses ve Üretim Makineleri</h4>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="gida_proses" name="urunGruplari[]"
+                                value="Gıda, kimya, ilaç, boya proses makineleri">
+                            <label for="gida_proses">Gıda, kimya, ilaç, boya proses makineleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="karistirici" name="urunGruplari[]"
+                                value="Karıştırıcılar, reaktörler, pompa ve dozaj sistemleri">
+                            <label for="karistirici">Karıştırıcılar, reaktörler, pompa ve dozaj sistemleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="ambalaj" name="urunGruplari[]"
+                                value="Ambalaj, dolum ve etiketleme makineleri">
+                            <label for="ambalaj">Ambalaj, dolum ve etiketleme makineleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="hat_konveyor" name="urunGruplari[]"
+                                value="Hat içi konveyör ve otomasyon sistemleri">
+                            <label for="hat_konveyor">Hat içi konveyör ve otomasyon sistemleri</label>
+                        </div>
+                    </div>
+
+                    <!-- 10. Yüzey İşlem, Isıl İşlem ve Kaplama Teknolojileri -->
+                    <div class="product-category">
+                        <h4>10. Yüzey İşlem, Isıl İşlem ve Kaplama Teknolojileri</h4>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="kumlama" name="urunGruplari[]"
+                                value="Kumlama, shotpeening, vibrasyonlu finisaj">
+                            <label for="kumlama">Kumlama, shotpeening, vibrasyonlu finisaj</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="boya_hatlari" name="urunGruplari[]"
+                                value="Elektrostatik ve ıslak boya hatları">
+                            <label for="boya_hatlari">Elektrostatik ve ıslak boya hatları</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="pvd_cvd" name="urunGruplari[]"
+                                value="PVD, CVD, DLC kaplama sistemleri">
+                            <label for="pvd_cvd">PVD, CVD, DLC kaplama sistemleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="nitrasyon" name="urunGruplari[]"
+                                value="Nitrasyon, sementasyon ve ısıl işlem fırınları">
+                            <label for="nitrasyon">Nitrasyon, sementasyon ve ısıl işlem fırınları</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="ultrasonik" name="urunGruplari[]"
+                                value="Ultrasonik temizleme ve yıkama sistemleri">
+                            <label for="ultrasonik">Ultrasonik temizleme ve yıkama sistemleri</label>
+                        </div>
+                    </div>
+
+                    <!-- 11. Güç Aktarım, Hidrolik & Pnömatik Sistemler -->
+                    <div class="product-category">
+                        <h4>11. Güç Aktarım, Hidrolik & Pnömatik Sistemler</h4>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="reduktorler" name="urunGruplari[]"
+                                value="Redüktörler, kaplinler, miller ve rulmanlar">
+                            <label for="reduktorler">Redüktörler, kaplinler, miller ve rulmanlar</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="hidrolik_guc" name="urunGruplari[]"
+                                value="Hidrolik güç üniteleri, silindir ve valfler">
+                            <label for="hidrolik_guc">Hidrolik güç üniteleri, silindir ve valfler</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="pnomatik" name="urunGruplari[]"
+                                value="Pnömatik kontrol ve hava hazırlama sistemleri">
+                            <label for="pnomatik">Pnömatik kontrol ve hava hazırlama sistemleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="hortum_baglanti" name="urunGruplari[]"
+                                value="Hortum, bağlantı elemanları ve sızdırmazlık ürünleri">
+                            <label for="hortum_baglanti">Hortum, bağlantı elemanları ve sızdırmazlık ürünleri</label>
+                        </div>
+                    </div>
+
+                    <!-- 12. Endüstriyel Enerji ve Tesis Ekipmanları -->
+                    <div class="product-category">
+                        <h4>12. Endüstriyel Enerji ve Tesis Ekipmanları</h4>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="kompresorler" name="urunGruplari[]"
+                                value="Kompresörler, vakum pompaları">
+                            <label for="kompresorler">Kompresörler, vakum pompaları</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="jenerator" name="urunGruplari[]"
+                                value="Jeneratör, UPS ve güç kalitesi sistemleri">
+                            <label for="jenerator">Jeneratör, UPS ve güç kalitesi sistemleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="hvac" name="urunGruplari[]"
+                                value="Endüstriyel fan, HVAC, chiller ve soğutma çözümleri">
+                            <label for="hvac">Endüstriyel fan, HVAC, chiller ve soğutma çözümleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="enerji_izleme" name="urunGruplari[]"
+                                value="Enerji izleme ve verimlilik sistemleri">
+                            <label for="enerji_izleme">Enerji izleme ve verimlilik sistemleri</label>
+                        </div>
+                    </div>
+
+                    <!-- 13. Malzeme, Sarf ve Endüstriyel Bileşenler -->
+                    <div class="product-category">
+                        <h4>13. Malzeme, Sarf ve Endüstriyel Bileşenler</h4>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="celik_alasim" name="urunGruplari[]"
+                                value="Çelik, alüminyum, döküm ve alaşım malzemeler">
+                            <label for="celik_alasim">Çelik, alüminyum, döküm ve alaşım malzemeler</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="plastik_levha" name="urunGruplari[]"
+                                value="Endüstriyel plastikler ve kompozit levhalar">
+                            <label for="plastik_levha">Endüstriyel plastikler ve kompozit levhalar</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="baglanti_elemani" name="urunGruplari[]"
+                                value="Bağlantı elemanları, contalar, yaylar, sızdırmazlık ürünleri">
+                            <label for="baglanti_elemani">Bağlantı elemanları, contalar, yaylar, sızdırmazlık
+                                ürünleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="yag_gres" name="urunGruplari[]"
+                                value="Endüstriyel yağlar, gresler ve kimyasallar">
+                            <label for="yag_gres">Endüstriyel yağlar, gresler ve kimyasallar</label>
+                        </div>
+                    </div>
+
+                    <!-- 14. İntralojistik ve Fabrika İçi Taşıma Sistemleri -->
+                    <div class="product-category">
+                        <h4>14. İntralojistik ve Fabrika İçi Taşıma Sistemleri</h4>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="konveyor_palet" name="urunGruplari[]"
+                                value="Konveyör, paletleme ve depaletleme sistemleri">
+                            <label for="konveyor_palet">Konveyör, paletleme ve depaletleme sistemleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="depo_raf" name="urunGruplari[]"
+                                value="Depo raf ve WMS çözümleri">
+                            <label for="depo_raf">Depo raf ve WMS çözümleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="otomatik_depo" name="urunGruplari[]"
+                                value="Otomatik depolama (AS/RS) ve hat içi taşıma sistemleri">
+                            <label for="otomatik_depo">Otomatik depolama (AS/RS) ve hat içi taşıma sistemleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="palet_kasa" name="urunGruplari[]"
+                                value="Palet, kasa ve istifleme yardımcı ekipmanları">
+                            <label for="palet_kasa">Palet, kasa ve istifleme yardımcı ekipmanları</label>
+                        </div>
+                    </div>
+
+                    <!-- 15. MRO (Bakım-Onarım) ve Teknik Hizmetler -->
+                    <div class="product-category">
+                        <h4>15. MRO (Bakım-Onarım) ve Teknik Hizmetler</h4>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="kestirimci_bakim" name="urunGruplari[]"
+                                value="Kestirimci bakım sistemleri">
+                            <label for="kestirimci_bakim">Kestirimci bakım sistemleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="titresim_analiz" name="urunGruplari[]"
+                                value="Titreşim ve termal analiz cihazları">
+                            <label for="titresim_analiz">Titreşim ve termal analiz cihazları</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="yedek_parca" name="urunGruplari[]"
+                                value="Yedek parça, bakım sarf ve el aletleri">
+                            <label for="yedek_parca">Yedek parça, bakım sarf ve el aletleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="servis_revizyon" name="urunGruplari[]"
+                                value="Servis, revizyon ve retrofit hizmetleri">
+                            <label for="servis_revizyon">Servis, revizyon ve retrofit hizmetleri</label>
+                        </div>
+                    </div>
+
+                    <!-- 16. Yazılım ve Dijital İkiz Teknolojileri -->
+                    <div class="product-category">
+                        <h4>16. Yazılım ve Dijital İkiz Teknolojileri</h4>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="cad_cam" name="urunGruplari[]" value="CAD/CAM/CAE yazılımları">
+                            <label for="cad_cam">CAD/CAM/CAE yazılımları</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="plm_erp" name="urunGruplari[]"
+                                value="PLM, ERP, MES üretim yönetim çözümleri">
+                            <label for="plm_erp">PLM, ERP, MES üretim yönetim çözümleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="dijital_ikiz" name="urunGruplari[]"
+                                value="Dijital ikiz ve veri analitiği sistemleri">
+                            <label for="dijital_ikiz">Dijital ikiz ve veri analitiği sistemleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="siber_guvenlik" name="urunGruplari[]"
+                                value="Siber güvenlik ve bulut tabanlı üretim platformları">
+                            <label for="siber_guvenlik">Siber güvenlik ve bulut tabanlı üretim platformları</label>
+                        </div>
+                    </div>
+
+                    <!-- 17. Kurumsal Hizmetler ve Destek Kuruluşları -->
+                    <div class="product-category">
+                        <h4>17. Kurumsal Hizmetler ve Destek Kuruluşları</h4>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="finansman" name="urunGruplari[]"
+                                value="Finansman, leasing ve sigorta hizmetleri">
+                            <label for="finansman">Finansman, leasing ve sigorta hizmetleri</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="egitim_danismanlik" name="urunGruplari[]"
+                                value="Eğitim, sertifikasyon ve danışmanlık firmaları">
+                            <label for="egitim_danismanlik">Eğitim, sertifikasyon ve danışmanlık firmaları</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="yayincilik" name="urunGruplari[]"
+                                value="Yayıncılık ve sektörel medya">
+                            <label for="yayincilik">Yayıncılık ve sektörel medya</label>
+                        </div>
+                        <div class="product-group-item">
+                            <input type="checkbox" id="kumelenme" name="urunGruplari[]"
+                                value="Kümelenme, OSB ve teknopark temsilcilikleri">
+                            <label for="kumelenme">Kümelenme, OSB ve teknopark temsilcilikleri</label>
+                        </div>
                     </div>
                 </div>
 
-                <!-- 4. Otomasyon, Robotik ve Hareket Kontrol Sistemleri -->
-                <div class="product-category">
-                    <h4>4. Otomasyon, Robotik ve Hareket Kontrol Sistemleri</h4>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="endustriyel_robot" name="urunGruplari[]" value="Endüstriyel robotlar, cobot'lar">
-                        <label for="endustriyel_robot">Endüstriyel robotlar, cobot'lar</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="agv_amr" name="urunGruplari[]" value="AGV/AMR taşıma robotları">
-                        <label for="agv_amr">AGV/AMR taşıma robotları</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="plc_hmi" name="urunGruplari[]" value="PLC, HMI, servo sürücü ve motor sistemleri">
-                        <label for="plc_hmi">PLC, HMI, servo sürücü ve motor sistemleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="haberlesme" name="urunGruplari[]" value="Endüstriyel haberleşme ve SCADA çözümleri">
-                        <label for="haberlesme">Endüstriyel haberleşme ve SCADA çözümleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="makine_gorus" name="urunGruplari[]" value="Makine görüsü, sensör ve güvenlik teknolojileri">
-                        <label for="makine_gorus">Makine görüsü, sensör ve güvenlik teknolojileri</label>
+                <!-- Markalar -->
+                <div class="section-title">Markalar</div>
+
+                <div class="form-group">
+                    <label class="form-label" for="markaAdi">Marka Adı <span class="required">*</span></label>
+                    <input type="text" id="markaAdi" name="markaAdi" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Marka Tescil Belgesi (5mb) <span class="required">*</span></label>
+                    <p style="font-size: 14px; color: #666; margin-bottom: 10px;">Lütfen Marka Tescil Belgenizi 'PDF'
+                        formatında giriniz.</p>
+                    <div class="file-upload-container">
+                        <input type="file" id="markaTescilBelgesi" name="markaTescilBelgesi" class="file-input"
+                            accept=".pdf" required>
+                        <button type="button" class="file-upload-btn"
+                            onclick="document.getElementById('markaTescilBelgesi').click()">Dosya Seç</button>
+                        <button type="button" class="file-upload-btn"
+                            onclick="previewFile('markaTescilBelgesi')">Görüntüle</button>
+                        <div id="markaTescilBelgesiPreview" class="file-preview"></div>
                     </div>
                 </div>
 
-                <!-- 5. Kesici Takımlar, Tutucular ve Fikstürleme Sistemleri -->
-                <div class="product-category">
-                    <h4>5. Kesici Takımlar, Tutucular ve Fikstürleme Sistemleri</h4>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="karbur_takimlar" name="urunGruplari[]" value="Karbür, seramik, elmas takımlar ve insertler">
-                        <label for="karbur_takimlar">Karbür, seramik, elmas takımlar ve insertler</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="takim_tutucu" name="urunGruplari[]" value="Takım tutucular, pensler, mandrenler">
-                        <label for="takim_tutucu">Takım tutucular, pensler, mandrenler</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="aparatlar" name="urunGruplari[]" value="Aparatlar, mengeneler ve modüler fikstürler">
-                        <label for="aparatlar">Aparatlar, mengeneler ve modüler fikstürler</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="sogutma_sivisi" name="urunGruplari[]" value="Soğutma sıvıları ve takım yönetim sistemleri">
-                        <label for="sogutma_sivisi">Soğutma sıvıları ve takım yönetim sistemleri</label>
+                <div class="form-group">
+                    <label class="form-label">Marka Logosu (5mb) <span class="required">*</span></label>
+                    <p style="font-size: 14px; color: #666; margin-bottom: 10px;">Lütfen Markanızın Logosunu 'PNG, JPG'
+                        formatlarında giriniz</p>
+                    <div class="file-upload-container">
+                        <input type="file" id="markaLogosu" name="markaLogosu" class="file-input"
+                            accept=".png,.jpg,.jpeg" required>
+                        <button type="button" class="file-upload-btn"
+                            onclick="document.getElementById('markaLogosu').click()">Dosya Seç</button>
+                        <button type="button" class="file-upload-btn"
+                            onclick="previewFile('markaLogosu')">Görüntüle</button>
+                        <div id="markaLogosuPreview" class="file-preview"></div>
                     </div>
                 </div>
 
-                <!-- 6-17 diğer kategoriler benzer şekilde devam eder... -->
-                <!-- Kısaltılmış hali için sadece başlıkları ekliyorum -->
-                <div class="product-category">
-                    <h4>6. Ölçüm, Kalite ve Metroloji Sistemleri</h4>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="cmm_olcum" name="urunGruplari[]" value="CMM koordinat ölçüm cihazları">
-                        <label for="cmm_olcum">CMM koordinat ölçüm cihazları</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="lazer_tarayici" name="urunGruplari[]" value="Lazer tarayıcılar, profilometreler">
-                        <label for="lazer_tarayici">Lazer tarayıcılar, profilometreler</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="yuzey_puruzluluk" name="urunGruplari[]" value="Yüzey pürüzlülük, sertlik ve kalınlık ölçüm cihazları">
-                        <label for="yuzey_puruzluluk">Yüzey pürüzlülük, sertlik ve kalınlık ölçüm cihazları</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="ndt_kalibrasyon" name="urunGruplari[]" value="NDT, kalibrasyon ve veri analiz sistemleri">
-                        <label for="ndt_kalibrasyon">NDT, kalibrasyon ve veri analiz sistemleri</label>
-                    </div>
+                <div class="form-group">
+                    <label class="form-label" for="markaninMensei">Markanızın Menşei <span
+                            class="required">*</span></label>
+                    <select id="markaninMensei" name="markaninMensei" class="form-select" required>
+                        <option value="">Lütfen Seçiniz</option>
+                        <option value="turkiye">Türkiye</option>
+                        <option value="almanya">Almanya</option>
+                        <option value="cin">Çin</option>
+                        <option value="japonya">Japonya</option>
+                        <option value="guneykore">Güney Kore</option>
+                        <option value="hindistan">Hindistan</option>
+                        <option value="brezilya">Brezilya</option>
+                        <option value="meksika">Meksika</option>
+                        <option value="arjantin">Arjantin</option>
+                        <option value="avustralya">Avustralya</option>
+                        <option value="isvec">İsveç</option>
+                        <option value="norvec">Norveç</option>
+                        <option value="danimarka">Danimarka</option>
+                        <option value="finlandiya">Finlandiya</option>
+                        <option value="portekiz">Portekiz</option>
+                        <option value="irlanda">İrlanda</option>
+                        <option value="misir">Mısır</option>
+                        <option value="guneyafrika">Güney Afrika</option>
+                        <option value="suudiarabistan">Suudi Arabistan</option>
+                        <option value="bae">BAE</option>
+                        <option value="malezya">Malezya</option>
+                        <option value="endonezya">Endonezya</option>
+                        <option value="tayland">Tayland</option>
+                        <option value="singapur">Singapur</option>
+                        <option value="kolombiya">Kolombiya</option>
+                        <option value="sili">Şili</option>
+                        <option value="fas">Fas</option>
+                        <option value="fransa">Fransa</option>
+                        <option value="ingiltere">İngiltere</option>
+                        <option value="rusya">Rusya</option>
+                        <option value="italya">İtalya</option>
+                        <option value="ispanya">İspanya</option>
+                        <option value="hollanda">Hollanda</option>
+                        <option value="belcika">Belçika</option>
+                        <option value="isvicre">İsviçre</option>
+                        <option value="avusturya">Avusturya</option>
+                        <option value="polonya">Polonya</option>
+                        <option value="cekya">Çekya</option>
+                        <option value="macaristan">Macaristan</option>
+                        <option value="bulgaristan">Bulgaristan</option>
+                        <option value="romanya">Romanya</option>
+                        <option value="yunanistan">Yunanistan</option>
+                        <option value="ukrayna">Ukrayna</option>
+                        <option value="abd">ABD</option>
+                        <option value="kanada">Kanada</option>
+                        <option value="diger">Diğer</option>
+                    </select>
                 </div>
 
-                <div class="product-category">
-                    <h4>7. Katmanlı İmalat (3D Baskı) ve Tersine Mühendislik</h4>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="metal_3d" name="urunGruplari[]" value="Metal ve polimer 3D yazıcılar">
-                        <label for="metal_3d">Metal ve polimer 3D yazıcılar</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="toz_filament" name="urunGruplari[]" value="Toz, filament ve reçine malzemeler">
-                        <label for="toz_filament">Toz, filament ve reçine malzemeler</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="destek_giderme" name="urunGruplari[]" value="Destek giderme ve yüzey finişleme sistemleri">
-                        <label for="destek_giderme">Destek giderme ve yüzey finişleme sistemleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="3d_tarayici" name="urunGruplari[]" value="3D tarayıcılar ve tersine mühendislik yazılımları">
-                        <label for="3d_tarayici">3D tarayıcılar ve tersine mühendislik yazılımları</label>
-                    </div>
-                </div>
-
-                <!-- 8. Plastik, Kauçuk ve Kompozit İşleme Makineleri -->
-                <div class="product-category">
-                    <h4>8. Plastik, Kauçuk ve Kompozit İşleme Makineleri</h4>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="enjeksiyon" name="urunGruplari[]" value="Enjeksiyon, ekstrüzyon, şişirme makineleri">
-                        <label for="enjeksiyon">Enjeksiyon, ekstrüzyon, şişirme makineleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="isil_sekillendirme" name="urunGruplari[]" value="Isıl şekillendirme, termoform sistemleri">
-                        <label for="isil_sekillendirme">Isıl şekillendirme, termoform sistemleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="granulatorler" name="urunGruplari[]" value="Granülatörler, kırıcılar, kurutucular">
-                        <label for="granulatorler">Granülatörler, kırıcılar, kurutucular</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="kaliplar_kompozit" name="urunGruplari[]" value="Kalıplar, kompozit sarım ve kürleme çözümleri">
-                        <label for="kaliplar_kompozit">Kalıplar, kompozit sarım ve kürleme çözümleri</label>
-                    </div>
-                </div>
-
-                <!-- 9. Proses ve Üretim Makineleri -->
-                <div class="product-category">
-                    <h4>9. Proses ve Üretim Makineleri</h4>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="gida_proses" name="urunGruplari[]" value="Gıda, kimya, ilaç, boya proses makineleri">
-                        <label for="gida_proses">Gıda, kimya, ilaç, boya proses makineleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="karistirici" name="urunGruplari[]" value="Karıştırıcılar, reakörler, pompa ve dozaj sistemleri">
-                        <label for="karistirici">Karıştırıcılar, reakörler, pompa ve dozaj sistemleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="ambalaj" name="urunGruplari[]" value="Ambalaj, dolum ve etiketleme makineleri">
-                        <label for="ambalaj">Ambalaj, dolum ve etiketleme makineleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="hat_konveyor" name="urunGruplari[]" value="Hat içi konveyör ve otomasyon sistemleri">
-                        <label for="hat_konveyor">Hat içi konveyör ve otomasyon sistemleri</label>
-                    </div>
-                </div>
-
-                <!-- 10. Yüzey İşlem, Isıl İşlem ve Kaplama Teknolojileri -->
-                <div class="product-category">
-                    <h4>10. Yüzey İşlem, Isıl İşlem ve Kaplama Teknolojileri</h4>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="kumlama" name="urunGruplari[]" value="Kumlama, shotpeening, vibrasyonlu finisaj">
-                        <label for="kumlama">Kumlama, shotpeening, vibrasyonlu finisaj</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="boya_hatlari" name="urunGruplari[]" value="Elektrostatik ve ıslak boya hatları">
-                        <label for="boya_hatlari">Elektrostatik ve ıslak boya hatları</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="pvd_cvd" name="urunGruplari[]" value="PVD, CVD, DLC kaplama sistemleri">
-                        <label for="pvd_cvd">PVD, CVD, DLC kaplama sistemleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="nitrasyon" name="urunGruplari[]" value="Nitrasyon, sementasyon ve ısıl işlem fırınları">
-                        <label for="nitrasyon">Nitrasyon, sementasyon ve ısıl işlem fırınları</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="ultrasonik" name="urunGruplari[]" value="Ultrasonik temizleme ve yıkama sistemleri">
-                        <label for="ultrasonik">Ultrasonik temizleme ve yıkama sistemleri</label>
-                    </div>
-                </div>
-
-                <!-- 11. Güç Aktarım, Hidrolik & Pnömatik Sistemler -->
-                <div class="product-category">
-                    <h4>11. Güç Aktarım, Hidrolik & Pnömatik Sistemler</h4>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="reduktorler" name="urunGruplari[]" value="Redüktörler, kaplinler, miller ve rulmanlar">
-                        <label for="reduktorler">Redüktörler, kaplinler, miller ve rulmanlar</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="hidrolik_guc" name="urunGruplari[]" value="Hidrolik güç üniteleri, silindir ve valfler">
-                        <label for="hidrolik_guc">Hidrolik güç üniteleri, silindir ve valfler</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="pnomatik" name="urunGruplari[]" value="Pnömatik kontrol ve hava hazırlama sistemleri">
-                        <label for="pnomatik">Pnömatik kontrol ve hava hazırlama sistemleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="hortum_baglanti" name="urunGruplari[]" value="Hortum, bağlantı elemanları ve sızdırmazlık ürünleri">
-                        <label for="hortum_baglanti">Hortum, bağlantı elemanları ve sızdırmazlık ürünleri</label>
-                    </div>
-                </div>
-
-                <!-- 12. Endüstriyel Enerji ve Tesis Ekipmanları -->
-                <div class="product-category">
-                    <h4>12. Endüstriyel Enerji ve Tesis Ekipmanları</h4>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="kompresorler" name="urunGruplari[]" value="Kompresörler, vakum pompaları">
-                        <label for="kompresorler">Kompresörler, vakum pompaları</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="jenerator" name="urunGruplari[]" value="Jeneratör, UPS ve güç kalitesi sistemleri">
-                        <label for="jenerator">Jeneratör, UPS ve güç kalitesi sistemleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="hvac" name="urunGruplari[]" value="Endüstriyel fan, HVAC, chiller ve soğutma çözümleri">
-                        <label for="hvac">Endüstriyel fan, HVAC, chiller ve soğutma çözümleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="enerji_izleme" name="urunGruplari[]" value="Enerji izleme ve verimlilik sistemleri">
-                        <label for="enerji_izleme">Enerji izleme ve verimlilik sistemleri</label>
-                    </div>
-                </div>
-
-                <!-- 13. Malzeme, Sarf ve Endüstriyel Bileşenler -->
-                <div class="product-category">
-                    <h4>13. Malzeme, Sarf ve Endüstriyel Bileşenler</h4>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="celik_alasim" name="urunGruplari[]" value="Çelik, alüminyum, döküm ve alaşım malzemeler">
-                        <label for="celik_alasim">Çelik, alüminyum, döküm ve alaşım malzemeler</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="plastik_levha" name="urunGruplari[]" value="Endüstriyel plastikler ve kompozit levhalar">
-                        <label for="plastik_levha">Endüstriyel plastikler ve kompozit levhalar</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="baglanti_elemani" name="urunGruplari[]" value="Bağlantı elemanları, contalar, yaylar, sızdırmazlık ürünleri">
-                        <label for="baglanti_elemani">Bağlantı elemanları, contalar, yaylar, sızdırmazlık ürünleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="yag_gres" name="urunGruplari[]" value="Endüstriyel yağlar, gresler ve kimyasallar">
-                        <label for="yag_gres">Endüstriyel yağlar, gresler ve kimyasallar</label>
-                    </div>
-                </div>
-
-                <!-- 14. İntralojistik ve Fabrika İçi Taşıma Sistemleri -->
-                <div class="product-category">
-                    <h4>14. İntralojistik ve Fabrika İçi Taşıma Sistemleri</h4>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="konveyor_palet" name="urunGruplari[]" value="Konveyör, paletleme ve depaletleme sistemleri">
-                        <label for="konveyor_palet">Konveyör, paletleme ve depaletleme sistemleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="depo_raf" name="urunGruplari[]" value="Depo raf ve WMS çözümleri">
-                        <label for="depo_raf">Depo raf ve WMS çözümleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="otomatik_depo" name="urunGruplari[]" value="Otomatik depolama (AS/RS) ve hat içi taşıma sistemleri">
-                        <label for="otomatik_depo">Otomatik depolama (AS/RS) ve hat içi taşıma sistemleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="palet_kasa" name="urunGruplari[]" value="Palet, kasa ve istifleme yardımcı ekipmanları">
-                        <label for="palet_kasa">Palet, kasa ve istifleme yardımcı ekipmanları</label>
-                    </div>
-                </div>
-
-                <!-- 15. MRO (Bakım-Onarım) ve Teknik Hizmetler -->
-                <div class="product-category">
-                    <h4>15. MRO (Bakım-Onarım) ve Teknik Hizmetler</h4>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="kestirimci_bakim" name="urunGruplari[]" value="Kestirimci bakım sistemleri">
-                        <label for="kestirimci_bakim">Kestirimci bakım sistemleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="titresim_analiz" name="urunGruplari[]" value="Titreşim ve termal analiz cihazları">
-                        <label for="titresim_analiz">Titreşim ve termal analiz cihazları</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="yedek_parca" name="urunGruplari[]" value="Yedek parça, bakım sarf ve el aletleri">
-                        <label for="yedek_parca">Yedek parça, bakım sarf ve el aletleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="servis_revizyon" name="urunGruplari[]" value="Servis, revizyon ve retrofit hizmetleri">
-                        <label for="servis_revizyon">Servis, revizyon ve retrofit hizmetleri</label>
-                    </div>
-                </div>
-
-                <!-- 16. Yazılım ve Dijital İkiz Teknolojileri -->
-                <div class="product-category">
-                    <h4>16. Yazılım ve Dijital İkiz Teknolojileri</h4>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="cad_cam" name="urunGruplari[]" value="CAD/CAM/CAE yazılımları">
-                        <label for="cad_cam">CAD/CAM/CAE yazılımları</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="plm_erp" name="urunGruplari[]" value="PLM, ERP, MES üretim yönetim çözümleri">
-                        <label for="plm_erp">PLM, ERP, MES üretim yönetim çözümleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="dijital_ikiz" name="urunGruplari[]" value="Dijital ikiz ve veri analitiği sistemleri">
-                        <label for="dijital_ikiz">Dijital ikiz ve veri analitiği sistemleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="siber_guvenlik" name="urunGruplari[]" value="Siber güvenlik ve bulut tabanlı üretim platformları">
-                        <label for="siber_guvenlik">Siber güvenlik ve bulut tabanlı üretim platformları</label>
-                    </div>
-                </div>
-
-                <!-- 17. Kurumsal Hizmetler ve Destek Kuruluşları -->
-                <div class="product-category">
-                    <h4>17. Kurumsal Hizmetler ve Destek Kuruluşları</h4>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="finansman" name="urunGruplari[]" value="Finansman, leasing ve sigorta hizmetleri">
-                        <label for="finansman">Finansman, leasing ve sigorta hizmetleri</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="egitim_danismanlik" name="urunGruplari[]" value="Eğitim, sertifikasyon ve danışmanlık firmaları">
-                        <label for="egitim_danismanlik">Eğitim, sertifikasyon ve danışmanlık firmaları</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="yayincilik" name="urunGruplari[]" value="Yayıncılık ve sektörel medya">
-                        <label for="yayincilik">Yayıncılık ve sektörel medya</label>
-                    </div>
-                    <div class="product-group-item">
-                        <input type="checkbox" id="kumelenme" name="urunGruplari[]" value="Kümelenme, OSB ve teknopark temsilcilikleri">
-                        <label for="kumelenme">Kümelenme, OSB ve teknopark temsilcilikleri</label>
-                    </div>
+                <div class="form-group">
+                    <label class="form-label" for="sirketProfili">Şirket Profili <span class="required">*</span></label>
+                    <select id="sirketProfili" name="sirketProfili" class="form-select" required>
+                        <option value="">Seçiniz...</option>
+                        <option value="Üretici">Üretici</option>
+                        <option value="İthalatçı">İthalatçı</option>
+                        <option value="Distribütör">Distribütör</option>
+                        <option value="Bayi / Satıcı">Bayi / Satıcı</option>
+                        <option value="Mühendislik Firması">Mühendislik Firması</option>
+                        <option value="Taahhhüt / Proje Firması">Taahhhüt / Proje Firması</option>
+                        <option value="Servis / Bakım Hizmetleri">Servis / Bakım Hizmetleri</option>
+                        <option value="Yedek Parça Tedarikçisi">Yedek Parça Tedarikçisi</option>
+                        <option value="Yazılım / Otomasyon Firması">Yazılım / Otomasyon Firması</option>
+                        <option value="Ar-Ge / Teknoloji Geliştiricisi">Ar-Ge / Teknoloji Geliştiricisi</option>
+                        <option value="Eğitim / Danışmanlık Kuruluşu">Eğitim / Danışmanlık Kuruluşu</option>
+                    </select>
                 </div>
             </div>
-            
-            <!-- Markalar -->
-            <div class="section-title">Markalar</div>
-            
-            <div class="form-group">
-                <label class="form-label" for="markaAdi">Marka Adı <span class="required">*</span></label>
-                <input type="text" id="markaAdi" name="markaAdi" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label">Marka Tescil Belgesi (5mb) <span class="required">*</span></label>
-                <p style="font-size: 14px; color: #666; margin-bottom: 10px;">Lütfen Marka Tescil Belgenizi 'PDF' formatında giriniz.</p>
-                <div class="file-upload-container">
-                    <input type="file" id="markaTescilBelgesi" name="markaTescilBelgesi" class="file-input" accept=".pdf" required>
-                    <button type="button" class="file-upload-btn" onclick="document.getElementById('markaTescilBelgesi').click()">Dosya Seç</button>
-                    <button type="button" class="file-upload-btn" onclick="previewFile('markaTescilBelgesi')">Görüntüle</button>
-                    <div id="markaTescilBelgesiPreview" class="file-preview"></div>
+
+            <!-- Tab 3: Tamamla -->
+            <div class="tab-content" id="tab3">
+                <div class="section-title">Kişisel Verilerin Korunması</div>
+                <div class="form-group">
+                    <div class="kvkk-consent">
+                        <input type="checkbox" id="kvkkConsent" name="kvkkConsent" required>
+                        <label for="kvkkConsent">
+                            <a href="#" id="kvkkLink">KVKK metnini okudum</a> ve onaylıyorum <span class="required">*</span>
+                        </label>
+                    </div>
                 </div>
+                <button type="submit" class="submit-btn" id="submitFormBtn" disabled>Formu Gönder</button>
             </div>
-            
-            <div class="form-group">
-                <label class="form-label">Marka Logosu (5mb) <span class="required">*</span></label>
-                <p style="font-size: 14px; color: #666; margin-bottom: 10px;">Lütfen Markanızın Logosunu 'PNG, JPG' formatlarında giriniz</p>
-                <div class="file-upload-container">
-                    <input type="file" id="markaLogosu" name="markaLogosu" class="file-input" accept=".png,.jpg,.jpeg" required>
-                    <button type="button" class="file-upload-btn" onclick="document.getElementById('markaLogosu').click()">Dosya Seç</button>
-                    <button type="button" class="file-upload-btn" onclick="previewFile('markaLogosu')">Görüntüle</button>
-                    <div id="markaLogosuPreview" class="file-preview"></div>
-                </div>
+
+            <!-- Navigation Buttons -->
+            <div class="form-navigation">
+                <button type="button" class="nav-btn prev-btn" onclick="previousTab()"
+                    style="display: none;">Önceki</button>
+                <button type="button" class="nav-btn next-btn" onclick="nextTab()">Sonraki</button>
             </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="markaninMensei">Markanızın Menşei <span class="required">*</span></label>
-                <select id="markaninMensei" name="markaninMensei" class="form-select" required>
-                    <option value="">Lütfen Seçiniz</option>
-                    <option value="turkiye">Türkiye</option>
-                    <option value="almanya">Almanya</option>
-                    <option value="cin">Çin</option>
-                    <option value="japonya">Japonya</option>
-                    <option value="guneykore">Güney Kore</option>
-                    <option value="hindistan">Hindistan</option>
-                    <option value="brezilya">Brezilya</option>
-                    <option value="meksika">Meksika</option>
-                    <option value="arjantin">Arjantin</option>
-                    <option value="avustralya">Avustralya</option>
-                    <option value="isvec">İsveç</option>
-                    <option value="norvec">Norveç</option>
-                    <option value="danimarka">Danimarka</option>
-                    <option value="finlandiya">Finlandiya</option>
-                    <option value="portekiz">Portekiz</option>
-                    <option value="irlanda">İrlanda</option>
-                    <option value="misir">Mısır</option>
-                    <option value="guneyafrika">Güney Afrika</option>
-                    <option value="suudiarabistan">Suudi Arabistan</option>
-                    <option value="bae">BAE</option>
-                    <option value="malezya">Malezya</option>
-                    <option value="endonezya">Endonezya</option>
-                    <option value="tayland">Tayland</option>
-                    <option value="singapur">Singapur</option>
-                    <option value="kolombiya">Kolombiya</option>
-                    <option value="sili">Şili</option>
-                    <option value="fas">Fas</option>
-                    <option value="fransa">Fransa</option>
-                    <option value="ingiltere">İngiltere</option>
-                    <option value="rusya">Rusya</option>
-                    <option value="italya">İtalya</option>
-                    <option value="ispanya">İspanya</option>
-                    <option value="hollanda">Hollanda</option>
-                    <option value="belcika">Belçika</option>
-                    <option value="isvicre">İsviçre</option>
-                    <option value="avusturya">Avusturya</option>
-                    <option value="polonya">Polonya</option>
-                    <option value="cekya">Çekya</option>
-                    <option value="macaristan">Macaristan</option>
-                    <option value="bulgaristan">Bulgaristan</option>
-                    <option value="romanya">Romanya</option>
-                    <option value="yunanistan">Yunanistan</option>
-                    <option value="ukrayna">Ukrayna</option>
-                    <option value="abd">ABD</option>
-                    <option value="kanada">Kanada</option>
-                    <option value="diger">Diğer</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="sirketProfili">Şirket Profili <span class="required">*</span></label>
-                <select id="sirketProfili" name="sirketProfili" class="form-select" required>
-                    <option value="">Seçiniz...</option>
-                    <option value="Üretici">Üretici</option>
-                    <option value="İthalatçı">İthalatçı</option>
-                    <option value="Distribütör">Distribütör</option>
-                    <option value="Bayi / Satıcı">Bayi / Satıcı</option>
-                    <option value="Mühendislik Firması">Mühendislik Firması</option>
-                    <option value="Taahhhüt / Proje Firması">Taahhhüt / Proje Firması</option>
-                    <option value="Servis / Bakım Hizmetleri">Servis / Bakım Hizmetleri</option>
-                    <option value="Yedek Parça Tedarikçisi">Yedek Parça Tedarikçisi</option>
-                    <option value="Yazılım / Otomasyon Firması">Yazılım / Otomasyon Firması</option>
-                    <option value="Ar-Ge / Teknoloji Geliştiricisi">Ar-Ge / Teknoloji Geliştiricisi</option>
-                    <option value="Eğitim / Danışmanlık Kuruluşu">Eğitim / Danışmanlık Kuruluşu</option>
-                </select>
-            </div>
-            
-            <button type="submit" class="submit-btn">Bilgileri Kaydet</button>
         </form>
     </div>
     <!-- Form End -->
 
+    <!-- JavaScript for Tab Functionality -->
+    <script>
+        let currentTab = 1;
+        const totalTabs = 3;
 
-    <!-- Logo Slider -->
-    <div class="container-fluid logo-slider">
-        <div class="logo-slider-container">
-            <!-- First Slide -->
-            <div class="logo-slide">
-                <a href="https://www.btso.org.tr" class="logo-link" target="_blank">
-                    <div class="logo-img-container">
-                        <img src="./images/btso-logo.png" alt="YMB" class="logo-img-slider">
-                    </div>
-                    <div class="logo-text"></div>
-                </a>
-                <a href="https://www.mib.org.tr" class="logo-link" target="_blank">
-                    <div class="logo-img-container">
-                        <img src="./images/mib-logo.png" alt="KFA" class="logo-img-slider">
-                    </div>
-                    <div class="logo-text"></div>
-                </a>
-                <a href="https://bfm.webonalti.net" class="logo-link" target="_blank">
-                    <div class="logo-img-container">
-                        <img src="./images/logo-beyaz.png" alt="TETSİAD" class="logo-img-slider">
-                    </div>
-                    <div class="logo-text"></div>
-                </a>
-            </div>
+        function showTab(tabNumber) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
 
-            <!-- Second Slide (duplicate for seamless looping) -->
-            <div class="logo-slide">
-                <a href="https://www.btso.org.tr" class="logo-link" target="_blank">
-                    <div class="logo-img-container">
-                        <img src="./images/btso-logo.png" alt="YMB" class="logo-img-slider">
-                    </div>
-                    <div class="logo-text"></div>
-                </a>
-                <a href="https://www.mib.org.tr" class="logo-link" target="_blank">
-                    <div class="logo-img-container">
-                        <img src="./images/mib-logo.png" alt="KFA" class="logo-img-slider">
-                    </div>
-                    <div class="logo-text"></div>
-                </a>
-                <a href="https://bfm.webonalti.net" class="logo-link" target="_blank">
-                    <div class="logo-img-container">
-                        <img src="./images/logo-beyaz.png" alt="TETSİAD" class="logo-img-slider">
-                    </div>
-                    <div class="logo-text"></div>
-                </a>
-            </div>
-        </div>
-    </div>
+            // Remove active class from all tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
 
-    <!-- Footer Start -->
-    <footer class="footer">
-        <div class="footer-content mt-3">
-            <div class="footer-left">
-                <div class="logo-footer">
-                    <img src="./images/meexx-logo-tr-beyaz.png" alt="">
-                </div>
-                <p class="address">İLETİŞİM BİLGİLERİ</p>
-                <div class="contact-info" style="font-size: 14px;">
-                    <i class="fas fa-phone"></i> <span>0546 458 70 16</span> <br>
-                    <i class="fas fa-phone"></i> <span>0224 294 85 50</span>
-                    <p><i class="fas fa-envelope"></i><span>info@meexx.com.tr
-                        </span></p>
-                    <p><i class="fas fa-envelope"></i><span>meexx@kfa.com.tr </span></p>
-                </div>
-                <h4 class="follow-us">Bizi Takip Edin</h4>
-                <div class="social-icons-footer">
-                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
+            // Show current tab
+            document.getElementById(`tab${tabNumber}`).classList.add('active');
+            document.querySelector(`[data-tab="tab${tabNumber}"]`).classList.add('active');
 
-            <div class="footer-right">
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h3>MEEXX</h3>
-                        <ul>
-                            <li><a href="hakkimizda.html">Hakkında</a></li>
-                            <li><a href="fuar-kunyesi.html">Fuar Künyesi</a></li>
-                            <li><a href="fuar-alani.html">Fuar Alanı</a></li>
-                            <li><a href="ulasim.html">Nasıl Ulaşırım ?</a></li>
-                            <li><a href="fuar-sonuc-raporu.html">Fuar Sonuç Raporu</a></li>
-                        </ul>
-                    </div>
+            // Update navigation buttons
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
 
-                    <div class="footer-column">
-                        <h3>KATILIMCI</h3>
-                        <ul>
-                            <li><a href="katilimci-profili.html">Katılımcı Profili</a></li>
-                            <li><a href="on-kayit-formu.html">Ön Kayıt Formu</a></li>
-                            <li><a href="katilimci-profili.html">Neden Katılmalısınız ?</a></li>
-                            <li><a href="#">Katılımcı Listesi 2026</a></li>
-                        </ul>
-                    </div>
+            if (tabNumber === 1) {
+                prevBtn.style.display = 'none';
+            } else {
+                prevBtn.style.display = 'inline-block';
+            }
 
-                    <div class="footer-column">
-                        <h3>ZİYARETÇİ</h3>
-                        <ul>
-                            <li><a href="ziyaretci-profili.html">Ziyaretçi Profili</a></li>
-                            <li><a href="neden-ziyaret-etmelisiniz.html">Neden Ziyaret Etmelisiniz?</a></li>
-                            <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
-                        </ul>
-                    </div>
+            if (tabNumber === totalTabs) {
+                nextBtn.style.display = 'none';
+            } else {
+                nextBtn.style.display = 'inline-block';
+            }
+        }
 
-                    <div class="footer-column">
-                        <h3>ETKİNLİKLER</h3>
-                        <ul>
-                            <li><a href="b2b-toplantıları.html">B2B Toplantıları</a></li>
-                            <li><a href="#">Haberler</a></li>
-                            <li><a href="#">MEEXX Trend Alanları</a></li>
-                            <li><a href="#">MEEXX Experiences</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+        function nextTab() {
+            if (currentTab < totalTabs) {
+                currentTab++;
+                showTab(currentTab);
+            }
+        }
 
-    <!-- Footer Alt Satır ve Modal Başlangıç -->
-    <div class="footer-bottom-bar">
-        <div class="footer-bottom-content">
-            <div class="footer-bottom-left">
-                <span>Copyright © 2025 MEEXX Her Hakkı Saklıdır</span>
-            </div>
-            <div class="footer-bottom-right">
-                <a href="#" class="footer-link" data-modal="kvkk">KVKK</a> •
-                <a href="#" class="footer-link" data-modal="gizlilik">GİZLİLİK SÖZLEŞMESİ</a> •
-                <a href="#" class="footer-link" data-modal="kullanici">KULLANICI SÖZLEŞMESİ</a>
-            </div>
-            <div class="footer-bottom-signed">
-                <span>Powered by <a href="https://www.f2fbilisim.com" target="_blank">F2F Bilişim</a></span>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Yapısı -->
-    <div id="footerModal" class="footer-modal">
-        <div class="footer-modal-content">
-            <span class="footer-modal-close">&times;</span>
-            <div id="footer-modal-title" class="footer-modal-title"></div>
-            <div id="footer-modal-body" class="footer-modal-body"></div>
-        </div>
-    </div>
-    
-    <!-- Dosya Görüntüleme Modalı -->
-    <div id="fileViewModal" class="file-view-modal" style="display: none;">
-        <div class="file-view-modal-content">
-            <span class="file-view-modal-close">&times;</span>
-            <div id="file-view-modal-body"></div>
-        </div>
-    </div>
-    <!-- Footer Alt Satır ve Modal Bitiş -->
+        function previousTab() {
+            if (currentTab > 1) {
+                currentTab--;
+                showTab(currentTab);
+            }
+        }
 
-    <!-- Bootstrap Bundle JS (includes Popper) - Load BEFORE custom scripts -->
+        // Tab button click handlers
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const tabId = this.getAttribute('data-tab');
+                    currentTab = parseInt(tabId.replace('tab', ''));
+                    showTab(currentTab);
+                });
+            });
+        });
+    </script>
+
+    <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- KVKK Modal -->
+    <div id="kvkkModal" class="footer-modal">
+        <div class="footer-modal-content">
+            <span class="footer-modal-close" id="kvkkModalClose">&times;</span>
+            <h2 id="kvkk-modal-title" class="footer-modal-title">KVKK Aydınlatma Metni</h2>
+            <div id="kvkk-modal-body" class="footer-modal-body">
+                <!-- KVKK içeriği buraya yüklenecek -->
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button id="kvkkModalKapat" style="background: #6c757d; color: white; padding: 10px 20px; border: none; border-radius: 5px; margin-right: 10px; cursor: pointer;">Kapat</button>
+                <button id="kvkkModalKabul" style="background: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Kabul Et</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Custom Scripts -->
     <script src="on-kayit-formu.js"></script>
