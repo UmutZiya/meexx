@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEEXX MAKİNE VE TEKNOLOJİLERİ FUARI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- Css -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/kvkk.css">
+    <link rel="stylesheet" href="./assets/bilgi-toplama.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" type="favicon" href="images/meex-favicon.png">
+
+    <link rel="icon" type="image" href="./images/lesexpo-favicon.png">
+    <style>
+        .banner {
+            position: relative;
+            background-image: url('./images/white-banner.jpg');
+            /* Görselin yolu */
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            /* Yüksekliği isteğe göre ayarlayın */
+            font-family: Arial, sans-serif;
+            align-items: center;
+            text-align: center;
+        }
+
+        .banner::before {
+            content: '';
+            background-color: rgba(0, 0, 0, 0.1);
+            /* parlaklık azaltıcı katman */
+            z-index: 1;
+        }
+
+        .banner-yazi {
+            position: relative;
+            font-size: 48px;
+            font-weight: bold;
+            padding-top: 178px;
+            color: rgb(0, 0, 0);
+        }
+
+        .breadcrumb-1 a {
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header class="main-header">
+        <div class="container-navbar">
+            <a href="index.html" class="logo mt-5">
+                <!-- Gerçek logo dosyanızın yolunu buraya ekleyin -->
+                <img src="./images/MEEXX_LOGO_tr.png" class="" alt="">
+            </a>
+
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">MEEXX <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="hakkimizda.html">Hakkında</a></li>
+                            <li><a href="fuar-kunyesi.html">Fuar Künyesi</a></li>
+                            <li><a href="fuar-alani.html">Fuar Alanı</a></li>
+                            <li><a href="ulasim.html">Nasıl Ulaşırım ?</a></li>
+                            <li><a href="#">Fuar Sonuç Raporu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Katılımcı <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="katilimci-profili.html">Katılımcı Profili</a></li>
+                            <li><a href="on-kayit-formu.html">Ön Kayıt Formu</a></li>
+                            <li><a href="neden-katilmalisiniz.html">Neden Katılmalısınız ?</a></li>
+                            <li><a href="#">Katılımcı Listesi 2026</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Ziyaretçi <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="ziyaretci-profili.html">Ziyaretçi Profili</a></li>
+                            <li><a href="neden-ziyaret-etmelisiniz.html">Neden Ziyaret Etmelisiniz ?</a></li>
+                            <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Etkinlikler <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="b2b-toplantıları.html">B2B Toplantıları</a></li>
+                            <li><a href="#">MEEXX Trend Alanları</a></li>
+                            <li><a href="#">MEEXX Experience</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Medya <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="partnerlerimiz.html">Partnerlerimiz</a></li>
+                            <li><a href="medya-logo.html">Logo</a></li>
+                            <li><a href="#">Haberler</a></li>
+                            <li><a href="#">Basında Biz</a></li>
+                            <li><a href="#">Kurumsal Kimlik</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="iletisim.html" class="nav-link">Bize Ulaşın</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-switch mt-4">
+                    <div class="header-search">
+                        <input type="text" class="header-search-input" placeholder="Ara...">
+                        <button class="header-search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <a href="online-bilet.html" class="trigger-button">ONLINE BİLET</a>
+                    <!-- Dil Dropdown Başlangıç -->
+                    <div class="lang-dropdown">
+                        <button class="lang-dropdown-toggle" id="langDropdownBtn">
+                            <span id="selectedLang">TR</span> <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="lang-dropdown-menu" id="langDropdownMenu">
+                            <a href="#" class="lang-option" data-lang="tr">TR</a>
+                            <a href="../en/about-us.html" class="lang-option" data-lang="en">EN</a>
+                        </div>
+                    </div>
+                    <!-- Dil Dropdown Bitiş -->
+                </div>
+                <div class="mobile-actions">
+                    <button class="search-toggle-button" aria-label="Arama">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="mobile-menu-toggle nav-toggle-button"
+                        data-translate-aria-label="menu.toggleAriaLabel" aria-label="Menüyü Aç/Kapat">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- Mobil Arama Çubuğu -->
+    <div class="search-overlay">
+        <div class="search-container">
+            <div class="search-content">
+                <input type="text" class="search-input" placeholder="Aramak istediğiniz kelimeyi yazınız...">
+                <button class="search-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Tam Ekran Overlay Menü -->
+    <div class="fullscreen-menu">
+        <div class="menu-header">
+            <a href="index.html" class="logo-menu">
+                <!-- Menüdeki logo -->
+                <img src="./images/MEEXX_LOGO_tr.png" alt="" class="fs-2">
+            </a>
+
+            <div class="menu-header-actions-fs">
+                <div class="lang-switch">
+                    <a href="online-bilet.html" class="trigger-button">ONLINE BILET</a>
+                    <a href="#" class="active" data-lang="tr" data-translate="lang.tr">TR</a> | <a
+                        href="../en/about-us.html" class="" data-lang="en" data-translate="lang.en">EN</a>
+                </div>
+                <button class="close-menu-btn" aria-label="Menüyü Kapat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="menu-content">
+            <div class="menu-column">
+                <!-- Başlığa tıklanınca menüyü kapatmak için nav-toggle-button ekledik -->
+                <h3 class="nav-toggle-button">MEEXX</h3>
+                <ul>
+                    <li><a href="hakkimizda.html">Hakkında</a></li>
+                    <li><a href="fuar-kunyesi.html">Fuar Künyesi</a></li>
+                    <li><a href="fuar-alani.html">Fuar Alanı</a></li>
+                    <li><a href="ulasim.html">Nasıl Ulaşırım ?</a></li>
+                    <li><a href="#">Fuar Sonuç Raporu</a></li>
+                </ul>
+            </div>
+            <div class="menu-column">
+                <h3 class="nav-toggle-button">Katılımcı</h3>
+                <ul>
+                    <li><a href="katilimci-profili.html">Katılımcı Profili</a></li>
+                    <li><a href="on-kayit-formu.html">Ön Kayıt Formu</a></li>
+                    <li><a href="neden-katilmalisiniz.html">Neden Katılmalısınız ?</a></li>
+                    <li><a href="katilimci-listesi.html">Katılımcı Listesi 2025</a></li>
+                </ul>
+            </div>
+            <div class="menu-column">
+                <h3 class="nav-toggle-button" data-translate="menu.visitBFM">Ziyaretçi</h3>
+                <ul>
+                    <li><a href="ziyaretci-profili.html">Ziyaretçi Profili</a></li>
+                    <li><a href="neden-ziyaret-etmelisiniz.html">Neden Ziyaret Etmelisiniz ?</a></li>
+                    <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+                </ul>
+            </div>
+            <div class="menu-column">
+                <h3 class="nav-toggle-button">ETKİNLİKLER</h3>
+                <ul>
+                    <li><a href="b2b-toplantilari.html">B2B Toplantıları</a></li>
+                    <li><a href="#">MEEXX Trend Alanları</a></li>
+                    <li><a href="#">MEEXX Experience</a></li>
+                </ul>
+            </div>
+            <div class="menu-column">
+                <h3 class="nav-toggle-button">Medya</h3>
+                <ul>
+                    <li><a href="medya-logo.html">Logo</a></li>
+                    <li><a href="#">Haberler</a></li>
+                    <li><a href="#">Basında Biz</a></li>
+                    <li><a href="#">Kurumsal Kimlik</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-column">
+                <h3 class="nav-toggle-button">Bize Ulaşın</h3>
+                <ul>
+                    <li><a href="iletisim.html">İletişim Bilgileri</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="menu-footer">
+            <!-- <span class="up-menu-f2f"> Powered By F2F Bilişim Reklam ve Danışmanlık Hizmetleri</span> -->
+            <span data-translate="menu.followUs">Bizi Takip Edin</span>
+            <div class="social-icons-menu">
+                <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Banner -->
+    <div class="banner">
+        <div class="banner-yazi">MEEXX</div>
+        <div class="breadcrumb-1">
+            <a href="index.html">Ana Sayfa /</a>
+            <a href="bilgi-toplama-formu.html">Bilgi Toplama Formu</a>
+        </div>
+    </div>
+
+    <!-- Form Start -->
+    <div class="form-container">
+        <h1 class="form-title">Katılımcı Bilgi Toplama Formu</h1>
+        <p class="form-subtitle">Aşağıdaki bilgileri doğru ve eksiksiz bir şekilde doldurmanızı rica ederiz</p>
+        
+        <form id="participantForm">
+            <!-- Firma Bilgileri -->
+            <div class="section-title">Firma Bilgileriniz</div>
+            
+            <div class="form-group">
+                <label class="form-label" for="firmaUnvani">Firma Unvanı <span class="required">*</span></label>
+                <input type="text" id="firmaUnvani" name="firmaUnvani" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="katalogFirmaIsmi">Katalog/Websitesi/Kapı Listeleri/Yerleşim Planlarında Kullanılacak Firma İsmi <span class="required">*</span></label>
+                <input type="text" id="katalogFirmaIsmi" name="katalogFirmaIsmi" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="firmaYetkilisi">Firma Yetkilisi <span class="required">*</span></label>
+                <input type="text" id="firmaYetkilisi" name="firmaYetkilisi" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="gorevi">Görevi <span class="required">*</span></label>
+                <input type="text" id="gorevi" name="gorevi" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="firmaAdresi">Firma Adresi <span class="required">*</span></label>
+                <textarea id="firmaAdresi" name="firmaAdresi" class="form-control" rows="3" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="firmaSabitTelefon">Firma Sabit Telefon</label>
+                <input type="tel" id="firmaSabitTelefon" name="firmaSabitTelefon" class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="ulke">Ülke <span class="required">*</span></label>
+                <select id="ulke" name="ulke" class="form-select" required>
+                    <option value="">Lütfen Seçiniz</option>
+                    <option value="turkiye">Türkiye</option>
+                    <option value="almanya">Almanya</option>
+                    <option value="cin">Çin</option>
+                    <option value="japonya">Japonya</option>
+                    <option value="guneykore">Güney Kore</option>
+                    <option value="hindistan">Hindistan</option>
+                    <option value="brezilya">Brezilya</option>
+                    <option value="meksika">Meksika</option>
+                    <option value="arjantin">Arjantin</option>
+                    <option value="avustralya">Avustralya</option>
+                    <option value="isvec">İsveç</option>
+                    <option value="norvec">Norveç</option>
+                    <option value="danimarka">Danimarka</option>
+                    <option value="finlandiya">Finlandiya</option>
+                    <option value="portekiz">Portekiz</option>
+                    <option value="irlanda">İrlanda</option>
+                    <option value="misir">Mısır</option>
+                    <option value="guneyafrika">Güney Afrika</option>
+                    <option value="suudiarabistan">Suudi Arabistan</option>
+                    <option value="bae">BAE</option>
+                    <option value="malezya">Malezya</option>
+                    <option value="endonezya">Endonezya</option>
+                    <option value="tayland">Tayland</option>
+                    <option value="singapur">Singapur</option>
+                    <option value="kolombiya">Kolombiya</option>
+                    <option value="sili">Şili</option>
+                    <option value="fas">Fas</option>
+                    <option value="fransa">Fransa</option>
+                    <option value="ingiltere">İngiltere</option>
+                    <option value="rusya">Rusya</option>
+                    <option value="italya">İtalya</option>
+                    <option value="ispanya">İspanya</option>
+                    <option value="hollanda">Hollanda</option>
+                    <option value="belcika">Belçika</option>
+                    <option value="isvicre">İsviçre</option>
+                    <option value="avusturya">Avusturya</option>
+                    <option value="polonya">Polonya</option>
+                    <option value="cekya">Çekya</option>
+                    <option value="macaristan">Macaristan</option>
+                    <option value="bulgaristan">Bulgaristan</option>
+                    <option value="romanya">Romanya</option>
+                    <option value="yunanistan">Yunanistan</option>
+                    <option value="ukrayna">Ukrayna</option>
+                    <option value="abd">ABD</option>
+                    <option value="kanada">Kanada</option>
+                    <option value="diger">Diğer</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="sehir">Şehir <span class="required">*</span></label>
+                <select id="sehir" name="sehir" class="form-select" required>
+                    <option value="">Lütfen Önce Ülke Seçiniz</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="firmaEmail">Firma Email <span class="required">*</span></label>
+                <input type="email" id="firmaEmail" name="firmaEmail" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="firmaWebsitesi">Firma Websitesi</label>
+                <input type="url" id="firmaWebsitesi" name="firmaWebsitesi" class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="salonNumarasi">Salon Numarası</label>
+                <input type="text" id="salonNumarasi" name="salonNumarasi" class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="stantNumarasi">Stant Numarası</label>
+                <input type="text" id="stantNumarasi" name="stantNumarasi" class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="yetkiliKisiTelefon">Yetkili Kişi Telefon <span class="required">*</span></label>
+                <input type="tel" id="yetkiliKisiTelefon" name="yetkiliKisiTelefon" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="yetkiliKisiEmail">Yetkili Kişi E-Posta Adresiniz <span class="required">*</span></label>
+                <input type="email" id="yetkiliKisiEmail" name="yetkiliKisiEmail" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Katalog/Websitesinde Kullanılacak Marka Logosu <span class="required">*</span></label>
+                <p style="font-size: 14px; color: #666; margin-bottom: 10px;">Lütfen Katalog/Websitesinde gözükmesini istediğiniz logonuzu yüksek çözünürlük veya vector versiyonunu PDF formatında buraya yükleyiniz.</p>
+                <div class="file-upload-container">
+                    <input type="file" id="katalogLogo" name="katalogLogo" class="file-input" accept=".pdf" required>
+                    <button type="button" class="file-upload-btn" onclick="document.getElementById('katalogLogo').click()">Dosya Seç</button>
+                    <button type="button" class="file-upload-btn" onclick="previewFile('katalogLogo')">Görüntüle</button>
+                    <div id="katalogLogoPreview" class="file-preview"></div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Firma Logosu (5mb) <span class="required">*</span></label>
+                <p style="font-size: 14px; color: #666; margin-bottom: 10px;">Lütfen Firmanızın Logosunu 'PNG, JPG' formatlarında giriniz.</p>
+                <div class="file-upload-container">
+                    <input type="file" id="firmaLogo" name="firmaLogo" class="file-input" accept=".png,.jpg,.jpeg" required>
+                    <button type="button" class="file-upload-btn" onclick="document.getElementById('firmaLogo').click()">Dosya Seç</button>
+                    <button type="button" class="file-upload-btn" onclick="previewFile('firmaLogo')">Görüntüle</button>
+                    <div id="firmaLogoPreview" class="file-preview"></div>
+                </div>
+            </div>
+            
+            <!-- Ürün Grupları -->
+            <div class="section-title">Ürün Grupları</div>
+            <div class="product-groups">
+                <div class="product-group-item">
+                    <input type="checkbox" id="tulPerde" name="urunGruplari[]" value="Tül & Perde">
+                    <label for="tulPerde">Tül & Perde</label>
+                </div>
+                <div class="product-group-item">
+                    <input type="checkbox" id="tul" name="urunGruplari[]" value="Tül">
+                    <label for="tul">Tül</label>
+                </div>
+                <div class="product-group-item">
+                    <input type="checkbox" id="perde" name="urunGruplari[]" value="Perde">
+                    <label for="perde">Perde</label>
+                </div>
+                <div class="product-group-item">
+                    <input type="checkbox" id="hazirPerde" name="urunGruplari[]" value="Hazır Perde">
+                    <label for="hazirPerde">Hazır Perde</label>
+                </div>
+                <div class="product-group-item">
+                    <input type="checkbox" id="brode" name="urunGruplari[]" value="Brode">
+                    <label for="brode">Brode</label>
+                </div>
+                <div class="product-group-item">
+                    <input type="checkbox" id="gipur" name="urunGruplari[]" value="Gipür">
+                    <label for="gipur">Gipür</label>
+                </div>
+                <div class="product-group-item">
+                    <input type="checkbox" id="transferBaskili" name="urunGruplari[]" value="Transfer Baskılı Ürünler">
+                    <label for="transferBaskili">Transfer Baskılı Ürünler</label>
+                </div>
+                <div class="product-group-item">
+                    <input type="checkbox" id="aksesuarlar1" name="urunGruplari[]" value="Aksesuarlar">
+                    <label for="aksesuarlar1">Aksesuarlar</label>
+                </div>
+                <div class="product-group-item">
+                    <input type="checkbox" id="perdeMekanizmalari" name="urunGruplari[]" value="Perde Mekanizmaları">
+                    <label for="perdeMekanizmalari">Perde Mekanizmaları</label>
+                </div>
+                <div class="product-group-item">
+                    <input type="checkbox" id="mobilyaDosemelik" name="urunGruplari[]" value="Mobilya & Döşemelik">
+                    <label for="mobilyaDosemelik">Mobilya & Döşemelik</label>
+                </div>
+                <div class="product-group-item">
+                    <input type="checkbox" id="dosemelikKumas" name="urunGruplari[]" value="Döşemelik Kumaş">
+                    <label for="dosemelikKumas">Döşemelik Kumaş</label>
+                </div>
+                <div class="product-group-item">
+                    <input type="checkbox" id="dosemelikDeri" name="urunGruplari[]" value="Döşemelik Deri, Suni Deri">
+                    <label for="dosemelikDeri">Döşemelik Deri, Suni Deri</label>
+                </div>
+                <div class="product-group-item">
+                    <input type="checkbox" id="aksesuarlar2" name="urunGruplari[]" value="Aksesuarlar">
+                    <label for="aksesuarlar2">Aksesuarlar</label>
+                </div>
+                <div class="product-group-item">
+                    <input type="checkbox" id="dekoStyle" name="urunGruplari[]" value="Deko & Style">
+                    <label for="dekoStyle">Deko & Style</label>
+                </div>
+                <div class="product-group-item">
+                    <input type="checkbox" id="dekoratifKumas" name="urunGruplari[]" value="Dekoratif Kumaş">
+                    <label for="dekoratifKumas">Dekoratif Kumaş</label>
+                </div>
+                <div class="product-group-item">
+                    <input type="checkbox" id="dekoratifAksesuarlar" name="urunGruplari[]" value="Dekoratif Aksesuarlar">
+                    <label for="dekoratifAksesuarlar">Dekoratif Aksesuarlar</label>
+                </div>
+                <div class="product-group-item">
+                    <input type="checkbox" id="hauteCouture" name="urunGruplari[]" value="Haute Couture">
+                    <label for="hauteCouture">Haute Couture</label>
+                </div>
+            </div>
+            
+            <!-- Markalar -->
+            <div class="section-title">Markalar</div>
+            
+            <div class="form-group">
+                <label class="form-label" for="markaAdi">Marka Adı <span class="required">*</span></label>
+                <input type="text" id="markaAdi" name="markaAdi" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Marka Tescil Belgesi (5mb) <span class="required">*</span></label>
+                <p style="font-size: 14px; color: #666; margin-bottom: 10px;">Lütfen Marka Tescil Belgenizi 'PDF' formatında giriniz.</p>
+                <div class="file-upload-container">
+                    <input type="file" id="markaTescilBelgesi" name="markaTescilBelgesi" class="file-input" accept=".pdf" required>
+                    <button type="button" class="file-upload-btn" onclick="document.getElementById('markaTescilBelgesi').click()">Dosya Seç</button>
+                    <button type="button" class="file-upload-btn" onclick="previewFile('markaTescilBelgesi')">Görüntüle</button>
+                    <div id="markaTescilBelgesiPreview" class="file-preview"></div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Marka Logosu (5mb) <span class="required">*</span></label>
+                <p style="font-size: 14px; color: #666; margin-bottom: 10px;">Lütfen Markanızın Logosunu 'PNG, JPG' formatlarında giriniz</p>
+                <div class="file-upload-container">
+                    <input type="file" id="markaLogosu" name="markaLogosu" class="file-input" accept=".png,.jpg,.jpeg" required>
+                    <button type="button" class="file-upload-btn" onclick="document.getElementById('markaLogosu').click()">Dosya Seç</button>
+                    <button type="button" class="file-upload-btn" onclick="previewFile('markaLogosu')">Görüntüle</button>
+                    <div id="markaLogosuPreview" class="file-preview"></div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="markaninMensei">Markanızın Menşei <span class="required">*</span></label>
+                <select id="markaninMensei" name="markaninMensei" class="form-select" required>
+                    <option value="">Lütfen Seçiniz</option>
+                    <option value="turkiye">Türkiye</option>
+                    <option value="almanya">Almanya</option>
+                    <option value="cin">Çin</option>
+                    <option value="japonya">Japonya</option>
+                    <option value="guneykore">Güney Kore</option>
+                    <option value="hindistan">Hindistan</option>
+                    <option value="brezilya">Brezilya</option>
+                    <option value="meksika">Meksika</option>
+                    <option value="arjantin">Arjantin</option>
+                    <option value="avustralya">Avustralya</option>
+                    <option value="isvec">İsveç</option>
+                    <option value="norvec">Norveç</option>
+                    <option value="danimarka">Danimarka</option>
+                    <option value="finlandiya">Finlandiya</option>
+                    <option value="portekiz">Portekiz</option>
+                    <option value="irlanda">İrlanda</option>
+                    <option value="misir">Mısır</option>
+                    <option value="guneyafrika">Güney Afrika</option>
+                    <option value="suudiarabistan">Suudi Arabistan</option>
+                    <option value="bae">BAE</option>
+                    <option value="malezya">Malezya</option>
+                    <option value="endonezya">Endonezya</option>
+                    <option value="tayland">Tayland</option>
+                    <option value="singapur">Singapur</option>
+                    <option value="kolombiya">Kolombiya</option>
+                    <option value="sili">Şili</option>
+                    <option value="fas">Fas</option>
+                    <option value="fransa">Fransa</option>
+                    <option value="ingiltere">İngiltere</option>
+                    <option value="rusya">Rusya</option>
+                    <option value="italya">İtalya</option>
+                    <option value="ispanya">İspanya</option>
+                    <option value="hollanda">Hollanda</option>
+                    <option value="belcika">Belçika</option>
+                    <option value="isvicre">İsviçre</option>
+                    <option value="avusturya">Avusturya</option>
+                    <option value="polonya">Polonya</option>
+                    <option value="cekya">Çekya</option>
+                    <option value="macaristan">Macaristan</option>
+                    <option value="bulgaristan">Bulgaristan</option>
+                    <option value="romanya">Romanya</option>
+                    <option value="yunanistan">Yunanistan</option>
+                    <option value="ukrayna">Ukrayna</option>
+                    <option value="abd">ABD</option>
+                    <option value="kanada">Kanada</option>
+                    <option value="diger">Diğer</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="sirketProfili">Şirket Profili <span class="required">*</span></label>
+                <select id="sirketProfili" name="sirketProfili" class="form-select" required>
+                    <option value="">Seçiniz...</option>
+                    <option value="Üretici">Üretici</option>
+                    <option value="İthalatçı">İthalatçı</option>
+                    <option value="Distributor">Distributor</option>
+                    <option value="Toptancı">Toptancı</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="submit-btn">Bilgileri Kaydet</button>
+        </form>
+    </div>
+    <!-- Form End -->
+
+
+    <!-- Logo Slider -->
+    <div class="container-fluid logo-slider">
+        <div class="logo-slider-container">
+            <!-- First Slide -->
+            <div class="logo-slide">
+                <a href="https://www.btso.org.tr" class="logo-link" target="_blank">
+                    <div class="logo-img-container">
+                        <img src="./images/btso-logo.png" alt="YMB" class="logo-img-slider">
+                    </div>
+                    <div class="logo-text"></div>
+                </a>
+                <a href="https://www.mib.org.tr" class="logo-link" target="_blank">
+                    <div class="logo-img-container">
+                        <img src="./images/mib-logo.png" alt="KFA" class="logo-img-slider">
+                    </div>
+                    <div class="logo-text"></div>
+                </a>
+                <a href="https://bfm.webonalti.net" class="logo-link" target="_blank">
+                    <div class="logo-img-container">
+                        <img src="./images/logo-beyaz.png" alt="TETSİAD" class="logo-img-slider">
+                    </div>
+                    <div class="logo-text"></div>
+                </a>
+            </div>
+
+            <!-- Second Slide (duplicate for seamless looping) -->
+            <div class="logo-slide">
+                <a href="https://www.btso.org.tr" class="logo-link" target="_blank">
+                    <div class="logo-img-container">
+                        <img src="./images/btso-logo.png" alt="YMB" class="logo-img-slider">
+                    </div>
+                    <div class="logo-text"></div>
+                </a>
+                <a href="https://www.mib.org.tr" class="logo-link" target="_blank">
+                    <div class="logo-img-container">
+                        <img src="./images/mib-logo.png" alt="KFA" class="logo-img-slider">
+                    </div>
+                    <div class="logo-text"></div>
+                </a>
+                <a href="https://bfm.webonalti.net" class="logo-link" target="_blank">
+                    <div class="logo-img-container">
+                        <img src="./images/logo-beyaz.png" alt="TETSİAD" class="logo-img-slider">
+                    </div>
+                    <div class="logo-text"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="footer-content mt-3">
+            <div class="footer-left">
+                <div class="logo-footer">
+                    <img src="./images/meexx-logo-tr-beyaz.png" alt="">
+                </div>
+                <p class="address">İLETİŞİM BİLGİLERİ</p>
+                <div class="contact-info" style="font-size: 14px;">
+                    <i class="fas fa-phone"></i> <span>0546 458 70 16</span> <br>
+                    <i class="fas fa-phone"></i> <span>0224 294 85 50</span>
+                    <p><i class="fas fa-envelope"></i><span>info@meexx.com.tr
+                        </span></p>
+                    <p><i class="fas fa-envelope"></i><span>meexx@kfa.com.tr </span></p>
+                </div>
+                <h4 class="follow-us">Bizi Takip Edin</h4>
+                <div class="social-icons-footer">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>MEEXX</h3>
+                        <ul>
+                            <li><a href="hakkimizda.html">Hakkında</a></li>
+                            <li><a href="fuar-kunyesi.html">Fuar Künyesi</a></li>
+                            <li><a href="fuar-alani.html">Fuar Alanı</a></li>
+                            <li><a href="ulasim.html">Nasıl Ulaşırım ?</a></li>
+                            <li><a href="fuar-sonuc-raporu.html">Fuar Sonuç Raporu</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>KATILIMCI</h3>
+                        <ul>
+                            <li><a href="katilimci-profili.html">Katılımcı Profili</a></li>
+                            <li><a href="on-kayit-formu.html">Ön Kayıt Formu</a></li>
+                            <li><a href="katilimci-profili.html">Neden Katılmalısınız ?</a></li>
+                            <li><a href="#">Katılımcı Listesi 2026</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>ZİYARETÇİ</h3>
+                        <ul>
+                            <li><a href="ziyaretci-profili.html">Ziyaretçi Profili</a></li>
+                            <li><a href="neden-ziyaret-etmelisiniz.html">Neden Ziyaret Etmelisiniz?</a></li>
+                            <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>ETKİNLİKLER</h3>
+                        <ul>
+                            <li><a href="b2b-toplantıları.html">B2B Toplantıları</a></li>
+                            <li><a href="#">Haberler</a></li>
+                            <li><a href="#">MEEXX Trend Alanları</a></li>
+                            <li><a href="#">MEEXX Experiences</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer Alt Satır ve Modal Başlangıç -->
+    <div class="footer-bottom-bar">
+        <div class="footer-bottom-content">
+            <div class="footer-bottom-left">
+                <span>Copyright © 2025 MEEXX Her Hakkı Saklıdır</span>
+            </div>
+            <div class="footer-bottom-right">
+                <a href="#" class="footer-link" data-modal="kvkk">KVKK</a> •
+                <a href="#" class="footer-link" data-modal="gizlilik">GİZLİLİK SÖZLEŞMESİ</a> •
+                <a href="#" class="footer-link" data-modal="kullanici">KULLANICI SÖZLEŞMESİ</a>
+            </div>
+            <div class="footer-bottom-signed">
+                <span>Powered by <a href="https://www.f2fbilisim.com" target="_blank">F2F Bilişim</a></span>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Yapısı -->
+    <div id="footerModal" class="footer-modal">
+        <div class="footer-modal-content">
+            <span class="footer-modal-close">&times;</span>
+            <div id="footer-modal-title" class="footer-modal-title"></div>
+            <div id="footer-modal-body" class="footer-modal-body"></div>
+        </div>
+    </div>
+    
+    <!-- Dosya Görüntüleme Modalı -->
+    <div id="fileViewModal" class="file-view-modal" style="display: none;">
+        <div class="file-view-modal-content">
+            <span class="file-view-modal-close">&times;</span>
+            <div id="file-view-modal-body"></div>
+        </div>
+    </div>
+    <!-- Footer Alt Satır ve Modal Bitiş -->
+
+    <!-- Bootstrap Bundle JS (includes Popper) - Load BEFORE custom scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="on-kayit-formu.js"></script>
+    <script src="bilgi-toplama.js"></script>
+    <script src="main.js"></script>
+    <script src="kvkk.js"></script>
+
+</body>
+
+</html>
