@@ -43,7 +43,7 @@
     <div class="container-navbar">
       <a href="home.html" class="logo mt-5">
         <!-- Gerçek logo dosyanızın yolunu buraya ekleyin -->
-        <img src="./images/MEEXX_LOGO_en.png" class="" alt="">"">
+        <img src="./images/MEEXX_LOGO_en.png" class="" alt="">
       </a>
 
       <nav class="main-nav">
@@ -64,7 +64,7 @@
               <li><a href="exhibitor-profile.html">Exhibitor Profile</a></li>
               <li><a href="pre-registration-form.html">Pre-Registration Form</a></li>
               <li><a href="why-exhibit.html">Why Exhibit ?</a></li>
-              <li><a href="#">Exhibitor List 2025</a></li>
+              <li><a href="exhibitor-list.html">Exhibitor List 2025</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -114,7 +114,7 @@
               <span id="selectedLang">TR</span> <i class="fas fa-chevron-down"></i>
             </button>
             <div class="lang-dropdown-menu" id="langDropdownMenu">
-              <a href="../tr/index.html" class="lang-option" data-lang="tr">TR</a>
+              <a href="../tr/katilimci-listesi.html" class="lang-option" data-lang="tr">TR</a>
               <a href="#" class="lang-option" data-lang="en">EN</a>
             </div>
           </div>
@@ -156,7 +156,7 @@
       <div class="menu-header-actions-fs">
         <div class="lang-switch">
           <a href="online-ticket.html" class="trigger-button">ONLINE TICKET</a>
-          <a href="../tr/index.html" class="active" data-lang="tr" data-translate="lang.tr">TR</a> | <a href="#"
+          <a href="../tr/katilimci-listesi.html" class="active" data-lang="tr" data-translate="lang.tr">TR</a> | <a href="#"
             class="" data-lang="en" data-translate="lang.en">EN</a>
         </div>
         <button class="close-menu-btn" aria-label="Menüyü Kapat">
@@ -183,7 +183,7 @@
           <li><a href="exhibitor-profile.html">Exhibitor Profile</a></li>
           <li><a href="pre-registration-form.html">Pre-Registration Form</a></li>
           <li><a href="why-exhibit.html">Why Exhibit ?</a></li>
-          <li><a href="#">Exhibitor List 2025</a></li>
+          <li><a href="exhibitor-list.html">Exhibitor List 2025</a></li>
         </ul>
       </div>
       <div class="menu-column">
@@ -242,54 +242,15 @@
   </div>
 
   <div class="container-klf">
-    <h1>2026 Participants List</h1>
+    <h1>2026 Exhibitor List</h1>
 
     <div class="year-indicator-klf">
     </div>
 
     <div class="filters-klf">
       <div class="filter-group-klf">
-        <label for="company-name">Company Name</label>
-        <input type="text" id="firma-adi" class="filter-input-klf" placeholder="Company Name">
-      </div>
-
-      <div class="filter-group-klf">
-        <label for="country">Country</label>
-        <div class="custom-select-klf">
-          <div class="select-selected-klf" id="selected-country">Turkey</div>
-          <div class="select-arrow-klf">&#9662;</div>
-          <div class="select-items-klf select-hide-klf" id="country-items">
-            <div class="search-container-klf">
-              <input type="text" id="country-search" placeholder="Search...">
-              <span class="search-icon-klf">&#128269;</span>
-            </div>
-            <div class="options-container-klf">
-              <div class="select-item-klf" data-value="turkey">Turkey</div>
-              <div class="select-item-klf" data-value="sri-lanka">Sri Lanka</div>
-              <div class="select-item-klf" data-value="taiwan">Taiwan</div>
-              <div class="select-item-klf" data-value="ukraine">Ukraine</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="filter-group-klf">
-        <label for="product-groups">Product Groups</label>
-        <div class="custom-select-klf">
-          <div class="select-selected-klf" id="selected-product">Crane Systems</div>
-          <div class="select-arrow-klf">&#9662;</div>
-          <div class="select-items-klf select-hide-klf" id="product-items">
-            <div class="options-container-klf">
-              <div class="select-item-klf" data-value="crane-systems">Crane Systems</div>
-              <div class="select-item-klf" data-value="lifting-equipment">Lifting Equipment</div>
-              <div class="select-item-klf" data-value="transport-systems">Transport Systems</div>
-              <div class="select-item-klf" data-value="load-balancing">Load Balancing</div>
-              <div class="select-item-klf" data-value="container-systems">Container Systems</div>
-              <div class="select-item-klf" data-value="forklift-equipment">Forklift Equipment</div>
-              <div class="select-item-klf" data-value="heavy-load-transport">Heavy Load Transport</div>
-            </div>
-          </div>
-        </div>
+        <label for="firma-adi">Company Name</label>
+        <input type="text" id="firma-adi" class="filter-input-klf" placeholder="Enter Company Name...">
       </div>
     </div>
 
@@ -299,14 +260,23 @@
       <table id="participants-table">
         <thead>
           <tr>
-            <th>Company Name</th>
-            <th>Country</th>
-            <th>Hall</th>
+            <th>
+              Company Name 
+              <button id="sort-button" class="sort-button-header">
+                <i class="fas fa-sort-alpha-down"></i>
+              </button>
+            </th>
+            <th>
+              Hall No 
+              <button id="sort-salon-button" class="sort-button-header">
+                <i class="fas fa-sort-numeric-down"></i>
+              </button>
+            </th>
             <th>Stand No</th>
           </tr>
         </thead>
         <tbody>
-          <!-- Data will be populated by JavaScript -->
+          <!-- Veriler JavaScript ile doldurulacak -->
         </tbody>
       </table>
     </div>
@@ -406,7 +376,7 @@
               <li><a href="exhibitor-profile.html">Exhibitor Profile</a></li>
               <li><a href="pre-registration-form.html">Pre-Registration Form</a></li>
               <li><a href="why-exhibit.html">Why Exhibit ?</a></li>
-              <li><a href="#">Exhibitor List 2025</a></li>
+              <li><a href="exhibitor-list.html">Exhibitor List 2025</a></li>
             </ul>
           </div>
 

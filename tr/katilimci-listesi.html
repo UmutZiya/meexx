@@ -64,7 +64,7 @@
               <li><a href="katilimci-profili.html">Katılımcı Profili</a></li>
               <li><a href="on-kayit-formu.html">Ön Kayıt Formu</a></li>
               <li><a href="neden-katilmalisiniz.html">Neden Katılmalısınız ?</a></li>
-              <li><a href="#">Katılımcı Listesi 2026</a></li>
+              <li><a href="katilimci-listesi.html">Katılımcı Listesi 2026</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -114,8 +114,8 @@
               <span id="selectedLang">TR</span> <i class="fas fa-chevron-down"></i>
             </button>
             <div class="lang-dropdown-menu" id="langDropdownMenu">
-              <a href="index.html" class="lang-option" data-lang="tr">TR</a>
-              <a href="" class="lang-option" data-lang="en">EN</a>
+              <a href="#" class="lang-option" data-lang="tr">TR</a>
+              <a href="../en/exhibitor-list.html" class="lang-option" data-lang="en">EN</a>
             </div>
           </div>
           <!-- Dil Dropdown Bitiş -->
@@ -156,7 +156,7 @@
       <div class="menu-header-actions-fs">
         <div class="lang-switch">
           <a href="online-bilet.html" class="trigger-button">ONLINE BILET</a>
-          <a href="#" class="active" data-lang="tr" data-translate="lang.tr">TR</a> | <a href="" class="" data-lang="en"
+          <a href="#" class="active" data-lang="tr" data-translate="lang.tr">TR</a> | <a href="../en/exhibitor-list.html" class="" data-lang="en"
             data-translate="lang.en">EN</a>
         </div>
         <button class="close-menu-btn" aria-label="Menüyü Kapat">
@@ -251,41 +251,6 @@
         <label for="firma-adi">Firma Adı</label>
         <input type="text" id="firma-adi" class="filter-input-klf" placeholder="Firma adı giriniz...">
       </div>
-
-      <div class="filter-group-klf">
-        <label for="adres-ulke">Ülke</label>
-        <div class="custom-select-klf">
-          <div class="select-selected-klf" id="selected-country">Türkiye</div>
-          <div class="select-arrow-klf">&#9662;</div>
-          <div class="select-items-klf select-hide-klf" id="country-items">
-            <div class="search-container-klf">
-              <input type="text" id="country-search" placeholder="Ara...">
-              <span class="search-icon-klf">&#128269;</span>
-            </div>
-            <div class="options-container-klf">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- <div class="filter-group-klf">
-        <label for="urun-gruplari">Ürün Grupları</label>
-        <div class="custom-select-klf">
-          <div class="select-selected-klf" id="selected-product">Vinç Sistemleri</div>
-          <div class="select-arrow-klf">&#9662;</div>
-          <div class="select-items-klf select-hide-klf" id="product-items">
-            <div class="options-container-klf">
-              <div class="select-item-klf" data-value="vinc-sistemleri">Vinç Sistemleri</div>
-              <div class="select-item-klf" data-value="kaldirma-ekipmanlari">Kaldırma Ekipmanları</div>
-              <div class="select-item-klf" data-value="tasima-sistemleri">Taşıma Sistemleri</div>
-              <div class="select-item-klf" data-value="yuk-dengeleme">Yük Dengeleme</div>
-              <div class="select-item-klf" data-value="konteyner-sistemleri">Konteyner Sistemleri</div>
-              <div class="select-item-klf" data-value="forklift-ekipmanlari">Forklift Ekipmanları</div>
-              <div class="select-item-klf" data-value="agir-yuk-tasima">Ağır Yük Taşıma</div>
-            </div>
-          </div>
-        </div>
-      </div> -->
     </div>
 
     <div class="divider-klf"></div>
@@ -294,9 +259,18 @@
       <table id="participants-table">
         <thead>
           <tr>
-            <th>Firma Adı</th>
-            <th>Ülke</th>
-            <th>Salon</th>
+            <th>
+              Firma Ünvanı 
+              <button id="sort-button" class="sort-button-header">
+                <i class="fas fa-sort-alpha-down"></i>
+              </button>
+            </th>
+            <th>
+              Salon No 
+              <button id="sort-salon-button" class="sort-button-header">
+                <i class="fas fa-sort-numeric-down"></i>
+              </button>
+            </th>
             <th>Stant No</th>
           </tr>
         </thead>
@@ -400,7 +374,7 @@
               <li><a href="katilimci-profili.html">Katılımcı Profili</a></li>
               <li><a href="on-kayit-formu.html">Ön Kayıt Formu</a></li>
               <li><a href="katilimci-profili.html">Neden Katılmalısınız ?</a></li>
-              <li><a href="#">Katılımcı Listesi 2026</a></li>
+              <li><a href="katilimci-listesi.html">Katılımcı Listesi 2026</a></li>
             </ul>
           </div>
 
