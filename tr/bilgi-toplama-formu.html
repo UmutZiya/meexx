@@ -377,13 +377,13 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label" for="salonNumarasi">Salon Numarası</label>
-                    <input type="text" id="salonNumarasi" name="salonNumarasi" class="form-control">
+                    <label class="form-label" for="salonNumarasi">Salon Numarası <span class="required">*</span></label>
+                    <input type="text" id="salonNumarasi" name="salonNumarasi" class="form-control" required>
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label" for="stantNumarasi">Stant Numarası</label>
-                    <input type="text" id="stantNumarasi" name="stantNumarasi" class="form-control">
+                    <label class="form-label" for="stantNumarasi">Stant Numarası <span class="required">*</span></label>
+                    <input type="text" id="stantNumarasi" name="stantNumarasi" class="form-control" required>
                 </div>
 
                 <div class="form-group">
@@ -408,24 +408,14 @@
                         <button type="button" class="file-upload-btn"
                             onclick="document.getElementById('firmaLogo').click()">Dosya Seç</button>
                         <button type="button" class="file-upload-btn"
-                            onclick="previewFile('firmaLogo')">Görüntüle</button>
+                            onclick="viewFileInModal('firmaLogo')">Görüntüle</button>
                         <div id="firmaLogoPreview" class="file-preview"></div>
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <label class="form-label">Eğer marka olarak katılıyorsanız ve firma logonuzun haricinde bir marka
-                        logonuz varsa yükleyiniz <span class="required">*</span></label>
-                    <p style="font-size: 14px; color: #666; margin-bottom: 10px;"></p>
-                    <div class="file-upload-container">
-                        <input type="file" id="katalogLogo" name="katalogLogo" class="file-input" accept=".pdf"
-                            required>
-                        <button type="button" class="file-upload-btn"
-                            onclick="document.getElementById('katalogLogo').click()">Dosya Seç</button>
-                        <button type="button" class="file-upload-btn"
-                            onclick="previewFile('katalogLogo')">Görüntüle</button>
-                        <div id="katalogLogoPreview" class="file-preview"></div>
-                    </div>
+                <!-- Form Navigation Buttons -->
+                <div class="form-navigation">
+                    <button type="button" class="nav-btn prev-btn" onclick="switchTab('tab1')" style="visibility: hidden;">Önceki</button>
+                    <button type="button" class="nav-btn next-btn" onclick="validateAndSwitchTab('tab1', 'tab2')">İlerle</button>
                 </div>
 
             </div>
@@ -892,16 +882,16 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">Marka Tescil Belgesi (5mb) <span class="required">*</span></label>
+                    <label class="form-label">Marka Tescil Belgesi (5mb)</label>
                     <p style="font-size: 14px; color: #666; margin-bottom: 10px;">Lütfen Marka Tescil Belgenizi 'PDF'
                         formatında giriniz.</p>
                     <div class="file-upload-container">
                         <input type="file" id="markaTescilBelgesi" name="markaTescilBelgesi" class="file-input"
-                            accept=".pdf" required>
+                            accept=".pdf">
                         <button type="button" class="file-upload-btn"
                             onclick="document.getElementById('markaTescilBelgesi').click()">Dosya Seç</button>
                         <button type="button" class="file-upload-btn"
-                            onclick="previewFile('markaTescilBelgesi')">Görüntüle</button>
+                            onclick="viewFileInModal('markaTescilBelgesi')">Görüntüle</button>
                         <div id="markaTescilBelgesiPreview" class="file-preview"></div>
                     </div>
                 </div>
@@ -916,7 +906,7 @@
                         <button type="button" class="file-upload-btn"
                             onclick="document.getElementById('markaLogosu').click()">Dosya Seç</button>
                         <button type="button" class="file-upload-btn"
-                            onclick="previewFile('markaLogosu')">Görüntüle</button>
+                            onclick="viewFileInModal('markaLogosu')">Görüntüle</button>
                         <div id="markaLogosuPreview" class="file-preview"></div>
                     </div>
                 </div>
@@ -992,6 +982,13 @@
                         <option value="Eğitim / Danışmanlık Kuruluşu">Eğitim / Danışmanlık Kuruluşu</option>
                     </select>
                 </div>
+
+                <!-- Form Navigation Buttons -->
+                <div class="form-navigation">
+                    <button type="button" class="nav-btn prev-btn" onclick="switchTab('tab1')">Önceki</button>
+                    <button type="button" class="nav-btn next-btn" onclick="validateAndSwitchTab('tab2', 'tab3')">İlerle</button>
+                </div>
+
             </div>
 
             <!-- Tab 3: Tamamla -->
@@ -1006,80 +1003,18 @@
                     </div>
                 </div>
                 <button type="submit" class="submit-btn" id="submitFormBtn" disabled>Formu Gönder</button>
-            </div>
 
-            <!-- Navigation Buttons -->
-            <div class="form-navigation">
-                <button type="button" class="nav-btn prev-btn" onclick="previousTab()"
-                    style="display: none;">Önceki</button>
-                <button type="button" class="nav-btn next-btn" onclick="nextTab()">Sonraki</button>
+                <!-- Form Navigation Buttons -->
+                <div class="form-navigation">
+                    <button type="button" class="nav-btn prev-btn" onclick="switchTab('tab2')">Önceki</button>
+                </div>
+
             </div>
         </form>
     </div>
     <!-- Form End -->
 
-    <!-- JavaScript for Tab Functionality -->
-    <script>
-        let currentTab = 1;
-        const totalTabs = 3;
 
-        function showTab(tabNumber) {
-            // Hide all tabs
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.remove('active');
-            });
-
-            // Remove active class from all tab buttons
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-
-            // Show current tab
-            document.getElementById(`tab${tabNumber}`).classList.add('active');
-            document.querySelector(`[data-tab="tab${tabNumber}"]`).classList.add('active');
-
-            // Update navigation buttons
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-
-            if (tabNumber === 1) {
-                prevBtn.style.display = 'none';
-            } else {
-                prevBtn.style.display = 'inline-block';
-            }
-
-            if (tabNumber === totalTabs) {
-                nextBtn.style.display = 'none';
-            } else {
-                nextBtn.style.display = 'inline-block';
-            }
-        }
-
-        function nextTab() {
-            if (currentTab < totalTabs) {
-                currentTab++;
-                showTab(currentTab);
-            }
-        }
-
-        function previousTab() {
-            if (currentTab > 1) {
-                currentTab--;
-                showTab(currentTab);
-            }
-        }
-
-        // Tab button click handlers
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const tabId = this.getAttribute('data-tab');
-                    currentTab = parseInt(tabId.replace('tab', ''));
-                    showTab(currentTab);
-                });
-            });
-        });
-    </script>
 
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
@@ -1088,6 +1023,16 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- File View Modal -->
+    <div id="fileViewModal" class="file-view-modal" style="display: none;">
+        <div class="file-view-modal-content">
+            <span class="file-view-modal-close">&times;</span>
+            <div id="file-view-modal-body">
+                <!-- Dosya içeriği buraya yüklenecek -->
+            </div>
+        </div>
+    </div>
 
     <!-- KVKK Modal -->
     <div id="kvkkModal" class="footer-modal">

@@ -81,6 +81,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Tab geçiş kontrolü
+    initTabNavigation();
+
     // Görüntüleme butonları için event listener
     const previewButtons = document.querySelectorAll('button[onclick*="previewFile"]');
     previewButtons.forEach(button => {
@@ -209,40 +212,159 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Form validasyon fonksiyonu
-function validateForm() {
-    const requiredFields = document.querySelectorAll('[required]');
-    let isValid = true;
+// Tab navigasyon sistemi
+function initTabNavigation() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabBtns.forEach((btn, index) => {
+        btn.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+            const currentActiveTab = document.querySelector('.tab-content.active');
+            
+            // Eğer ileri gidiyorsa validasyon yap
+            if (shouldValidateBeforeSwitch(currentActiveTab.id, targetTab)) {
+                if (!validateCurrentTab(currentActiveTab.id)) {
+                    return; // Validasyon başarısızsa tab değiştirme
+                }
+            }
+            
+            // Tab değiştir
+            switchTab(targetTab);
+        });
+    });
+}
 
+// Hangi durumlarda validasyon yapılacağını belirle
+function shouldValidateBeforeSwitch(currentTab, targetTab) {
+    const tabOrder = ['tab1', 'tab2', 'tab3'];
+    const currentIndex = tabOrder.indexOf(currentTab);
+    const targetIndex = tabOrder.indexOf(targetTab);
+    
+    // Sadece ileri giderken validasyon yap
+    return targetIndex > currentIndex;
+}
+
+// Tab değiştirme fonksiyonu
+function switchTab(targetTab) {
+    // Tüm tab butonlarından active sınıfını kaldır
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // Tüm tab içeriklerinden active sınıfını kaldır
+    document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
+    });
+    
+    // Hedef tab butonunu aktif yap
+    document.querySelector(`[data-tab="${targetTab}"]`).classList.add('active');
+    
+    // Hedef tab içeriğini aktif yap
+    document.getElementById(targetTab).classList.add('active');
+}
+
+// Mevcut tab'ı validate et
+function validateCurrentTab(tabId) {
+    const currentTab = document.getElementById(tabId);
+    const requiredFields = currentTab.querySelectorAll('[required]');
+    let isValid = true;
+    let errorMessages = [];
+    
+    // Tab 2 için ürün grubu seçimi kontrolü
+    if (tabId === 'tab2') {
+        const selectedProducts = currentTab.querySelectorAll('input[name="urunGruplari[]"]:checked');
+        if (selectedProducts.length === 0) {
+            errorMessages.push('En az bir ürün grubu seçmelisiniz.');
+            isValid = false;
+        }
+    }
+    
     requiredFields.forEach(field => {
-        if (field.type === 'checkbox') {
-            if (!field.checked) {
+        // Önceki hata stilini temizle
+        field.style.borderColor = '#ddd';
+        
+        if (field.type === 'file') {
+            if (!field.files || !field.files[0]) {
+                field.style.borderColor = '#dc3545';
+                const label = field.closest('.form-group').querySelector('.form-label');
+                const fieldName = label ? label.textContent.replace(' *', '') : 'Dosya';
+                errorMessages.push(`${fieldName} alanı zorunludur.`);
                 isValid = false;
+            } else {
+                // Dosya boyutu kontrolü (5MB)
+                const fileSize = field.files[0].size / 1024 / 1024;
+                if (fileSize > 5) {
+                    field.style.borderColor = '#dc3545';
+                    const label = field.closest('.form-group').querySelector('.form-label');
+                    const fieldName = label ? label.textContent.replace(' *', '') : 'Dosya';
+                    errorMessages.push(`${fieldName} 5MB'dan büyük olamaz.`);
+                    isValid = false;
+                }
+            }
+        } else if (field.type === 'checkbox') {
+            if (!field.checked) {
+                field.style.outline = '2px solid #dc3545';
+                const label = field.closest('.form-group').querySelector('.form-label');
+                const fieldName = label ? label.textContent.replace(' *', '') : 'Checkbox';
+                errorMessages.push(`${fieldName} alanı zorunludur.`);
+                isValid = false;
+            } else {
+                field.style.outline = 'none';
             }
         } else if (!field.value.trim()) {
             field.style.borderColor = '#dc3545';
+            const label = field.closest('.form-group').querySelector('.form-label');
+            const fieldName = label ? label.textContent.replace(' *', '') : 'Alan';
+            errorMessages.push(`${fieldName} alanı zorunludur.`);
             isValid = false;
-        } else {
-            field.style.borderColor = '#ddd';
+        } else if (field.type === 'email' && !isValidEmail(field.value)) {
+            field.style.borderColor = '#dc3545';
+            const label = field.closest('.form-group').querySelector('.form-label');
+            const fieldName = label ? label.textContent.replace(' *', '') : 'Email';
+            errorMessages.push(`${fieldName} geçerli bir email adresi olmalıdır.`);
+            isValid = false;
         }
     });
-
-    // Dosya boyutu kontrolü (5MB)
-    const fileInputs = document.querySelectorAll('.file-input[required]');
-    fileInputs.forEach(input => {
-        if (input.files && input.files[0]) {
-            const fileSize = input.files[0].size / 1024 / 1024;
-            if (fileSize > 5) {
-                const labelText = input.previousElementSibling ? input.previousElementSibling.textContent : 'Dosya';
-                alert(`${labelText} 5MB'dan büyük olamaz.`);
-                isValid = false;
-            }
-        }
-    });
-
+    
     if (!isValid) {
-        alert('Lütfen tüm zorunlu alanları doldurunuz ve dosya boyutlarını kontrol ediniz.');
+        alert('Lütfen aşağıdaki hataları düzeltin:\n\n' + errorMessages.join('\n'));
+        // İlk hatalı alana odaklan
+        const firstErrorField = currentTab.querySelector('[required][style*="border-color: rgb(220, 53, 69)"], [required][style*="outline: 2px solid rgb(220, 53, 69)"]');
+        if (firstErrorField) {
+            firstErrorField.focus();
+            firstErrorField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
     }
-
+    
     return isValid;
+}
+
+// Validasyon yaparak tab değiştirme fonksiyonu
+function validateAndSwitchTab(currentTab, targetTab) {
+    if (validateCurrentTab(currentTab)) {
+        switchTab(targetTab);
+    }
+}
+
+// Email validasyon fonksiyonu
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+// Form validasyon fonksiyonu (tüm form için)
+function validateForm() {
+    // Tüm tabları sırayla validate et
+    const tabs = ['tab1', 'tab2'];
+    
+    for (let tabId of tabs) {
+        if (!validateCurrentTab(tabId)) {
+            // Hatalı tab'a geç
+            switchTab(tabId);
+            return false;
+        }
+    }
+    
+    return true;
 }
